@@ -1,1 +1,3097 @@
-export const P2_DATA = [{"id":"P2C1","name":"Preliminary","mcqs":[{"id":"P2C1.Q1","q":"Companies Act, 2013 extends to:","opts":["Whole India","Only Companies","Only Corporates","SEZ only"],"ans":0,"exp":"Act applies to whole of India","type":"Concept","diff":1},{"id":"P2C1.Q2","q":"\u201cExcept in so far as\u201d implies:","opts":["Full applicability","Partial exclusion","Ignore law","Dual application"],"ans":1,"exp":"Means exclusion to the extent specified","type":"Trap","diff":2},{"id":"P2C1.Q3","q":"Associate company requires:","opts":["10% control","15% control","20% voting power","25% voting power"],"ans":2,"exp":"Defined as 20% voting power or participation","type":"Concept","diff":1},{"id":"P2C1.Q4","q":"Associate company condition includes:","opts":["Only voting power","Only contracts","Either voting or participation","None"],"ans":2,"exp":"\u201cOR\u201d condition is key trap","type":"Trap","diff":2},{"id":"P2C1.Q5","q":"Definition section is:","opts":["External aid","Internal aid","Judicial aid","None"],"ans":1,"exp":"Definitions act as internal aid","type":"Concept","diff":2},{"id":"P2C1.Q6","q":"Subsidiary of public company is treated as:","opts":["Private","Public","Either","Optional"],"ans":1,"exp":"Always treated as public","type":"Trap","diff":2},{"id":"P2C1.Q7","q":"Small company excludes:","opts":["Private company","Holding company","OPC","LLP"],"ans":1,"exp":"Holding companies excluded","type":"Trap","diff":2},{"id":"P2C1.Q8","q":"Fiduciary holding is:","opts":["Counted","Ignored","Optional","Taxed"],"ans":1,"exp":"Not considered for control calculation","type":"Trap","diff":3},{"id":"P2C1.Q9","q":"Financial year normally ends on:","opts":["31 Dec","31 March","30 June","Flexible"],"ans":1,"exp":"Defined under Act","type":"Concept","diff":1},{"id":"P2C1.Q10","q":"Net worth excludes:","opts":["Paid-up capital","Free reserves","Revaluation reserve","Securities premium"],"ans":2,"exp":"Revaluation reserve excluded","type":"Trap","diff":2},{"id":"P2C1.Q11","q":"Small company paid-up capital limit is:","opts":["\u20b94 Cr","\u20b95 Cr","\u20b910 Cr","\u20b950 Lakh"],"ans":2,"exp":"Revised to \u20b910 Cr","type":"Amendment","diff":1},{"id":"P2C1.Q12","q":"Small company turnover limit is:","opts":["\u20b940 Cr","\u20b950 Cr","\u20b9100 Cr","\u20b92 Cr"],"ans":2,"exp":"Revised to \u20b9100 Cr","type":"Amendment","diff":1}],"tricky":[{"id":"P2C1.T1","point":"\u201cExcept in so far as\u201d meaning","mistake":"Assume both laws apply fully","why":"Tests interpretation precision","priority":"High"},{"id":"P2C1.T2","point":"Commencement of Act (different dates)","mistake":"Assume entire Act applies together","why":"Tests conceptual clarity","priority":"Medium"},{"id":"P2C1.T3","point":"Definition = internal aid","mistake":"Confuse with external aid","why":"ICAI tests conceptual depth","priority":"Medium"},{"id":"P2C1.T4","point":"Associate = 20% OR participation","mistake":"Ignore \u201cOR\u201d condition","why":"Classic ICAI trap","priority":"High"},{"id":"P2C1.T5","point":"Fiduciary holding exclusion","mistake":"Include fiduciary shares","why":"Advanced differentiation question","priority":"High"},{"id":"P2C1.T6","point":"Small company exclusions","mistake":"Forget Section 8 / holding exclusions","why":"Repeated exam logic","priority":"Very High"},{"id":"P2C1.T7","point":"Private company (200 members rule)","mistake":"Count employees wrongly","why":"Numerical trap","priority":"High"},{"id":"P2C1.T8","point":"Subsidiary of public = public","mistake":"Assume private remains private","why":"Counterintuitive \u2192 high testability","priority":"Very High"},{"id":"P2C1.T9","point":"Financial year exception","mistake":"Ignore foreign subsidiary rule","why":"Application-based testing","priority":"Medium"},{"id":"P2C1.T10","point":"Net worth excludes revaluation","mistake":"Include revaluation reserve","why":"Practical + conceptual trap","priority":"High"}],"amendments":[{"id":"P2C1.A1","topic":"Small Company Threshold","what":"Paid-up capital limit increased to \u20b910 Cr and turnover to \u20b9100 Cr (replacing earlier \u20b94 Cr / \u20b940 Cr)","relevance":"Very High","priority":"Very High"}],"cases":[{"id":"P2C1.C1","scenario":"Company applies Companies Act provisions ignoring exception clause","question":"Is this correct?","answer":"No","reasoning":"\u201cExcept in so far as\u201d limits applicability","trap":"Interpretation trap","diff":3},{"id":"P2C1.C2","scenario":"Two companies share 20% voting power but no participation in policy decisions","question":"Associate company?","answer":"Yes","reasoning":"Either voting power OR participation","trap":"OR condition trap","diff":3},{"id":"P2C1.C3","scenario":"Company holds shares in fiduciary capacity and counted for control","question":"Correct?","answer":"No","reasoning":"Fiduciary holdings excluded","trap":"Fiduciary trap","diff":4},{"id":"P2C1.C4","scenario":"Private company with \u20b98 Cr capital and \u20b990 Cr turnover claims small company status","question":"Valid?","answer":"Yes","reasoning":"Within revised limits","trap":"Amendment application","diff":2},{"id":"P2C1.C5","scenario":"Holding company claims small company benefit","question":"Valid?","answer":"No","reasoning":"Explicit exclusion","trap":"Exception trap","diff":3},{"id":"P2C1.C6","scenario":"Subsidiary of public company treated as private","question":"Correct?","answer":"No","reasoning":"Deemed public company","trap":"Counterintuitive trap","diff":3},{"id":"P2C1.C7","scenario":"Company prepares accounts for calendar year (Jan\u2013Dec) without approval","question":"Valid?","answer":"No","reasoning":"Financial year must end 31 March","trap":"Compliance trap","diff":2},{"id":"P2C1.C8","scenario":"Company includes revaluation reserve in net worth","question":"Correct?","answer":"No","reasoning":"Must be excluded","trap":"Calculation trap","diff":3}],"trees":[{"id":"P2C1.DT1","topic":"Applicability Clause","logic":"Does provision contain \u201cexcept in so far as\u201d?","outcome":"Yes \u2192 Limited application; No \u2192 Full application"},{"id":"P2C1.DT2","topic":"Associate Company","logic":"\u226520% voting power OR participation?","outcome":"Yes \u2192 Associate; No \u2192 Not associate"},{"id":"P2C1.DT3","topic":"Fiduciary Holding","logic":"Shares held in fiduciary capacity?","outcome":"Yes \u2192 Ignore for control; No \u2192 Count"},{"id":"P2C1.DT4","topic":"Small Company Status","logic":"Capital \u2264 \u20b910 Cr AND turnover \u2264 \u20b9100 Cr? AND not excluded?","outcome":"Yes \u2192 Small company; No \u2192 Not"},{"id":"P2C1.DT5","topic":"Public vs Private Status","logic":"Is it subsidiary of public company?","outcome":"Yes \u2192 Deemed public; No \u2192 Normal classification"},{"id":"P2C1.DT6","topic":"Financial Year","logic":"Ends on 31 March?","outcome":"Yes \u2192 Valid; No \u2192 Invalid unless exception"},{"id":"P2C1.DT7","topic":"Net Worth Calculation","logic":"Includes revaluation reserve?","outcome":"Yes \u2192 Incorrect; No \u2192 Correct"}]},{"id":"P2C2","name":"Incorporation of Company and Matters Incidental Thereto","mcqs":[{"id":"P2C2.Q1","q":"Promoter includes:","opts":["Only named person","Only shareholders","Person with indirect control","Only directors"],"ans":2,"exp":"Includes indirect control & influence","type":"Concept","diff":2},{"id":"P2C2.Q2","q":"Professional acting as advisor is:","opts":["Promoter","Not promoter","Director","Member"],"ans":1,"exp":"Professionals excluded","type":"Trap","diff":2},{"id":"P2C2.Q3","q":"Minimum members for public company:","opts":["2","5","7","10"],"ans":2,"exp":"Defined under Sec 3","type":"Concept","diff":1},{"id":"P2C2.Q4","q":"OPC can be formed by:","opts":["Minor","Indian citizen","Foreign company","LLP"],"ans":1,"exp":"Only natural person, Indian citizen","type":"Concept","diff":2},{"id":"P2C2.Q5","q":"OPC nominee change timeline:","opts":["7 days","15 days","30 days","60 days"],"ans":1,"exp":"Member must nominate within 15 days","type":"Trap","diff":3},{"id":"P2C2.Q6","q":"Company continues with reduced members >6 months:","opts":["No liability","Joint liability","Several liability","Limited liability"],"ans":2,"exp":"Members become severally liable","type":"Trap","diff":3},{"id":"P2C2.Q7","q":"SPICe+ is:","opts":["Single form","Multi-service form","Only tax form","Only ROC filing"],"ans":1,"exp":"Integrated 10 services","type":"Concept","diff":2},{"id":"P2C2.Q8","q":"MOA must be signed:","opts":["Without witness","With 2 witnesses","With 1 witness","Not required"],"ans":2,"exp":"At least one witness required","type":"Trap","diff":2},{"id":"P2C2.Q9","q":"Certificate of incorporation is:","opts":["Absolute proof","Not conclusive proof","Invalid proof","Optional proof"],"ans":1,"exp":"Not conclusive under 2013 Act","type":"Trap","diff":3},{"id":"P2C2.Q10","q":"CIN first letter indicates:","opts":["State","Year","Listing status","ROC"],"ans":2,"exp":"L = listed, U = unlisted","type":"Concept","diff":2},{"id":"P2C2.Q11","q":"OPC can be Section 8 company:","opts":["Yes","No","Optional","Depends"],"ans":1,"exp":"Explicitly prohibited","type":"Trap","diff":2},{"id":"P2C2.Q12","q":"Name similarity includes:","opts":["Same spelling only","Minor variation allowed","Phonetic similarity also","Only exact match"],"ans":2,"exp":"Includes phonetic similarity","type":"Trap","diff":2}],"tricky":[{"id":"P2C2.T1","point":"Promoter definition includes indirect control","mistake":"Ignore \u201cindirect control\u201d & advice-based control","why":"Conceptual + case trap","priority":"Very High"},{"id":"P2C2.T2","point":"Professional advice \u2260 promoter","mistake":"Treat CA/lawyer as promoter","why":"Exception-based testing","priority":"High"},{"id":"P2C2.T3","point":"Minimum members (7/2/1)","mistake":"Confuse OPC vs private vs public","why":"Basic but high-frequency","priority":"Very High"},{"id":"P2C2.T4","point":"OPC eligibility (Indian citizen, not minor)","mistake":"Think NRI not allowed","why":"ICAI tests updated interpretation","priority":"High"},{"id":"P2C2.T5","point":"OPC nominee rules (change/withdrawal)","mistake":"Miss timelines (15 days / 30 days)","why":"Procedural trap","priority":"Very High"},{"id":"P2C2.T6","point":"Member liability (Sec 3A)","mistake":"Think liability always limited","why":"Conditional liability trap","priority":"Very High"},{"id":"P2C2.T7","point":"SPICe+ form scope","mistake":"Treat as simple form only","why":"Practical + exam relevance","priority":"Medium"},{"id":"P2C2.T8","point":"MOA/AOA signing rules","mistake":"Ignore witness / foreign rules","why":"Procedural + tricky","priority":"High"},{"id":"P2C2.T9","point":"Certificate of incorporation NOT conclusive proof","mistake":"Assume absolute validity","why":"Legal conceptual trap","priority":"Very High"},{"id":"P2C2.T10","point":"CIN structure decoding","mistake":"Ignore meaning of digits","why":"Applied MCQ area","priority":"Medium"},{"id":"P2C2.T11","point":"Section 8 company restrictions","mistake":"Think OPC allowed","why":"Exception trap","priority":"Very High"},{"id":"P2C2.T12","point":"Name similarity rules","mistake":"Ignore minor spelling changes","why":"ICAI favorite trap area","priority":"Very High"}],"amendments":[],"cases":[{"id":"P2C2.C1","scenario":"Person indirectly controls company decisions but not named as promoter","question":"Promoter?","answer":"Yes","reasoning":"Indirect control included","trap":"Control trap","diff":4},{"id":"P2C2.C2","scenario":"CA advises company and is treated as promoter","question":"Correct?","answer":"No","reasoning":"Professional advice excluded","trap":"Exception trap","diff":3},{"id":"P2C2.C3","scenario":"Public company formed with 5 members","question":"Valid?","answer":"No","reasoning":"Requires minimum 7 members","trap":"Basic trap","diff":2},{"id":"P2C2.C4","scenario":"OPC formed by minor","question":"Valid?","answer":"No","reasoning":"Minor not allowed","trap":"Eligibility trap","diff":2},{"id":"P2C2.C5","scenario":"OPC fails to appoint nominee within 15 days","question":"Valid?","answer":"No","reasoning":"Mandatory requirement","trap":"Timeline trap","diff":3},{"id":"P2C2.C6","scenario":"Company continues with 1 member for 8 months (private company)","question":"Liability?","answer":"Yes","reasoning":"Member becomes personally liable","trap":"Liability trap","diff":4},{"id":"P2C2.C7","scenario":"MOA signed without witness","question":"Valid?","answer":"No","reasoning":"Witness required","trap":"Procedural trap","diff":3},{"id":"P2C2.C8","scenario":"Company claims incorporation valid despite fraud in documents","question":"Correct?","answer":"No","reasoning":"Incorporation not conclusive proof","trap":"Legal trap","diff":4},{"id":"P2C2.C9","scenario":"Company name differs slightly from existing company","question":"Allowed?","answer":"No","reasoning":"Phonetic similarity also restricted","trap":"Name trap","diff":3},{"id":"P2C2.C10","scenario":"OPC registered as Section 8 company","question":"Valid?","answer":"No","reasoning":"Not permitted","trap":"Structural trap","diff":3}],"trees":[{"id":"P2C2.DT1","topic":"Promoter Identification","logic":"Does person have direct OR indirect control?","outcome":"Yes \u2192 Promoter; No \u2192 Not promoter"},{"id":"P2C2.DT2","topic":"Professional Exception","logic":"Acting in professional capacity only?","outcome":"Yes \u2192 Not promoter; No \u2192 May be promoter"},{"id":"P2C2.DT3","topic":"Minimum Members","logic":"Members \u2265 required (7/2/1)?","outcome":"Yes \u2192 Valid; No \u2192 Invalid incorporation"},{"id":"P2C2.DT4","topic":"OPC Eligibility","logic":"Natural person + Indian citizen + not minor?","outcome":"Yes \u2192 Eligible; No \u2192 Not eligible"},{"id":"P2C2.DT5","topic":"OPC Nominee","logic":"Nominee appointed within time?","outcome":"Yes \u2192 Valid; No \u2192 Non-compliance"},{"id":"P2C2.DT6","topic":"Member Liability","logic":"Members < minimum for >6 months?","outcome":"Yes \u2192 Personal liability arises"},{"id":"P2C2.DT7","topic":"MOA Validity","logic":"Signed + witnessed?","outcome":"Yes \u2192 Valid; No \u2192 Invalid"},{"id":"P2C2.DT8","topic":"Incorporation Validity","logic":"Any fraud/misrepresentation?","outcome":"Yes \u2192 Can be challenged; No \u2192 Valid"},{"id":"P2C2.DT9","topic":"Name Approval","logic":"Identical/phonetic similarity exists?","outcome":"Yes \u2192 Rejected; No \u2192 Approved"},{"id":"P2C2.DT10","topic":"OPC Restriction","logic":"Is company Section 8?","outcome":"Yes \u2192 OPC not allowed; No \u2192 Allowed"}]},{"id":"P2C3","name":"Prospectus & Allotment of Securities","mcqs":[{"id":"P2C3.Q1","q":"Public company can issue securities via:","opts":["Only prospectus","Only private placement","Prospectus + private placement + rights/bonus","Only rights issue"],"ans":2,"exp":"Sec 23 modes","type":"Concept","diff":2},{"id":"P2C3.Q2","q":"\u201cPublic\u201d includes:","opts":["Only general public","Only shareholders","Any section of public","Only >50 persons"],"ans":2,"exp":"Not restricted to large group","type":"Trap","diff":3},{"id":"P2C3.Q3","q":"Private communication amounts to prospectus:","opts":["Always","Never","Depends on publicity","If marked confidential"],"ans":2,"exp":"Needs publicity element","type":"Trap","diff":3},{"id":"P2C3.Q4","q":"Deemed prospectus triggered if:","opts":["Within 1 year","Within 6 months","After 2 years","Anytime"],"ans":1,"exp":"6-month rule","type":"Trap","diff":3},{"id":"P2C3.Q5","q":"Prospectus includes:","opts":["Only document","Only circular","Advertisement also","Only SEBI doc"],"ans":2,"exp":"Definition includes advertisement","type":"Concept","diff":2},{"id":"P2C3.Q6","q":"Prospectus must be signed by:","opts":["Majority directors","All directors named","Chairman only","Any one director"],"ans":1,"exp":"Sec 26(4)","type":"Trap","diff":3},{"id":"P2C3.Q7","q":"Prospectus validity:","opts":["60 days","90 days","120 days","No limit"],"ans":1,"exp":"Sec 26(8)","type":"Concept","diff":1},{"id":"P2C3.Q8","q":"Expert statement allowed if:","opts":["No consent needed","Consent withdrawn","Written consent exists","Expert is promoter"],"ans":2,"exp":"Sec 26(5)","type":"Trap","diff":3},{"id":"P2C3.Q9","q":"Variation in prospectus objects needs:","opts":["Board resolution","Special resolution","Ordinary resolution","SEBI approval only"],"ans":1,"exp":"Sec 27","type":"Concept","diff":2},{"id":"P2C3.Q10","q":"Shelf prospectus validity:","opts":["6 months","1 year","2 years","Unlimited"],"ans":1,"exp":"Max 1 year","type":"Concept","diff":2},{"id":"P2C3.Q11","q":"Red herring prospectus excludes:","opts":["Company name","Price/quantity","Directors","Objects"],"ans":1,"exp":"Price discovery stage","type":"Concept","diff":2},{"id":"P2C3.Q12","q":"Abridged prospectus required:","opts":["Always","Never","With application form","Only IPO"],"ans":2,"exp":"Sec 33","type":"Concept","diff":2},{"id":"P2C3.Q13","q":"Misstatement includes:","opts":["False only","Omission only","Both false + omission","None"],"ans":2,"exp":"Legal definition","type":"Trap","diff":3},{"id":"P2C3.Q14","q":"Criminal liability under:","opts":["Sec 35","Sec 34","Sec 26","Sec 29"],"ans":1,"exp":"Sec 34 = criminal","type":"Concept","diff":2},{"id":"P2C3.Q15","q":"Civil liability under:","opts":["Sec 34","Sec 35","Sec 23","Sec 31"],"ans":1,"exp":"Sec 35 = compensation","type":"Concept","diff":2},{"id":"P2C3.Q16","q":"Demat compulsory for public offer:","opts":["Yes","No","Optional","Only listed"],"ans":0,"exp":"Sec 29","type":"Concept","diff":2}],"tricky":[{"id":"P2C3.T1","point":"Public vs Private placement (Sec 23)","mistake":"Think private co can issue prospectus","why":"Structural concept trap","priority":"Very High"},{"id":"P2C3.T2","point":"Meaning of \u201cpublic\u201d","mistake":"Assume large number required","why":"Case-law based trap","priority":"Very High"},{"id":"P2C3.T3","point":"Private communication \u2260 prospectus","mistake":"Confuse with deemed prospectus","why":"Classic ICAI trap","priority":"Very High"},{"id":"P2C3.T4","point":"Deemed prospectus conditions (Sec 25)","mistake":"Ignore 6 months / consideration test","why":"Technical + tricky","priority":"Very High"},{"id":"P2C3.T5","point":"Prospectus includes advertisement","mistake":"Students think only formal document","why":"Definition trap","priority":"High"},{"id":"P2C3.T6","point":"Section 26 signing requirement","mistake":"Think majority directors sufficient","why":"Procedural trap","priority":"Very High"},{"id":"P2C3.T7","point":"Prospectus validity = 90 days","mistake":"Ignore timeline","why":"Straight but easy mistake","priority":"High"},{"id":"P2C3.T8","point":"Expert consent rules","mistake":"Ignore withdrawal condition","why":"Liability angle","priority":"High"},{"id":"P2C3.T9","point":"Variation in objects (Sec 27)","mistake":"Think board approval enough","why":"Governance trap","priority":"Very High"},{"id":"P2C3.T10","point":"Deemed prospectus additional disclosures","mistake":"Think same as normal prospectus","why":"Extra requirement trap","priority":"High"},{"id":"P2C3.T11","point":"Shelf vs Red Herring prospectus","mistake":"Mix both concepts","why":"ICAI loves comparison","priority":""}],"amendments":[],"cases":[{"id":"P2C3.C1","scenario":"Company circulates 2,500 copies marked \u201cPrivate Circulation Only\u201d to investors","question":"Is this a prospectus?","answer":"Yes","reasoning":"Offering to a section of public still qualifies as public issue","trap":"Public definition trap","diff":4},{"id":"P2C3.C2","scenario":"Director sends document marked confidential to one person","question":"Does this amount to prospectus?","answer":"No","reasoning":"No public invitation \u2192 private communication","trap":"Private communication","diff":3},{"id":"P2C3.C3","scenario":"Shares allotted to intermediary and offered to public within 4 months","question":"Is this deemed prospectus?","answer":"Yes","reasoning":"Offer within 6 months triggers Sec 25","trap":"Time-based trigger","diff":4},{"id":"P2C3.C4","scenario":"Shares allotted to intermediary but consideration not fully received, then offered to public","question":"Deemed prospectus?","answer":"Yes","reasoning":"Consideration incomplete \u2192 deemed prospectus applies","trap":"Consideration trap","diff":4},{"id":"P2C3.C5","scenario":"Prospectus issued without filing with ROC","question":"Valid?","answer":"No","reasoning":"Filing with ROC is mandatory before issue","trap":"Procedural compliance","diff":3},{"id":"P2C3.C6","scenario":"Prospectus signed by majority of directors only","question":"Valid?","answer":"No","reasoning":"Must be signed by all named directors","trap":"Majority vs all","diff":3},{"id":"P2C3.C7","scenario":"Prospectus issued after 100 days from filing","question":"Valid?","answer":"No","reasoning":"Validity limited to 90 days","trap":"Timeline trap","diff":2},{"id":"P2C3.C8","scenario":"Expert withdraws consent before filing but statement included","question":"Valid prospectus?","answer":"No","reasoning":"Expert consent must exist at filing","trap":"Expert condition","diff":4},{"id":"P2C3.C9","scenario":"Company changes object of issue without shareholder approval","question":"Valid?","answer":"No","reasoning":"Requires special resolution under Sec 27","trap":"Governance trap","diff":3},{"id":"P2C3.C10","scenario":"Prospectus shows dividends but hides they were from capital profits","question":"Misstatement?","answer":"Yes","reasoning":"Omission leading to misleading impression = misstatement","trap":"Concealment trap","diff":5},{"id":"P2C3.C11","scenario":"Director claims reliance on promoter\u2019s statement for incorrect info","question":"Liable?","answer":"Yes","reasoning":"Directors liable under Sec 34 & 35","trap":"Liability trap","diff":4},{"id":"P2C3.C12","scenario":"Investor buys shares from market (not directly from company)","question":"Can rescission be claimed?","answer":"No","reasoning":"Only original allottee can rescind","trap":"Eligibility trap","diff":4}],"trees":[{"id":"P2C3.DT1","topic":"Public vs Private Issue","logic":"Is communication made to a section of public (not specific identified persons)?","outcome":"Yes \u2192 Public issue (prospectus applies); No \u2192 Private communication"},{"id":"P2C3.DT2","topic":"Meaning of \u201cPublic\u201d","logic":"Is offer open beyond identified individuals?","outcome":"Yes \u2192 Considered public (even small group); No \u2192 Not public"},{"id":"P2C3.DT3","topic":"Private Communication","logic":"Is communication confidential and to a specific person?","outcome":"Yes \u2192 Not prospectus; No \u2192 May be prospectus"},{"id":"P2C3.DT4","topic":"Deemed Prospectus (Time Test)","logic":"Shares allotted to intermediary AND offered to public within 6 months?","outcome":"Yes \u2192 Deemed prospectus; No \u2192 Not triggered"},{"id":"P2C3.DT5","topic":"Deemed Prospectus (Consideration Test)","logic":"Has intermediary paid full consideration?","outcome":"No \u2192 Deemed prospectus applies; Yes \u2192 May not apply"},{"id":"P2C3.DT6","topic":"Prospectus Definition","logic":"Is it any document/notice/advertisement inviting public subscription?","outcome":"Yes \u2192 Prospectus; No \u2192 Not prospectus"},{"id":"P2C3.DT7","topic":"Prospectus Validity","logic":"Is issue within 90 days of filing?","outcome":"Yes \u2192 Valid; No \u2192 Invalid prospectus"},{"id":"P2C3.DT8","topic":"Signing Requirement","logic":"Signed by all named directors?","outcome":"No \u2192 Invalid prospectus; Yes \u2192 Valid"},{"id":"P2C3.DT9","topic":"Expert Consent","logic":"Has expert given written consent at time of filing?","outcome":"No \u2192 Invalid; Yes \u2192 Valid"},{"id":"P2C3.DT10","topic":"Variation of Objects","logic":"Is special resolution passed?","outcome":"No \u2192 Invalid variation; Yes \u2192 Valid"},{"id":"P2C3.DT11","topic":"Abridged Prospectus","logic":"Is application form issued with prospectus?","outcome":"Yes \u2192 Abridged prospectus required; No \u2192 Not required"},{"id":"P2C3.DT12","topic":"Shelf vs Red Herring","logic":"Multiple issues over time OR price not finalized?","outcome":"Multiple issues \u2192 Shelf prospectus; Price not finalized \u2192 Red herring"},{"id":"P2C3.DT13","topic":"Misstatement","logic":"Is statement false OR omission misleading?","outcome":"Yes \u2192 Misstatement exists; No \u2192 No misstatement"},{"id":"P2C3.DT14","topic":"Liability Type","logic":"Is liability criminal or civil?","outcome":"Sec 34 \u2192 Criminal; Sec 35 \u2192 Civil liability"},{"id":"P2C3.DT15","topic":"Rescission Right","logic":"Did investor subscribe directly from company?","outcome":"Yes \u2192 Can rescind; No \u2192 Cannot rescind"},{"id":"P2C3.DT16","topic":"Demat Requirement","logic":"Is it a public offer?","outcome":"Yes \u2192 Demat mandatory; No \u2192 Not mandatory"}]},{"id":"P2C4","name":"Share Capital and Debentures","mcqs":[{"id":"P2C4.Q1","q":"Share includes:","opts":["Only equity","Only preference","Stock also","Debentures"],"ans":2,"exp":"Share includes stock","type":"Concept","diff":1},{"id":"P2C4.Q2","q":"Preference share has priority in:","opts":["Dividend only","Capital only","Both dividend & capital","None"],"ans":2,"exp":"Both rights exist","type":"Concept","diff":1},{"id":"P2C4.Q3","q":"Company can have only preference shares:","opts":["Yes","No","Optional","Depends"],"ans":1,"exp":"Equity must exist","type":"Trap","diff":2},{"id":"P2C4.Q4","q":"Max voting power for DVR shares:","opts":["50%","74%","100%","25%"],"ans":1,"exp":"Rule 4 cap","type":"Trap","diff":3},{"id":"P2C4.Q5","q":"Share certificate is:","opts":["Conclusive proof","Prima facie proof","No proof","Optional"],"ans":1,"exp":"Prima facie only","type":"Trap","diff":2},{"id":"P2C4.Q6","q":"Duplicate share certificate issued within:","opts":["15 days","45 days","3 months","Both B & C"],"ans":3,"exp":"Listed 45 days, unlisted 3 months","type":"Concept","diff":2},{"id":"P2C4.Q7","q":"Equity shareholder voting right:","opts":["Fixed","Proportional","None","Optional"],"ans":1,"exp":"Based on paid-up capital","type":"Concept","diff":1},{"id":"P2C4.Q8","q":"Preference shareholders vote when dividend unpaid for:","opts":["1 year","2 years","3 years","Always"],"ans":1,"exp":"Trigger condition","type":"Trap","diff":2},{"id":"P2C4.Q9","q":"Variation of rights requires:","opts":["50% holders","75% shares","75% directors","Tribunal only"],"ans":1,"exp":"% of shares","type":"Trap","diff":3},{"id":"P2C4.Q10","q":"Calls must be:","opts":["Selective","Uniform","Optional","Random"],"ans":1,"exp":"Sec 49","type":"Concept","diff":2},{"id":"P2C4.Q11","q":"Calls in advance gives:","opts":["Extra voting","Same voting","No voting","Double voting"],"ans":1,"exp":"No extra rights","type":"Trap","diff":2},{"id":"P2C4.Q12","q":"Securities premium can be used for:","opts":["Dividend","Bonus shares","Salaries","Tax"],"ans":1,"exp":"Allowed usage","type":"Concept","diff":2},{"id":"P2C4.Q13","q":"Shares issued at discount are:","opts":["Valid","Void","Optional","Conditional"],"ans":1,"exp":"Except exceptions","type":"Trap","diff":2},{"id":"P2C4.Q14","q":"Sweat equity requires:","opts":["Ordinary resolution","Special resolution","No approval","Board only"],"ans":1,"exp":"Mandatory condition","type":"Concept","diff":2},{"id":"P2C4.Q15","q":"Irredeemable preference shares:","opts":["Allowed","Prohibited","Optional","Conditional"],"ans":1,"exp":"Not allowed","type":"Concept","diff":1}],"tricky":[{"id":"P2C4.T1","point":"Share vs Stock","mistake":"Think both same concept","why":"Concept clarity + case","priority":"High"},{"id":"P2C4.T2","point":"Preference shares rights","mistake":"Forget both dividend + capital preference","why":"Core definition trap","priority":"Very High"},{"id":"P2C4.T3","point":"Company cannot have only preference shares","mistake":"Assume allowed","why":"Logical trap","priority":"Very High"},{"id":"P2C4.T4","point":"Differential voting rights conditions","mistake":"Ignore 74% cap + conditions","why":"Procedural + heavy","priority":"Very High"},{"id":"P2C4.T5","point":"Share certificate = prima facie evidence","mistake":"Treat as conclusive proof","why":"Legal nuance","priority":"High"},{"id":"P2C4.T6","point":"Duplicate certificate rules","mistake":"Ignore timelines (3 months / 45 days)","why":"Practical trap","priority":"Very High"},{"id":"P2C4.T7","point":"Voting rights (equity vs preference)","mistake":"Think preference always vote","why":"Conditional rights trap","priority":"Very High"},{"id":"P2C4.T8","point":"Preference shareholders voting trigger","mistake":"Forget 2 years unpaid dividend rule","why":"ICAI favorite","priority":"Very High"},{"id":"P2C4.T9","point":"Variation of rights = 75% of shares (not holders)","mistake":"Confuse % of holders","why":"Classic exam trap","priority":"Very High"},{"id":"P2C4.T10","point":"Calls must be uniform","mistake":"Think selective call allowed","why":"Legal principle","priority":"High"},{"id":"P2C4.T11","point":"Calls in advance = no extra voting rights","mistake":"Think more payment = more rights","why":"Logical trap","priority":"High"},{"id":"P2C4.T12","point":"Securities premium usage restrictions","mistake":"Treat as free reserve","why":"Accounting + law mix","priority":"Very High"},{"id":"P2C4.T13","point":"Issue at discount prohibited","mistake":"Forget exceptions (debt conversion)","why":"Amendment + trap","priority":"Very High"},{"id":"P2C4.T14","point":"Sweat equity conditions","mistake":"Ignore special resolution + limits","why":"Procedural heavy","priority":"High"},{"id":"P2C4.T15","point":"Preference shares must be redeemable","mistake":"Think irredeemable allowed","why":"Direct law trap","priority":"Very High"}],"amendments":[],"cases":[{"id":"P2C4.C1","scenario":"Company converts fully paid shares into stock and later reconverts","question":"Is this allowed?","answer":"Yes","reasoning":"Sec 61 allows conversion both ways","trap":"Share vs Stock","diff":3},{"id":"P2C4.C2","scenario":"Company issues only preference shares with no equity","question":"Valid?","answer":"No","reasoning":"Preference requires existence of equity","trap":"Structural trap","diff":3},{"id":"P2C4.C3","scenario":"Company issues DVR shares with 80% voting power","question":"Valid?","answer":"No","reasoning":"Max cap is 74%","trap":"Limit breach","diff":4},{"id":"P2C4.C4","scenario":"Company defaults in dividend but still issues DVR shares","question":"Valid?","answer":"No","reasoning":"No default allowed for DVR issuance","trap":"Condition violation","diff":4},{"id":"P2C4.C5","scenario":"Share certificate issued but wrong name printed","question":"Can holder claim ownership?","answer":"Yes (prima facie)","reasoning":"Certificate is prima facie evidence, not conclusive","trap":"Evidence trap","diff":3},{"id":"P2C4.C6","scenario":"Duplicate share certificate issued after 5 months (unlisted company)","question":"Valid?","answer":"No","reasoning":"Must be within 3 months","trap":"Timeline trap","diff":3},{"id":"P2C4.C7","scenario":"Preference shareholder tries voting on general resolution (dividend paid regularly)","question":"Allowed?","answer":"No","reasoning":"Only limited voting rights","trap":"Voting trap","diff":3},{"id":"P2C4.C8","scenario":"Preference dividend unpaid for 2+ years","question":"Can they vote on all matters?","answer":"Yes","reasoning":"Sec 47 trigger activated","trap":"Conditional right","diff":4},{"id":"P2C4.C9","scenario":"Variation approved by 75% of shareholders (number), not value","question":"Valid?","answer":"No","reasoning":"Requires 75% of share value","trap":"Technical trap","diff":4},{"id":"P2C4.C10","scenario":"Company calls unpaid amount only from few shareholders","question":"Valid?","answer":"No","reasoning":"Calls must be uniform within class","trap":"Equality principle","diff":3},{"id":"P2C4.C11","scenario":"Shareholder pays full amount early (calls in advance) and demands extra voting rights","question":"Allowed?","answer":"No","reasoning":"No additional voting rights","trap":"Logical trap","diff":3},{"id":"P2C4.C12","scenario":"Company uses securities premium to pay dividends","question":"Valid?","answer":"No","reasoning":"Restricted usage","trap":"Accounting-law trap","diff":4},{"id":"P2C4.C13","scenario":"Company issues shares at discount to public","question":"Valid?","answer":"No","reasoning":"Prohibited under Sec 53","trap":"Direct violation","diff":2},{"id":"P2C4.C14","scenario":"Company converts debt into shares at discount","question":"Valid?","answer":"Yes","reasoning":"Exception allowed","trap":"Exception trap","diff":4},{"id":"P2C4.C15","scenario":"Company issues sweat equity without special resolution","question":"Valid?","answer":"No","reasoning":"Mandatory requirement","trap":"Procedural trap","diff":3},{"id":"P2C4.C16","scenario":"Sweat equity issued beyond 25% limit","question":"Valid?","answer":"No","reasoning":"Exceeds statutory cap","trap":"Limit breach","diff":4},{"id":"P2C4.C17","scenario":"Company issues irredeemable preference shares","question":"Valid?","answer":"No","reasoning":"Strictly prohibited","trap":"Direct law trap","diff":2},{"id":"P2C4.C18","scenario":"Preference shares redeemable after 25 years","question":"Valid?","answer":"No","reasoning":"Max 20 years (general rule)","trap":"Timeline trap","diff":3}],"trees":[{"id":"P2C4.DT1","topic":"Preference Share Voting","logic":"Dividend unpaid \u2265 2 years? \u2192 Yes / No","outcome":"Yes \u2192 Full voting rights on all matters; No \u2192 Only on matters affecting rights"},{"id":"P2C4.DT2","topic":"DVR Validity","logic":"Voting power \u2264 74%? AND No default in filings/dividend?","outcome":"If any condition fails \u2192 Invalid; Else \u2192 Valid DVR issue"},{"id":"P2C4.DT3","topic":"Variation of Rights","logic":"Approval \u2265 75% of share VALUE?","outcome":"No \u2192 Invalid; Yes \u2192 Valid (dissenters may apply to Tribunal)"},{"id":"P2C4.DT4","topic":"Issue at Discount","logic":"Normal issue OR debt conversion?","outcome":"Normal \u2192 Invalid; Debt conversion \u2192 Allowed"},{"id":"P2C4.DT5","topic":"Securities Premium Usage","logic":"Used for allowed purposes (bonus, write-off, redemption premium)?","outcome":"Yes \u2192 Allowed; No \u2192 Not allowed"},{"id":"P2C4.DT6","topic":"Share Certificate","logic":"Certificate issued?","outcome":"Yes \u2192 Prima facie evidence (not conclusive); Can be challenged"},{"id":"P2C4.DT7","topic":"Duplicate Certificate","logic":"Listed or Unlisted company?","outcome":"Listed \u2192 Issue within 45 days; Unlisted \u2192 Within 3 months; Delay \u2192 Non-compliance"},{"id":"P2C4.DT8","topic":"Calls on Shares","logic":"Calls uniform within same class?","outcome":"No \u2192 Invalid; Yes \u2192 Valid"},{"id":"P2C4.DT9","topic":"Calls in Advance","logic":"Early payment made?","outcome":"No extra voting rights granted"},{"id":"P2C4.DT10","topic":"Sweat Equity","logic":"Special resolution passed AND within limits (\u226425%)?","outcome":"If any fails \u2192 Invalid; Else \u2192 Valid"},{"id":"P2C4.DT11","topic":"Preference Redemption","logic":"Irredeemable OR redemption >20 years?","outcome":"Yes \u2192 Invalid; Else \u2192 Valid"}]},{"id":"P2C5","name":"Acceptance of Deposits","mcqs":[{"id":"P2C5.Q1","q":"Deposit includes:","opts":["Only loans","Only advances","Any receipt unless excluded","Only borrowings"],"ans":2,"exp":"Wide definition","type":"Concept","diff":1},{"id":"P2C5.Q2","q":"Loan from director is:","opts":["Deposit","Not deposit","Optional","Depends"],"ans":1,"exp":"Excluded category","type":"Trap","diff":2},{"id":"P2C5.Q3","q":"Advance becomes deposit after:","opts":["180 days","365 days + 15","60 days","Never"],"ans":1,"exp":"Timeline rule","type":"Trap","diff":3},{"id":"P2C5.Q4","q":"Share application money becomes deposit after:","opts":["30 days","60 days","60 + 15 days","90 days"],"ans":2,"exp":"Allot/refund rule","type":"Trap","diff":3},{"id":"P2C5.Q5","q":"Convertible note (startup):","opts":["Deposit","Not deposit","Optional","Depends"],"ans":1,"exp":"Exception","type":"Concept","diff":2},{"id":"P2C5.Q6","q":"Private company can accept from public:","opts":["Yes","No","Conditional","Optional"],"ans":1,"exp":"Not allowed","type":"Concept","diff":1},{"id":"P2C5.Q7","q":"Eligible company requires:","opts":["Any turnover","\u20b9100 Cr net worth OR \u20b9500 Cr turnover","\u20b910 Cr","\u20b950 Cr"],"ans":1,"exp":"Eligibility rule","type":"Concept","diff":2},{"id":"P2C5.Q8","q":"Deposit acceptance requires:","opts":["Board approval","No approval","Resolution","Optional"],"ans":2,"exp":"Mandatory","type":"Trap","diff":2},{"id":"P2C5.Q9","q":"Deposit repayment reserve:","opts":["10%","15%","20%","25%"],"ans":2,"exp":"Sec 73 rule","type":"Concept","diff":2},{"id":"P2C5.Q10","q":"Deposit tenure:","opts":["3\u201312 months","6\u201336 months","1\u20135 years","Any"],"ans":1,"exp":"Standard rule","type":"Concept","diff":2},{"id":"P2C5.Q11","q":"Short-term deposits allowed if:","opts":["Any amount","\u226410% limit","\u226450%","Not allowed"],"ans":1,"exp":"Exception","type":"Trap","diff":3},{"id":"P2C5.Q12","q":"Max deposit from members (private co):","opts":["10%","25%","35%","50%"],"ans":2,"exp":"Limit rule","type":"Trap","diff":3},{"id":"P2C5.Q13","q":"Credit rating required for:","opts":["All deposits","Public deposits","None","Optional"],"ans":1,"exp":"Mandatory for eligible company","type":"Trap","diff":3},{"id":"P2C5.Q14","q":"Secured deposit requires:","opts":["Any asset","Intangible asset","Tangible asset charge","No asset"],"ans":2,"exp":"Legal requirement","type":"Trap","diff":3},{"id":"P2C5.Q15","q":"Delay in repayment attracts:","opts":["10%","12%","18%","24%"],"ans":2,"exp":"Penal interest","type":"Concept","diff":2}],"tricky":[{"id":"P2C5.T1","point":"Definition of deposit (wide scope)","mistake":"Think only loans are deposits","why":"Classification trap","priority":"Very High"},{"id":"P2C5.T2","point":"Exclusions (director, ICD, govt)","mistake":"Miss exclusions","why":"ICAI favorite","priority":"Very High"},{"id":"P2C5.T3","point":"Advance becomes deposit","mistake":"Ignore 365 + 15 rule","why":"Timeline trap","priority":"Very High"},{"id":"P2C5.T4","point":"Share application money timeline","mistake":"Forget 60 + 15 rule","why":"Classic ICAI question","priority":"Very High"},{"id":"P2C5.T5","point":"Convertible notes (startup)","mistake":"Treat as deposit","why":"Exception trap","priority":"Medium"},{"id":"P2C5.T6","point":"Private company restriction","mistake":"Think public deposits allowed","why":"Structural trap","priority":"High"},{"id":"P2C5.T7","point":"Eligible company criteria","mistake":"Ignore net worth/turnover","why":"Eligibility trap","priority":"High"},{"id":"P2C5.T8","point":"Resolution requirement","mistake":"Think optional","why":"Procedural trap","priority":"High"},{"id":"P2C5.T9","point":"Deposit repayment reserve (20%)","mistake":"Forget April 30 deadline","why":"Compliance trap","priority":"Very High"},{"id":"P2C5.T10","point":"Tenure rules (6\u201336 months)","mistake":"Ignore short-term exception","why":"Exception trap","priority":"Very High"},{"id":"P2C5.T11","point":"Deposit limits (10%, 25%, 35%)","mistake":"Confuse percentages","why":"Numerical trap","priority":"Very High"},{"id":"P2C5.T12","point":"Credit rating requirement","mistake":"Ignore mandatory nature","why":"Co","priority":""}],"amendments":[],"cases":[{"id":"P2C5.C1","scenario":"Company receives advance for goods and does not supply within 365 days and doesn\u2019t refund","question":"Is it deposit?","answer":"Yes","reasoning":"Becomes deposit after 15 days of becoming refundable","trap":"Time + conversion trap","diff":5},{"id":"P2C5.C2","scenario":"Company receives loan from another company","question":"Deposit?","answer":"No","reasoning":"Inter-corporate loans excluded","trap":"Classification trap","diff":3},{"id":"P2C5.C3","scenario":"Share application money not allotted within 60 days and not refunded in next 15 days","question":"Deposit?","answer":"Yes","reasoning":"Deemed deposit condition triggered","trap":"Timeline trap","diff":5},{"id":"P2C5.C4","scenario":"Private company accepts deposit from public","question":"Valid?","answer":"No","reasoning":"Private company cannot accept from public","trap":"Structural trap","diff":3},{"id":"P2C5.C5","scenario":"Public company accepts deposits without meeting net worth/turnover criteria","question":"Valid?","answer":"No","reasoning":"Not an eligible company","trap":"Eligibility trap","diff":4},{"id":"P2C5.C6","scenario":"Company accepts deposit without passing resolution","question":"Valid?","answer":"No","reasoning":"Mandatory requirement","trap":"Procedural trap","diff":3},{"id":"P2C5.C7","scenario":"Company does not create deposit repayment reserve","question":"Valid?","answer":"No","reasoning":"20% reserve mandatory","trap":"Compliance trap","diff":4},{"id":"P2C5.C8","scenario":"Company accepts deposit repayable in 2 months","question":"Valid?","answer":"No","reasoning":"Minimum tenure 6 months (except special case)","trap":"Tenure trap","diff":3},{"id":"P2C5.C9","scenario":"Company accepts short-term deposit (4 months) within 10% limit","question":"Valid?","answer":"Yes","reasoning":"Exception allowed (\u22653 months)","trap":"Exception trap","diff":4},{"id":"P2C5.C10","scenario":"Company accepts deposit exceeding 35% limit from members","question":"Valid?","answer":"No","reasoning":"Exceeds statutory limit","trap":"Limit trap","diff":3},{"id":"P2C5.C11","scenario":"Eligible company accepts public deposit without credit rating","question":"Valid?","answer":"No","reasoning":"Credit rating mandatory","trap":"Compliance trap","diff":4},{"id":"P2C5.C12","scenario":"Company creates charge on intangible assets for secured deposit","question":"Valid?","answer":"No","reasoning":"Only tangible assets allowed","trap":"Asset trap","diff":4},{"id":"P2C5.C13","scenario":"Company delays repayment and pays normal interest","question":"Correct?","answer":"No","reasoning":"Must pay 18% penal interest","trap":"Penalty trap","diff":3},{"id":"P2C5.C14","scenario":"Company alters deposit terms after accepting deposits","question":"Valid?","answer":"No","reasoning":"Cannot alter adversely","trap":"Legal protection trap","diff":4},{"id":"P2C5.C15","scenario":"Company receives money from director with proper declaration","question":"Deposit?","answer":"No","reasoning":"Excluded category","trap":"Exception trap","diff":3},{"id":"P2C5.C16","scenario":"Start-up receives \u20b925L convertible note in single tranche","question":"Deposit?","answer":"No","reasoning":"Specifically excluded","trap":"Amendment-style trap","diff":4}],"trees":[{"id":"P2C5.DT1","topic":"Deposit Definition","logic":"Is money received as loan/deposit/any form?","outcome":"Yes \u2192 Deposit unless excluded"},{"id":"P2C5.DT2","topic":"Exclusion Test","logic":"Falls under exclusions (govt, bank, ICD, director etc.)?","outcome":"Yes \u2192 Not deposit; No \u2192 Deposit"},{"id":"P2C5.DT3","topic":"Advance for Goods","logic":"Adjusted within 365 days?","outcome":"Yes \u2192 Not deposit; No \u2192 Becomes deposit after 15 days"},{"id":"P2C5.DT4","topic":"Share Application Money","logic":"Allotted within 60 days OR refunded within 15 days?","outcome":"No \u2192 Becomes deposit"},{"id":"P2C5.DT5","topic":"Private Company","logic":"Accepting from public?","outcome":"Yes \u2192 Invalid; No \u2192 Allowed (members only)"},{"id":"P2C5.DT6","topic":"Eligible Company","logic":"Net worth \u2265100 Cr OR turnover \u2265500 Cr?","outcome":"Yes \u2192 Eligible; No \u2192 Cannot take public deposits"},{"id":"P2C5.DT7","topic":"Resolution Requirement","logic":"Resolution passed?","outcome":"No \u2192 Invalid; Yes \u2192 Proceed"},{"id":"P2C5.DT8","topic":"Deposit Repayment Reserve","logic":"20% reserve created by April 30?","outcome":"No \u2192 Non-compliance; Yes \u2192 Valid"},{"id":"P2C5.DT9","topic":"Tenure Rule","logic":"Deposit tenure between 6\u201336 months?","outcome":"Yes \u2192 Valid"},{"id":"P2C5.DT10","topic":"Short-Term Exception","logic":"\u226410% limit AND \u22653 months?","outcome":"Yes \u2192 Allowed"},{"id":"P2C5.DT11","topic":"Limit Check","logic":"Within % limits (35% / 10% / 25%)?","outcome":"No \u2192 Invalid"},{"id":"P2C5.DT12","topic":"Credit Rating","logic":"Rating obtained (for public deposits)?","outcome":"No \u2192 Invalid"},{"id":"P2C5.DT13","topic":"Security Creation","logic":"Charge on tangible assets?","outcome":"Yes \u2192 Valid secured deposit; No \u2192 Invalid"},{"id":"P2C5.DT14","topic":"Penal Interest","logic":"Delay in repayment?","outcome":"Yes \u2192 18% interest applicable"},{"id":"P2C5.DT15","topic":"Alteration of Terms","logic":"Terms changed after acceptance?","outcome":"Yes \u2192 Invalid"},{"id":"P2C5.DT16","topic":"Convertible Note","logic":"Startup + \u2265\u20b925L single tranche?","outcome":"Yes \u2192 Not deposit"}]},{"id":"P2C6","name":"Registration of Charges","mcqs":[{"id":"P2C6.Q1","q":"Charge includes:","opts":["Only mortgage","Only lien","Interest/lien incl. mortgage","Only loan"],"ans":2,"exp":"Sec 2(16)","type":"Concept","diff":1},{"id":"P2C6.Q2","q":"Fixed charge applies to:","opts":["Changing assets","Specific assets","Future assets","None"],"ans":1,"exp":"Fixed asset","type":"Concept","diff":1},{"id":"P2C6.Q3","q":"Floating charge crystallizes when:","opts":["Sale","Default/liquidation","Profit","Issue shares"],"ans":1,"exp":"Trigger events","type":"Trap","diff":2},{"id":"P2C6.Q4","q":"Registration must be within:","opts":["15 days","30 days","60 days","90 days"],"ans":1,"exp":"Base rule","type":"Concept","diff":1},{"id":"P2C6.Q5","q":"Post-2018 max period (with extension):","opts":["60 days","90 days","120 days","180 days"],"ans":2,"exp":"30+30+60","type":"Trap","diff":3},{"id":"P2C6.Q6","q":"If company fails, who can register?","opts":["ROC","Govt","Charge-holder","Auditor"],"ans":2,"exp":"Sec 78","type":"Concept","diff":2},{"id":"P2C6.Q7","q":"Certificate of charge is:","opts":["Optional","Conclusive evidence","Advisory","Temporary"],"ans":1,"exp":"Legal proof","type":"Concept","diff":2},{"id":"P2C6.Q8","q":"Registered charge gives:","opts":["Actual notice","Deemed notice","No notice","Conditional"],"ans":1,"exp":"Sec 80","type":"Trap","diff":2},{"id":"P2C6.Q9","q":"Unregistered charge is:","opts":["Fully void","Valid fully","Void against liquidator","Always enforceable"],"ans":2,"exp":"Sec 77(3)","type":"Trap","diff":3},{"id":"P2C6.Q10","q":"Priority based on:","opts":["Creation date","Registration date","Agreement","Amount"],"ans":1,"exp":"ICAI favorite","type":"Trap","diff":4},{"id":"P2C6.Q11","q":"Modification of charge requires:","opts":["No action","Re-registration","Approval only","Optional"],"ans":1,"exp":"Sec 79","type":"Concept","diff":2},{"id":"P2C6.Q12","q":"Register of charges kept by:","opts":["ROC only","Company only","Both","None"],"ans":2,"exp":"Dual requirement","type":"Concept","diff":1},{"id":"P2C6.Q13","q":"Satisfaction must be filed within:","opts":["15 days","30 days","60 days","90 days"],"ans":1,"exp":"Sec 82","type":"Concept","diff":1},{"id":"P2C6.Q14","q":"Registrar can update satisfaction without company?","opts":["No","Yes","Only court","Optional"],"ans":1,"exp":"Sec 83","type":"Trap","diff":2},{"id":"P2C6.Q15","q":"Penalty for default company:","opts":["\u20b91L","\u20b95L","\u20b910L","\u20b950K"],"ans":1,"exp":"Sec 86","type":"Concept","diff":1}],"tricky":[{"id":"P2C6.T1","point":"Meaning of charge","mistake":"Think only mortgage","why":"Definition trap","priority":"High"},{"id":"P2C6.T2","point":"Fixed vs Floating charge","mistake":"Confuse usage rights","why":"Concept + application","priority":"Very High"},{"id":"P2C6.T3","point":"Crystallization of floating charge","mistake":"Ignore triggers","why":"ICAI favorite","priority":"Very High"},{"id":"P2C6.T4","point":"Registration timeline (30 days)","mistake":"Forget base rule","why":"Timeline trap","priority":"Very High"},{"id":"P2C6.T5","point":"Extended timeline (post 2018)","mistake":"Confuse 60 + 60 structure","why":"Technical trap","priority":"Very High"},{"id":"P2C6.T6","point":"Charge-holder registration right","mistake":"Think only company can register","why":"Legal safeguard","priority":"High"},{"id":"P2C6.T7","point":"Certificate = conclusive evidence","mistake":"Treat as optional","why":"Legal effect","priority":"High"},{"id":"P2C6.T8","point":"Deemed notice of charge","mistake":"Think actual knowledge needed","why":"Legal fiction trap","priority":"Very High"},{"id":"P2C6.T9","point":"Non-registration consequence","mistake":"Think charge invalid completely","why":"Partial invalidity trap","priority":"Very High"},{"id":"P2C6.T10","point":"Priority of charge","mistake":"Think earlier creation wins","why":"Registration date matters","priority":"Very High"},{"id":"P2C6.T11","point":"Modification of charge","mistake":"Ignore requirement to re-register","why":"Compliance trap","priority":"High"},{"id":"P2C6.T12","point":"Register of charges","mistake":"Think optional","why":"Compliance trap","priority":"Medium"},{"id":"P2C6.T13","point":"Satisfaction of charge timeline","mistake":"Forget 30 + 300 rule","why":"Timeline trap","priority":"High"},{"id":"P2C6.T14","point":"Registrar power (Sec 83)","mistake":"Think company only can update","why":"Legal authority trap","priority":"Medium"},{"id":"P2C6.T15","point":"Penalty provisions","mistake":"Ignore Sec 86","why":"Direct question","priority":"Medium"}],"amendments":[],"cases":[{"id":"P2C6.C1","scenario":"Company creates charge but doesn\u2019t register within 30 days","question":"Valid charge?","answer":"Yes (but limited)","reasoning":"Debt valid but charge void against liquidator/creditors","trap":"Partial invalidity","diff":4},{"id":"P2C6.C2","scenario":"Bank A creates charge first but registers late; Bank B registers earlier","question":"Who has priority?","answer":"Bank B","reasoning":"Priority based on registration, not creation","trap":"Priority trap","diff":5},{"id":"P2C6.C3","scenario":"Floating charge exists; company defaults","question":"What happens?","answer":"Crystallizes","reasoning":"Floating converts into fixed charge","trap":"Concept trigger","diff":3},{"id":"P2C6.C4","scenario":"Company fails to register; lender applies to ROC","question":"Allowed?","answer":"Yes","reasoning":"Charge-holder can register under Sec 78","trap":"Legal safeguard","diff":3},{"id":"P2C6.C5","scenario":"Buyer purchases charged asset claiming no knowledge","question":"Valid defense?","answer":"No","reasoning":"Registered charge gives deemed notice","trap":"Legal fiction","diff":4},{"id":"P2C6.C6","scenario":"Company modifies charge terms but does not register","question":"Valid?","answer":"No","reasoning":"Modification requires registration","trap":"Compliance trap","diff":3},{"id":"P2C6.C7","scenario":"Charge satisfied but company does not inform ROC","question":"Valid?","answer":"No","reasoning":"Must file satisfaction within timeline","trap":"Timeline trap","diff":3},{"id":"P2C6.C8","scenario":"Registrar records satisfaction without company filing","question":"Valid?","answer":"Yes","reasoning":"Registrar has power under Sec 83","trap":"Authority trap","diff":3}],"trees":[{"id":"P2C6.DT1","topic":"Charge Definition","logic":"Is security created on asset/property?","outcome":"Yes \u2192 Charge"},{"id":"P2C6.DT2","topic":"Fixed vs Floating","logic":"Specific asset OR fluctuating asset?","outcome":"Specific \u2192 Fixed; Fluctuating \u2192 Floating"},{"id":"P2C6.DT3","topic":"Crystallization","logic":"Default/liquidation occurs?","outcome":"Yes \u2192 Floating becomes fixed"},{"id":"P2C6.DT4","topic":"Registration Timeline","logic":"Filed within 30 days?","outcome":"Yes \u2192 Valid"},{"id":"P2C6.DT5","topic":"Extension Rule","logic":"Within 60 days? Else within further 60 days?","outcome":"Yes \u2192 Valid with fees"},{"id":"P2C6.DT6","topic":"Who can register","logic":"Company failed?","outcome":"Yes \u2192 Charge-holder can register"},{"id":"P2C6.DT7","topic":"Deemed Notice","logic":"Charge registered?","outcome":"Yes \u2192 Third party deemed aware"},{"id":"P2C6.DT8","topic":"Non-registration","logic":"Registered?","outcome":"No \u2192 Void against liquidator (debt survives)"},{"id":"P2C6.DT9","topic":"Priority","logic":"Which registered earlier?","outcome":"Earlier registration \u2192 Higher priority"},{"id":"P2C6.DT10","topic":"Modification","logic":"Terms changed?","outcome":"Yes \u2192 Must re-register"},{"id":"P2C6.DT11","topic":"Satisfaction","logic":"Paid off?","outcome":"Yes \u2192 File within 30 days"},{"id":"P2C6.DT12","topic":"Registrar Power","logic":"No intimation but evidence exists?","outcome":"Yes \u2192 Registrar can update"}]},{"id":"P2C7","name":"Management and Administration","mcqs":[{"id":"P2C7.Q1","q":"Register of members required for:","opts":["Public only","Private only","All companies","Listed only"],"ans":2,"exp":"Sec 88","type":"Concept","diff":1},{"id":"P2C7.Q2","q":"Entries in register within:","opts":["3 days","7 days","15 days","30 days"],"ans":1,"exp":"Rule 5","type":"Trap","diff":2},{"id":"P2C7.Q3","q":"Register location change requires:","opts":["Board approval","Special resolution","ROC approval","None"],"ans":1,"exp":"Rule 5","type":"Concept","diff":2},{"id":"P2C7.Q4","q":"Index required if members:","opts":[">10",">25","\u226550","Always"],"ans":2,"exp":"Rule 6","type":"Trap","diff":2},{"id":"P2C7.Q5","q":"Beneficial interest declaration time:","opts":["15 days","30 days","60 days","90 days"],"ans":1,"exp":"Sec 89","type":"Concept","diff":2},{"id":"P2C7.Q6","q":"SBO threshold:","opts":["25%","20%","10%","5%"],"ans":2,"exp":"Rule SBO","type":"Trap","diff":3},{"id":"P2C7.Q7","q":"Register closure max (year):","opts":["30 days","45 days","60 days","90 days"],"ans":1,"exp":"Sec 91","type":"Concept","diff":2},{"id":"P2C7.Q8","q":"Notice before closure:","opts":["3 days","5 days","7 days","10 days"],"ans":2,"exp":"Rule 10","type":"Concept","diff":1},{"id":"P2C7.Q9","q":"Annual return filing:","opts":["30 days","45 days","60 days","90 days"],"ans":2,"exp":"Sec 92","type":"Trap","diff":2},{"id":"P2C7.Q10","q":"OPC files annual return in:","opts":["MGT-7","MGT-7A","AOC-4","DIR-3"],"ans":1,"exp":"Rule 11","type":"Concept","diff":2},{"id":"P2C7.Q11","q":"CS certification required for:","opts":["All cos","Listed only","Big cos","None"],"ans":2,"exp":"Sec 92(2)","type":"Trap","diff":3},{"id":"P2C7.Q12","q":"AGM is:","opts":["Optional","Mandatory yearly","Rare","Optional for private"],"ans":1,"exp":"Sec 96","type":"Concept","diff":1},{"id":"P2C7.Q13","q":"Quorum absence leads to:","opts":["Cancel","Adjourn","Invalid","Continue"],"ans":1,"exp":"Sec 103","type":"Trap","diff":2},{"id":"P2C7.Q14","q":"Proxy can vote on show of hands:","opts":["Yes","No","Conditional","Always"],"ans":1,"exp":"Sec 105","type":"Trap","diff":3},{"id":"P2C7.Q15","q":"Special resolution requires:","opts":["50%","75%","90%","100%"],"ans":1,"exp":"Sec 114","type":"Concept","diff":1}],"tricky":[{"id":"P2C7.T1","point":"Register of members mandatory","mistake":"Think optional","why":"Basic compliance trap","priority":"High"},{"id":"P2C7.T2","point":"Entries within 7 days","mistake":"Ignore timeline","why":"Timeline trap","priority":"Very High"},{"id":"P2C7.T3","point":"Register location change","mistake":"Forget special resolution","why":"Procedural trap","priority":"High"},{"id":"P2C7.T4","point":"Index not needed <50 members","mistake":"Always assume required","why":"Exception trap","priority":"Medium"},{"id":"P2C7.T5","point":"Beneficial interest declaration (30 days)","mistake":"Confuse forms/timelines","why":"ICAI favorite","priority":"Very High"},{"id":"P2C7.T6","point":"SBO threshold (10%)","mistake":"Assume 25%","why":"Amendment-style trap","priority":"Very High"},{"id":"P2C7.T7","point":"Closure of register limits (45/30 days)","mistake":"Confuse limits","why":"Numerical trap","priority":"High"},{"id":"P2C7.T8","point":"Notice for closure (7 days)","mistake":"Ignore requirement","why":"Procedural trap","priority":"High"},{"id":"P2C7.T9","point":"Annual return filing (60 days)","mistake":"Link only to AGM held","why":"ICAI trap","priority":"Very High"},{"id":"P2C7.T10","point":"MGT-7 vs MGT-7A","mistake":"Confuse applicability","why":"Format trap","priority":"High"},{"id":"P2C7.T11","point":"Certification by CS mandatory","mistake":"Ignore thresholds","why":"Compliance trap","priority":"High"},{"id":"P2C7.T12","point":"AGM vs EGM difference","mistake":"Treat same","why":"Concept trap","priority":"Medium"},{"id":"P2C7.T13","point":"Quorum rules","mistake":"Forget thresholds","why":"ICAI favorite","priority":"Very High"},{"id":"P2C7.T14","point":"Proxy cannot vote on show of hands","mistake":"Assume full rights","why":"Classic trap","priority":"Very High"},{"id":"P2C7.T15","point":"Special vs ordinary resolution","mistake":"Confuse % requirement","why":"Direct trap","priority":"Very High"}],"amendments":[],"cases":[{"id":"P2C7.C1","scenario":"Company updates register after 15 days of allotment","question":"Valid?","answer":"No","reasoning":"Must update within 7 days","trap":"Timeline trap","diff":4},{"id":"P2C7.C2","scenario":"Company shifts register without special resolution","question":"Valid?","answer":"No","reasoning":"SR required","trap":"Procedural trap","diff":3},{"id":"P2C7.C3","scenario":"Company with 40 members maintains no index","question":"Valid?","answer":"Yes","reasoning":"Exception applies","trap":"Exception trap","diff":3},{"id":"P2C7.C4","scenario":"Beneficial owner fails to declare interest","question":"Can rights be enforced?","answer":"No","reasoning":"Rights suspended","trap":"Legal consequence","diff":5},{"id":"P2C7.C5","scenario":"Individual holds 12% shares indirectly but not declared SBO","question":"SBO?","answer":"Yes","reasoning":"\u226510% rule","trap":"Threshold trap","diff":4},{"id":"P2C7.C6","scenario":"Company closes register for 50 days in year","question":"Valid?","answer":"No","reasoning":"Max 45 days","trap":"Limit breach","diff":4},{"id":"P2C7.C7","scenario":"Company gives 3 days notice before closure","question":"Valid?","answer":"No","reasoning":"Minimum 7 days","trap":"Timeline trap","diff":3},{"id":"P2C7.C8","scenario":"AGM not held; company skips annual return","question":"Valid?","answer":"No","reasoning":"Still must file within 60 days","trap":"ICAI favorite","diff":5},{"id":"P2C7.C9","scenario":"Small company files MGT-7 instead of MGT-7A","question":"Valid?","answer":"No","reasoning":"Wrong form","trap":"Format trap","diff":3},{"id":"P2C7.C10","scenario":"Large company files return without CS certification","question":"Valid?","answer":"No","reasoning":"Mandatory requirement","trap":"Compliance trap","diff":4},{"id":"P2C7.C11","scenario":"Meeting held without quorum but continues","question":"Valid?","answer":"No","reasoning":"Must adjourn","trap":"Meeting trap","diff":4},{"id":"P2C7.C12","scenario":"Proxy votes on show of hands","question":"Valid?","answer":"No","reasoning":"Not allowed","trap":"Voting trap","diff":4},{"id":"P2C7.C13","scenario":"Resolution passed with 60% votes as special resolution","question":"Valid?","answer":"No","reasoning":"Needs 75%","trap":"Percentage trap","diff":3}],"trees":[{"id":"P2C7.DT1","topic":"Register Requirement","logic":"Is company incorporated?","outcome":"Yes \u2192 Must maintain register"},{"id":"P2C7.DT2","topic":"Entry Timeline","logic":"Entry made within 7 days?","outcome":"No \u2192 Non-compliance"},{"id":"P2C7.DT3","topic":"Register Location","logic":"Shifted register?","outcome":"Yes \u2192 Needs special resolution"},{"id":"P2C7.DT4","topic":"Index Requirement","logic":"Members <50?","outcome":"Yes \u2192 Index not required"},{"id":"P2C7.DT5","topic":"Beneficial Interest","logic":"Declaration filed within 30 days?","outcome":"No \u2192 Rights not enforceable"},{"id":"P2C7.DT6","topic":"SBO Test","logic":"Holding \u226510% or control?","outcome":"Yes \u2192 SBO"},{"id":"P2C7.DT7","topic":"Register Closure","logic":"Within 45 days/year & 30 at a time?","outcome":"No \u2192 Invalid"},{"id":"P2C7.DT8","topic":"Closure Notice","logic":"\u22657 days notice given?","outcome":"No \u2192 Invalid"},{"id":"P2C7.DT9","topic":"Annual Return","logic":"Filed within 60 days of AGM (or due date)?","outcome":"No \u2192 Penalty"},{"id":"P2C7.DT10","topic":"Form Selection","logic":"OPC/small company?","outcome":"Yes \u2192 MGT-7A; No \u2192 MGT-7"},{"id":"P2C7.DT11","topic":"CS Certification","logic":"Meets threshold?","outcome":"Yes \u2192 Certification required"},{"id":"P2C7.DT12","topic":"Quorum","logic":"Quorum present?","outcome":"No \u2192 Adjourn meeting"},{"id":"P2C7.DT13","topic":"Proxy Voting","logic":"Voting via show of hands?","outcome":"Proxy cannot vote"},{"id":"P2C7.DT14","topic":"Resolution Type","logic":"\u226575% votes?","outcome":"Yes \u2192 Special; No \u2192 Ordinary"}]},{"id":"P2C8","name":"Declaration & Payment of Dividend","mcqs":[{"id":"P2C8.Q1","q":"Dividend includes:","opts":["Final","Interim","Both","None"],"ans":2,"exp":"Sec 2(35) includes interim","type":"Concept","diff":1},{"id":"P2C8.Q2","q":"Dividend declared by:","opts":["Board","Shareholders","CS","Govt"],"ans":1,"exp":"Shareholders declare","type":"Concept","diff":2},{"id":"P2C8.Q3","q":"Dividend higher than board recommendation:","opts":["Allowed","Not allowed","Conditional","Rare"],"ans":1,"exp":"Cannot exceed board","type":"Trap","diff":3},{"id":"P2C8.Q4","q":"Dividend calculated on:","opts":["Market value","Face value","NAV","Cost"],"ans":1,"exp":"Always face value","type":"Trap","diff":3},{"id":"P2C8.Q5","q":"Dividend from reserves:","opts":["All reserves","Free reserves only","Capital reserve","Any"],"ans":1,"exp":"Only free reserves","type":"Trap","diff":3},{"id":"P2C8.Q6","q":"Interim dividend declared by:","opts":["Shareholders","Board","Govt","Auditor"],"ans":1,"exp":"Board declares interim","type":"Concept","diff":2},{"id":"P2C8.Q7","q":"Deposit within:","opts":["3 days","5 days","7 days","10 days"],"ans":1,"exp":"Sec 123(4)","type":"Concept","diff":1},{"id":"P2C8.Q8","q":"Payment within:","opts":["15 days","30 days","45 days","60 days"],"ans":1,"exp":"Sec 127","type":"Concept","diff":1},{"id":"P2C8.Q9","q":"UDA transfer timing:","opts":["30 days","37 days","45 days","60 days"],"ans":1,"exp":"30+7 rule","type":"Trap","diff":3},{"id":"P2C8.Q10","q":"IEPF transfer after:","opts":["5 yrs","6 yrs","7 yrs","10 yrs"],"ans":2,"exp":"Sec 125","type":"Concept","diff":1},{"id":"P2C8.Q11","q":"Interest on UDA default:","opts":["10%","12%","15%","18%"],"ans":1,"exp":"Sec 124","type":"Trap","diff":2},{"id":"P2C8.Q12","q":"Interest on non-payment:","opts":["10%","12%","15%","18%"],"ans":3,"exp":"Sec 127","type":"Trap","diff":2}],"tricky":[{"id":"P2C8.T1","point":"Dividend includes interim","mistake":"Treat separately","why":"Definition confusion","priority":"Medium"},{"id":"P2C8.T2","point":"Declared by shareholders","mistake":"Think board declares","why":"Core conceptual clarity","priority":"Very High"},{"id":"P2C8.T3","point":"Cannot exceed board recommendation","mistake":"Ignore cap","why":"ICAI classic trap","priority":"Very High"},{"id":"P2C8.T4","point":"Dividend on face value","mistake":"Use market value","why":"Numerical trap","priority":"Very High"},{"id":"P2C8.T5","point":"Depreciation mandatory","mistake":"Ignore adjustment","why":"Protect capital principle","priority":"High"},{"id":"P2C8.T6","point":"Only free reserves allowed","mistake":"Include revaluation","why":"ICAI favorite","priority":"Very High"},{"id":"P2C8.T7","point":"Past losses must be set off","mistake":"Skip step","why":"Adjustment logic","priority":"High"},{"id":"P2C8.T8","point":"Interim dividend loss restriction","mistake":"Ignore avg rule","why":"Condition-based testing","priority":"Very High"},{"id":"P2C8.T9","point":"Deposit within 5 days","mistake":"Forget timeline","why":"Straight timeline trap","priority":"Very High"},{"id":"P2C8.T10","point":"Payment within 30 days","mistake":"Confuse with UDA","why":"Penalty trigger","priority":"Very High"},{"id":"P2C8.T11","point":"UDA transfer (30+7 rule)","mistake":"Confuse sequence","why":"Flow-based trap","priority":"Very High"},{"id":"P2C8.T12","point":"IEPF after 7 years","mistake":"Forget duration","why":"Long-term memory trap","priority":"High"},{"id":"P2C8.T13","point":"Shares also transferred to IEPF","mistake":"Miss","why":"Advanced ICAI trap","priority":"Very High"},{"id":"P2C8.T14","point":"Interest @12% (UDA default)","mistake":"Mix with 18%","why":"Rate confusion","priority":"Medium"},{"id":"P2C8.T15","point":"Interest @18% (non-payment)","mistake":"Mix with 12%","why":"ICAI twist","priority":"Very High"}],"amendments":[],"cases":[{"id":"P2C8.C1","scenario":"Shareholders declare dividend > board recommendation","question":"Valid?","answer":"No","reasoning":"Cannot exceed board recommendation","trap":"Structural trap","diff":4},{"id":"P2C8.C2","scenario":"Dividend declared without depreciation","question":"Valid?","answer":"No","reasoning":"Mandatory before declaration","trap":"Adjustment trap","diff":4},{"id":"P2C8.C3","scenario":"Dividend declared from revaluation reserve","question":"Valid?","answer":"No","reasoning":"Not free reserve","trap":"Reserve trap","diff":5},{"id":"P2C8.C4","scenario":"Interim dividend declared in loss year above avg","question":"Valid?","answer":"No","reasoning":"Avg restriction applies","trap":"Conditional trap","diff":5},{"id":"P2C8.C5","scenario":"Dividend not deposited within 5 days","question":"Valid?","answer":"No","reasoning":"Violates Sec 123(4)","trap":"Timeline trap","diff":3},{"id":"P2C8.C6","scenario":"Dividend unpaid after 30 days","question":"Next step?","answer":"Transfer to UDA","reasoning":"Mandatory compliance","trap":"Flow trap","diff":4},{"id":"P2C8.C7","scenario":"UDA not transferred","question":"Consequence?","answer":"12% interest","reasoning":"Sec 124 penalty","trap":"Rate trap","diff":3},{"id":"P2C8.C8","scenario":"Dividend unpaid for 7 years","question":"Consequence?","answer":"Transfer to IEPF","reasoning":"Sec 125","trap":"Long-term trap","diff":4},{"id":"P2C8.C9","scenario":"Dividend unpaid 7 yrs on shares","question":"Shares?","answer":"Also transferred","reasoning":"Sec 124(6)","trap":"Advanced trap","diff":5},{"id":"P2C8.C10","scenario":"Dividend paid after 45 days","question":"Valid?","answer":"No","reasoning":"Penalty applies","trap":"Timeline trap","diff":3},{"id":"P2C8.C11","scenario":"Dividend adjusted against call money","question":"Valid?","answer":"Yes","reasoning":"Allowed adjustment","trap":"Exception trap","diff":2},{"id":"P2C8.C12","scenario":"Dividend paid to non-registered holder","question":"Valid?","answer":"No","reasoning":"Only registered shareholder","trap":"Legal trap","diff":3}],"trees":[{"id":"P2C8.DT1","topic":"Declaration Validity","logic":"Profits + depreciation + set-off satisfied?","outcome":"Yes \u2192 Proceed"},{"id":"P2C8.DT2","topic":"Source Check","logic":"Using free reserves only?","outcome":"No \u2192 Invalid"},{"id":"P2C8.DT3","topic":"Board Control","logic":"Dividend \u2264 recommendation?","outcome":"No \u2192 Invalid"},{"id":"P2C8.DT4","topic":"Deposit Timeline","logic":"Deposited within 5 days?","outcome":"No \u2192 Non-compliance"},{"id":"P2C8.DT5","topic":"Payment Timeline","logic":"Paid within 30 days?","outcome":"No \u2192 Penalty"},{"id":"P2C8.DT6","topic":"UDA Flow","logic":"Unpaid after 30 days?","outcome":"Transfer within 7 days"},{"id":"P2C8.DT7","topic":"IEPF Transfer","logic":"Unclaimed for 7 years?","outcome":"Transfer to IEPF"},{"id":"P2C8.DT8","topic":"Share Transfer","logic":"Dividend unpaid 7 yrs?","outcome":"Shares transferred"},{"id":"P2C8.DT9","topic":"Interest Check","logic":"Delay in UDA transfer?","outcome":"12% interest"},{"id":"P2C8.DT10","topic":"Penal Interest","logic":"Delay in payment?","outcome":"18% interest"}]},{"id":"P2C9","name":"Accounts of Companies","mcqs":[{"id":"P2C9.Q1","q":"Books must be kept on:","opts":["Cash","Accrual","Hybrid","Optional"],"ans":1,"exp":"Sec 128","type":"Concept","diff":1},{"id":"P2C9.Q2","q":"Books preserved for:","opts":["5 yrs","6 yrs","8 yrs","10 yrs"],"ans":2,"exp":"Includes vouchers","type":"Concept","diff":1},{"id":"P2C9.Q3","q":"Books can be kept outside RO if:","opts":["Govt approval","Board decision + ROC filing","Auditor approval","None"],"ans":1,"exp":"AOC-5 filing","type":"Trap","diff":3},{"id":"P2C9.Q4","q":"Audit trail mandatory for:","opts":["All companies","Software users","Listed only","Optional"],"ans":1,"exp":"Rule 3","type":"Trap","diff":3},{"id":"P2C9.Q5","q":"Financial statements must comply with:","opts":["AS","Schedule III","Both","None"],"ans":2,"exp":"Combined requirement","type":"Concept","diff":2},{"id":"P2C9.Q6","q":"Consolidated FS required when:","opts":["Subsidiary exists","Optional","Only listed","None"],"ans":0,"exp":"Sec 129","type":"Concept","diff":2},{"id":"P2C9.Q7","q":"Deviation disclosure includes:","opts":["Reason only","Effect only","Deviation + reason + effect","None"],"ans":2,"exp":"3-part disclosure","type":"Trap","diff":2},{"id":"P2C9.Q8","q":"Reopening accounts requires:","opts":["Board approval","Tribunal order","Auditor approval","None"],"ans":1,"exp":"Sec 130","type":"Trap","diff":3},{"id":"P2C9.Q9","q":"Reopening allowed for:","opts":["3 yrs","5 yrs","8 yrs","Unlimited"],"ans":2,"exp":"Time cap","type":"Concept","diff":2},{"id":"P2C9.Q10","q":"Voluntary revision allowed for:","opts":["2 yrs","3 yrs","5 yrs","8 yrs"],"ans":1,"exp":"Sec 131","type":"Concept","diff":2},{"id":"P2C9.Q11","q":"NFRA applies to:","opts":["Small cos","Listed cos","All cos","Private only"],"ans":1,"exp":"Threshold-based","type":"Concept","diff":2},{"id":"P2C9.Q12","q":"Financial statements laid at:","opts":["Board meeting","AGM","EGM","ROC"],"ans":1,"exp":"Mandatory","type":"Concept","diff":1}],"tricky":[{"id":"P2C9.T1","point":"Books must give true & fair view","mistake":"Treat as formality","why":"Core accounting principle","priority":"High"},{"id":"P2C9.T2","point":"Accrual + double entry mandatory","mistake":"Think optional","why":"Concept trap","priority":"Very High"},{"id":"P2C9.T3","point":"Books location (RO or board-approved)","mistake":"Ignore AOC-5 filing","why":"Procedural trap","priority":"High"},{"id":"P2C9.T4","point":"Books preservation 8 years","mistake":"Forget vouchers included","why":"ICAI direct","priority":"Very High"},{"id":"P2C9.T5","point":"Electronic books rules (audit trail mandatory)","mistake":"Ignore audit log requirement","why":"Amendment-driven","priority":"Very High"},{"id":"P2C9.T6","point":"Director inspection rights","mistake":"Think restricted","why":"Governance trap","priority":"Medium"},{"id":"P2C9.T7","point":"Financial statement components","mistake":"Miss cash flow exceptions","why":"Concept trap","priority":"High"},{"id":"P2C9.T8","point":"Schedule III compliance","mistake":"Ignore format","why":"ICAI favorite","priority":"High"},{"id":"P2C9.T9","point":"Consolidated FS mandatory","mistake":"Miss exemptions","why":"Big exam area","priority":"Very High"},{"id":"P2C9.T10","point":"Deviation disclosure (3 parts)","mistake":"Miss financial effect","why":"Direct ICAI question","priority":"Very High"},{"id":"P2C9.T11","point":"Reopening only via Tribunal","mistake":"Think voluntary allowed","why":"Legal trap","priority":"Very High"},{"id":"P2C9.T12","point":"Reopening time limit (8 years)","mistake":"Forget limit","why":"Timeline trap","priority":"High"},{"id":"P2C9.T13","point":"Voluntary revision \u2192 Tribunal approval","mistake":"Think board enough","why":"Procedural trap","priority":"Very High"},{"id":"P2C9.T14","point":"Revision only for 3 years","mistake":"Ignore limit","why":"Timeline trap","priority":"High"},{"id":"P2C9.T15","point":"NFRA applicability","mistake":"Confuse thresholds","why":"Authority trap","priority":"Very High"}],"amendments":[{"id":"P2C9.A1","topic":"AOC Forms converted to e-forms","what":"AOC-1, AOC-2 now e-forms","relevance":"Medium","priority":"Medium"},{"id":"P2C9.A2","topic":"Board Report disclosures expanded","what":"Sexual harassment + maternity compliance added","relevance":"High","priority":"High"},{"id":"P2C9.A3","topic":"XBRL filing requirement","what":"Mandatory PDF attachment with AOC-4 XBRL","relevance":"Medium","priority":"Medium"}],"cases":[{"id":"P2C9.C1","scenario":"Company maintains books on cash basis","question":"Valid?","answer":"No","reasoning":"Accrual mandatory","trap":"Concept trap","diff":4},{"id":"P2C9.C2","scenario":"Books kept outside RO without ROC filing","question":"Valid?","answer":"No","reasoning":"AOC-5 required","trap":"Compliance trap","diff":4},{"id":"P2C9.C3","scenario":"Books preserved for 6 years only","question":"Valid?","answer":"No","reasoning":"Minimum 8 years","trap":"Timeline trap","diff":3},{"id":"P2C9.C4","scenario":"Software without audit trail used","question":"Valid?","answer":"No","reasoning":"Mandatory feature","trap":"Amendment trap","diff":5},{"id":"P2C9.C5","scenario":"Company skips consolidated FS despite subsidiary","question":"Valid?","answer":"No","reasoning":"Mandatory","trap":"Structural trap","diff":5},{"id":"P2C9.C6","scenario":"Financial statement deviates but no disclosure","question":"Valid?","answer":"No","reasoning":"Must disclose all 3","trap":"ICAI favorite","diff":4},{"id":"P2C9.C7","scenario":"Board reopens accounts without Tribunal","question":"Valid?","answer":"No","reasoning":"Sec 130 violation","trap":"Legal trap","diff":5},{"id":"P2C9.C8","scenario":"Reopening done for 10 years","question":"Valid?","answer":"No","reasoning":"Max 8 years","trap":"Timeline trap","diff":4},{"id":"P2C9.C9","scenario":"Company revises FS without Tribunal approval","question":"Valid?","answer":"No","reasoning":"Mandatory approval","trap":"Procedural trap","diff":5},{"id":"P2C9.C10","scenario":"NFRA applies to small private company","question":"Valid?","answer":"No","reasoning":"Threshold not met","trap":"Scope trap","diff":3}],"trees":[{"id":"P2C9.DT1","topic":"Books Validity","logic":"Accrual + double entry followed?","outcome":"No \u2192 Invalid"},{"id":"P2C9.DT2","topic":"Location","logic":"Kept outside RO?","outcome":"Yes \u2192 ROC filing required"},{"id":"P2C9.DT3","topic":"Preservation","logic":"\u22658 years maintained?","outcome":"No \u2192 Non-compliance"},{"id":"P2C9.DT4","topic":"Electronic Books","logic":"Audit trail enabled?","outcome":"No \u2192 Non-compliance"},{"id":"P2C9.DT5","topic":"Financial Statement","logic":"As per Schedule III + AS?","outcome":"No \u2192 Invalid"},{"id":"P2C9.DT6","topic":"Consolidation","logic":"Subsidiary exists?","outcome":"Yes \u2192 CFS required"},{"id":"P2C9.DT7","topic":"Deviation","logic":"Deviation disclosed fully?","outcome":"No \u2192 Non-compliance"},{"id":"P2C9.DT8","topic":"Reopening","logic":"Tribunal order present?","outcome":"No \u2192 Invalid"},{"id":"P2C9.DT9","topic":"Revision","logic":"Within 3 years + Tribunal?","outcome":"No \u2192 Invalid"},{"id":"P2C9.DT10","topic":"NFRA Scope","logic":"Meets threshold/listed?","outcome":"Yes \u2192 NFRA applies"}]},{"id":"P2C10","name":"Audit & Auditors","mcqs":[{"id":"P2C10.Q1","q":"Auditor appointed at AGM holds office till:","opts":["Next AGM","3rd AGM","6th AGM","5 yrs"],"ans":2,"exp":"Sec 139","type":"Concept","diff":2},{"id":"P2C10.Q2","q":"First auditor appointed by:","opts":["Members","Board","CG","Auditor"],"ans":1,"exp":"Sec 139(6)","type":"Concept","diff":2},{"id":"P2C10.Q3","q":"First auditor tenure ends at:","opts":["6th AGM","1st AGM","5 yrs","Optional"],"ans":1,"exp":"Direct provision","type":"Concept","diff":1},{"id":"P2C10.Q4","q":"ADT-1 filed within:","opts":["30 days","15 days","60 days","7 days"],"ans":1,"exp":"ROC compliance","type":"Concept","diff":2},{"id":"P2C10.Q5","q":"Individual auditor max term:","opts":["5 yrs","10 yrs","Unlimited","6 yrs"],"ans":0,"exp":"Sec 139(2)","type":"Concept","diff":2},{"id":"P2C10.Q6","q":"Firm max term:","opts":["5 yrs","10 yrs","15 yrs","Unlimited"],"ans":1,"exp":"2\u00d75 yrs","type":"Concept","diff":2},{"id":"P2C10.Q7","q":"Cooling period:","opts":["3 yrs","5 yrs","10 yrs","None"],"ans":1,"exp":"Mandatory","type":"Concept","diff":1},{"id":"P2C10.Q8","q":"Casual vacancy due to resignation filled by:","opts":["Board","CG","Members","Auditor"],"ans":2,"exp":"GM approval needed","type":"Trap","diff":3},{"id":"P2C10.Q9","q":"Removal requires:","opts":["Board resolution","Special resolution + CG approval","Only CG","Only SR"],"ans":1,"exp":"Sec 140","type":"Trap","diff":3},{"id":"P2C10.Q10","q":"ADT-3 filed within:","opts":["15 days","30 days","60 days","90 days"],"ans":1,"exp":"Auditor duty","type":"Concept","diff":2},{"id":"P2C10.Q11","q":"Auditor disqualified if holding shares:","opts":[">1000","Any amount",">5000","Allowed"],"ans":1,"exp":"Strict rule","type":"Trap","diff":3},{"id":"P2C10.Q12","q":"Auditor must be:","opts":["CA","Lawyer","MBA","Any professional"],"ans":0,"exp":"Sec 141","type":"Concept","diff":1}],"tricky":[{"id":"P2C10.T1","point":"Auditor appointment tenure (1st AGM \u2192 6th AGM)","mistake":"Think yearly appointment","why":"Core logic","priority":"Very High"},{"id":"P2C10.T2","point":"First auditor by Board within 30 days","mistake":"Confuse with AGM appointment","why":"Timeline trap","priority":"Very High"},{"id":"P2C10.T3","point":"First auditor tenure ends at first AGM","mistake":"Think 5 years","why":"Direct trap","priority":"Very High"},{"id":"P2C10.T4","point":"ADT-1 filing within 15 days","mistake":"Forget ROC filing","why":"Procedural trap","priority":"High"},{"id":"P2C10.T5","point":"Rotation rules (individual vs firm)","mistake":"Mix limits","why":"ICAI favorite","priority":"Very High"},{"id":"P2C10.T6","point":"Cooling period 5 years","mistake":"Ignore cooling gap","why":"Timeline trap","priority":"Very High"},{"id":"P2C10.T7","point":"Common partner restriction","mistake":"Ignore network firms","why":"Advanced trap","priority":"High"},{"id":"P2C10.T8","point":"Casual vacancy due to resignation \u2192 GM approval","mistake":"Think board enough","why":"Classic ICAI trap","priority":"Very High"},{"id":"P2C10.T9","point":"Removal requires CG approval + special resolution","mistake":"Miss CG part","why":"Procedural trap","priority":"Very High"},{"id":"P2C10.T10","point":"ADT-3 filing on resignation within 30 days","mistake":"Ignore auditor duty","why":"Compliance trap","priority":"High"},{"id":"P2C10.T11","point":"Disqualification (holding ANY security)","mistake":"Think small holding allowed","why":"Old law confusion","priority":"Very High"},{"id":"P2C10.T12","point":"Auditor must be CA","mistake":"Think firm enough","why":"Basic trap","priority":"Medium"},{"id":"P2C10.T13","point":"Prohibited services (Section 144)","mistake":"Mix with audit services","why":"ICAI loves list","priority":"High"},{"id":"P2C10.T14","point":"Fraud by auditor \u2192 NCLT removal","mistake":"Ignore consequences","why":"High-stakes trap","priority":"Very High"}],"amendments":[{"id":"P2C10.A1","topic":"ADT-4 filing mode changed","what":"Report now filed electronically","relevance":"Medium","priority":"Medium"}],"cases":[{"id":"P2C10.C1","scenario":"Board appoints auditor for 5 years as first auditor","question":"Valid?","answer":"No","reasoning":"Only till 1st AGM","trap":"Concept trap","diff":4},{"id":"P2C10.C2","scenario":"No ADT-1 filed","question":"Valid?","answer":"No","reasoning":"Mandatory ROC filing","trap":"Compliance trap","diff":4},{"id":"P2C10.C3","scenario":"Auditor reappointed after 5 years without gap","question":"Valid?","answer":"No","reasoning":"Cooling required","trap":"Timeline trap","diff":4},{"id":"P2C10.C4","scenario":"Firm with common partner appointed","question":"Valid?","answer":"No","reasoning":"Independence violation","trap":"Advanced trap","diff":5},{"id":"P2C10.C5","scenario":"Board fills vacancy after resignation without GM","question":"Valid?","answer":"No","reasoning":"GM approval required","trap":"ICAI favorite","diff":5},{"id":"P2C10.C6","scenario":"Auditor removed without CG approval","question":"Valid?","answer":"No","reasoning":"Mandatory approval","trap":"Legal trap","diff":5},{"id":"P2C10.C7","scenario":"Auditor resigns but does not file ADT-3","question":"Valid?","answer":"No","reasoning":"Penalty applicable","trap":"Compliance trap","diff":4},{"id":"P2C10.C8","scenario":"Auditor holds shares of company","question":"Valid?","answer":"No","reasoning":"Absolute disqualification","trap":"Classic trap","diff":4},{"id":"P2C10.C9","scenario":"Auditor provides management consultancy","question":"Valid?","answer":"No","reasoning":"Prohibited service","trap":"Service trap","diff":4},{"id":"P2C10.C10","scenario":"Auditor involved in fraud","question":"Outcome?","answer":"Removed + ban 5 yrs","reasoning":"NCLT action","trap":"High-risk trap","diff":5}],"trees":[{"id":"P2C10.DT1","topic":"Appointment","logic":"First auditor?","outcome":"Board within 30 days"},{"id":"P2C10.DT2","topic":"Tenure","logic":"Appointed at AGM?","outcome":"Till 6th AGM"},{"id":"P2C10.DT3","topic":"Rotation","logic":"Individual/Firm?","outcome":"5 yrs / 10 yrs"},{"id":"P2C10.DT4","topic":"Cooling","logic":"Term completed?","outcome":"5-year gap required"},{"id":"P2C10.DT5","topic":"Vacancy","logic":"Due to resignation?","outcome":"GM approval required"},{"id":"P2C10.DT6","topic":"Removal","logic":"Before term?","outcome":"CG approval + SR"},{"id":"P2C10.DT7","topic":"Disqualification","logic":"Any shareholding?","outcome":"Disqualified"},{"id":"P2C10.DT8","topic":"Resignation","logic":"ADT-3 filed?","outcome":"No \u2192 Penalty"},{"id":"P2C10.DT9","topic":"Fraud","logic":"Auditor involved?","outcome":"NCLT removal + ban"}]},{"id":"P2C11","name":"Companies Incorporated Outside India","mcqs":[{"id":"P2C11.Q1","q":"Foreign company includes:","opts":["Only physical presence","Only branch","Electronic presence also","Only subsidiary"],"ans":2,"exp":"Sec 2(42) includes electronic mode","type":"Trap","diff":2},{"id":"P2C11.Q2","q":"Place of business includes:","opts":["Office only","Agent/server","Registered office only","None"],"ans":1,"exp":"Broad meaning","type":"Trap","diff":2},{"id":"P2C11.Q3","q":"Documents to ROC within:","opts":["15 days","30 days","60 days","90 days"],"ans":1,"exp":"Sec 380","type":"Concept","diff":1},{"id":"P2C11.Q4","q":"Initial filing form:","opts":["FC-2","FC-3","FC-1","FC-4"],"ans":2,"exp":"First filing","type":"Concept","diff":1},{"id":"P2C11.Q5","q":"Alteration filing:","opts":["FC-1","FC-2","FC-3","FC-4"],"ans":1,"exp":"Change reporting","type":"Concept","diff":1},{"id":"P2C11.Q6","q":"Financial statement filing within:","opts":["30 days","60 days","3 months","6 months"],"ans":3,"exp":"Sec 381","type":"Trap","diff":2},{"id":"P2C11.Q7","q":"Audit by:","opts":["Foreign auditor","Indian CA","Any auditor","Optional"],"ans":1,"exp":"Mandatory local audit","type":"Concept","diff":2},{"id":"P2C11.Q8","q":"Annual return form:","opts":["MGT-7","FC-4","AOC-4","DIR-3"],"ans":1,"exp":"Foreign company form","type":"Trap","diff":2},{"id":"P2C11.Q9","q":"Annual return timeline:","opts":["30 days","60 days","90 days","6 months"],"ans":1,"exp":"Sec 384","type":"Concept","diff":2},{"id":"P2C11.Q10","q":"Prospectus rules apply when:","opts":["Only Indian cos","Only foreign with office","Even without office","Never"],"ans":2,"exp":"Sec 387","type":"Trap","diff":3},{"id":"P2C11.Q11","q":"Penalty range:","opts":["\u20b950K\u2013\u20b95L","\u20b91L\u2013\u20b93L","\u20b910K\u2013\u20b91L","\u20b95L\u2013\u20b910L"],"ans":1,"exp":"Sec 392","type":"Concept","diff":1},{"id":"P2C11.Q12","q":"Contract validity if non-compliance:","opts":["Void","Valid","Conditional","Voidable"],"ans":1,"exp":"Sec 393","type":"Trap","diff":2}],"tricky":[{"id":"P2C11.T1","point":"Foreign company includes electronic presence","mistake":"Think physical presence required","why":"Definition trap","priority":"Very High"},{"id":"P2C11.T2","point":"Place of business includes agent/server","mistake":"Ignore indirect presence","why":"ICAI twist","priority":"High"},{"id":"P2C11.T3","point":"Sec 379 applicability (50% Indian holding rule)","mistake":"Ignore additional compliance","why":"Hybrid trap","priority":"Very High"},{"id":"P2C11.T4","point":"Documents to ROC within 30 days","mistake":"Forget timeline","why":"Direct trap","priority":"Very High"},{"id":"P2C11.T5","point":"Form FC-1 filing","mistake":"Ignore form","why":"Procedural trap","priority":"Medium"},{"id":"P2C11.T6","point":"Alteration filing within 30 days (FC-2)","mistake":"Ignore change reporting","why":"ICAI favorite","priority":"High"},{"id":"P2C11.T7","point":"Accounts to be filed annually (FC-3)","mistake":"Confuse with Indian company rules","why":"Cross-chapter trap","priority":"High"},{"id":"P2C11.T8","point":"Filing within 6 months of FY","mistake":"Think 30/60 days","why":"Timeline trap","priority":"Very High"},{"id":"P2C11.T9","point":"Audit by Indian CA mandatory","mistake":"Ignore local audit requirement","why":"Compliance trap","priority":"High"},{"id":"P2C11.T10","point":"Annual return (FC-4 within 60 days)","mistake":"Confuse with MGT-7","why":"Form trap","priority":"Very High"},{"id":"P2C11.T11","point":"Prospectus provisions apply even without place of business","mistake":"Assume exemption","why":"ICAI trap","priority":"Very High"},{"id":"P2C11.T12","point":"IDR rules applicability","mistake":"Ignore SEBI + RBI layer","why":"Advanced trap","priority":"Medium"},{"id":"P2C11.T13","point":"Punishment \u20b91L\u2013\u20b93L + \u20b950K/day","mistake":"Confuse penalty range","why":"Direct trap","priority":"Very High"},{"id":"P2C11.T14","point":"Non-compliance does not void contracts","mistake":"Assume invalid","why":"Legal logic trap","priority":"High"}],"amendments":[],"cases":[{"id":"P2C11.C1","scenario":"Foreign company operates via website only","question":"Is it a foreign company?","answer":"Yes","reasoning":"Electronic mode included","trap":"Definition trap","diff":4},{"id":"P2C11.C2","scenario":"Company operates via Indian agent","question":"Covered?","answer":"Yes","reasoning":"Agent = place of business","trap":"Scope trap","diff":3},{"id":"P2C11.C3","scenario":"60% shares held by Indian company","question":"Extra compliance?","answer":"Yes","reasoning":"Sec 379(2) applies","trap":"Hybrid trap","diff":5},{"id":"P2C11.C4","scenario":"Documents filed after 45 days","question":"Valid?","answer":"No","reasoning":"Must be within 30 days","trap":"Timeline trap","diff":3},{"id":"P2C11.C5","scenario":"Change in directors not reported","question":"Valid?","answer":"No","reasoning":"FC-2 required","trap":"Compliance trap","diff":4},{"id":"P2C11.C6","scenario":"Financial statements filed after 3 months","question":"Valid?","answer":"Yes","reasoning":"Within 6 months","trap":"Timeline confusion","diff":3},{"id":"P2C11.C7","scenario":"Accounts audited by foreign auditor only","question":"Valid?","answer":"No","reasoning":"Indian CA required","trap":"Audit trap","diff":4},{"id":"P2C11.C8","scenario":"Annual return filed in MGT-7","question":"Valid?","answer":"No","reasoning":"FC-4 required","trap":"Form trap","diff":3},{"id":"P2C11.C9","scenario":"Prospectus issued without Indian office","question":"Valid?","answer":"Yes (rules apply)","reasoning":"Sec 387 applies","trap":"ICAI twist","diff":5},{"id":"P2C11.C10","scenario":"Company violates provisions but contract executed","question":"Valid?","answer":"Yes","reasoning":"Sec 393 saves contract","trap":"Legal trap","diff":4}],"trees":[{"id":"P2C11.DT1","topic":"Foreign Company Test","logic":"Incorporated outside + business in India?","outcome":"Yes \u2192 Foreign company"},{"id":"P2C11.DT2","topic":"Electronic Mode","logic":"Business via digital mode?","outcome":"Yes \u2192 Covered"},{"id":"P2C11.DT3","topic":"50% Rule","logic":"\u226550% Indian holding?","outcome":"Yes \u2192 Additional compliance"},{"id":"P2C11.DT4","topic":"Initial Filing","logic":"Filed within 30 days?","outcome":"No \u2192 Non-compliance"},{"id":"P2C11.DT5","topic":"Alteration","logic":"Change reported within 30 days?","outcome":"No \u2192 Penalty"},{"id":"P2C11.DT6","topic":"Accounts Filing","logic":"Filed within 6 months?","outcome":"No \u2192 Non-compliance"},{"id":"P2C11.DT7","topic":"Audit","logic":"Audited by Indian CA?","outcome":"No \u2192 Invalid"},{"id":"P2C11.DT8","topic":"Annual Return","logic":"Filed in FC-4 within 60 days?","outcome":"No \u2192 Penalty"},{"id":"P2C11.DT9","topic":"Prospectus","logic":"Issued in India?","outcome":"Yes \u2192 Sec 387 applies"},{"id":"P2C11.DT10","topic":"Contract Validity","logic":"Non-compliance exists?","outcome":"Contract still valid"}]},{"id":"OL1","name":"General Clauses Act, 1897","mcqs":[{"id":"OL1.Q1","q":"GCA applies to:","opts":["Only Companies Act","All Central Acts","Only Constitution","None"],"ans":1,"exp":"Applies unless repugnant","type":"Concept","diff":1},{"id":"OL1.Q2","q":"\u201cMeans\u201d definition is:","opts":["Inclusive","Exhaustive","Optional","Partial"],"ans":1,"exp":"Restrictive definition","type":"Trap","diff":2},{"id":"OL1.Q3","q":"\u201cIncludes\u201d definition is:","opts":["Exhaustive","Restrictive","Expansive","Limited"],"ans":2,"exp":"Expands meaning","type":"Trap","diff":2},{"id":"OL1.Q4","q":"\u201cShall\u201d generally means:","opts":["Optional","Mandatory","Suggestive","None"],"ans":1,"exp":"Mandatory intent","type":"Concept","diff":1},{"id":"OL1.Q5","q":"Preamble is:","opts":["Binding law","Aid to interpretation","Irrelevant","Override"],"ans":1,"exp":"Used in ambiguity","type":"Concept","diff":1},{"id":"OL1.Q6","q":"Good faith requires:","opts":["Care + honesty","Only honesty","Only care","None"],"ans":1,"exp":"Negligence allowed","type":"Trap","diff":3},{"id":"OL1.Q7","q":"Financial year starts from:","opts":["Jan 1","Apr 1","Mar 31","July 1"],"ans":1,"exp":"Sec 3(21)","type":"Concept","diff":1},{"id":"OL1.Q8","q":"Document includes:","opts":["Paper only","Digital also","Only written","None"],"ans":1,"exp":"Broad definition","type":"Concept","diff":1},{"id":"OL1.Q9","q":"Repeal affects past rights?","opts":["Yes","No","Sometimes","Optional"],"ans":1,"exp":"Sec 6","type":"Trap","diff":3},{"id":"OL1.Q10","q":"\u201cFrom\u201d in timeline:","opts":["Includes first day","Excludes first day","Optional","None"],"ans":1,"exp":"Sec 9","type":"Trap","diff":2},{"id":"OL1.Q11","q":"Singular includes plural?","opts":["No","Yes","Conditional","Rare"],"ans":1,"exp":"Sec 13","type":"Concept","diff":1},{"id":"OL1.Q12","q":"Power to appoint includes removal?","opts":["No","Yes","Conditional","Rare"],"ans":1,"exp":"Sec 16","type":"Concept","diff":2}],"tricky":[{"id":"OL1.T1","point":"Applies to all Central Acts unless repugnant","mistake":"Ignore exception clause","why":"Core interpretation rule","priority":"Very High"},{"id":"OL1.T2","point":"\u201cMeans\u201d vs \u201cIncludes\u201d","mistake":"Treat both same","why":"Classic ICAI trap","priority":"Very High"},{"id":"OL1.T3","point":"\u201cShall\u201d vs \u201cMay\u201d","mistake":"Assume literal meaning always","why":"Context-based interpretation","priority":"Very High"},{"id":"OL1.T4","point":"Definitions apply only if not defined elsewhere","mistake":"Apply blindly","why":"Context override concept","priority":"High"},{"id":"OL1.T5","point":"Preamble is aid, not override","mistake":"Treat as supreme","why":"Interpretation logic","priority":"Medium"},{"id":"OL1.T6","point":"Good faith = honesty (even negligent)","mistake":"Apply IPC definition","why":"Definition conflict trap","priority":"Very High"},{"id":"OL1.T7","point":"Financial year vs calendar year","mistake":"Confuse both","why":"Direct factual trap","priority":"High"},{"id":"OL1.T8","point":"Immovable property includes benefits arising from land","mistake":"Ignore indirect rights","why":"ICAI conceptual trap","priority":"Very High"},{"id":"OL1.T9","point":"Document includes electronic records","mistake":"Think physical only","why":"Modern interpretation","priority":"High"},{"id":"OL1.T10","point":"Repeal does NOT affect past rights","mistake":"Assume full wipeout","why":"Legal principle","priority":"Very High"},{"id":"OL1.T11","point":"\u201cFrom\u201d excludes first day, \u201cTo\u201d includes last","mistake":"Reverse logic","why":"Timeline trap","priority":"Very High"},{"id":"OL1.T12","point":"Singular includes plural (and vice versa)","mistake":"Ignore rule","why":"Interpretation shortcut","priority":"Medium"},{"id":"OL1.T13","point":"Power to appoint includes power to remove","mistake":"Assume separate authority","why":"Logical extension","priority":"High"},{"id":"OL1.T14","point":"Power to issue includes power to amend/rescind","mistake":"Think one-time use","why":"Delegated power logic","priority":"Very High"}],"amendments":[],"cases":[{"id":"OL1.C1","scenario":"Word undefined in Act","question":"Use GCA?","answer":"Yes","reasoning":"Default interpretation","trap":"Core trap","diff":3},{"id":"OL1.C2","scenario":"Definition conflicts with Act","question":"Which prevails?","answer":"Act","reasoning":"Context overrides","trap":"Concept trap","diff":4},{"id":"OL1.C3","scenario":"Negligent but honest act","question":"Good faith?","answer":"Yes","reasoning":"Honesty sufficient","trap":"ICAI favorite","diff":5},{"id":"OL1.C4","scenario":"Right acquired before repeal","question":"Valid?","answer":"Yes","reasoning":"Sec 6 protection","trap":"Legal trap","diff":5},{"id":"OL1.C5","scenario":"Timeline \u201cfrom 1 Jan to 10 Jan\u201d","question":"Days counted?","answer":"2\u201310 Jan","reasoning":"First excluded","trap":"Timeline trap","diff":4},{"id":"OL1.C6","scenario":"Law says appoint authority","question":"Can remove?","answer":"Yes","reasoning":"Sec 16","trap":"Logical trap","diff":4},{"id":"OL1.C7","scenario":"Notification issued once","question":"Can amend?","answer":"Yes","reasoning":"Sec 21","trap":"Delegation trap","diff":4},{"id":"OL1.C8","scenario":"Property right to collect forest produce","question":"Immovable?","answer":"Yes","reasoning":"Benefit from land","trap":"Concept trap","diff":5}],"trees":[{"id":"OL1.DT1","topic":"Applicability","logic":"Word defined in Act?","outcome":"Yes \u2192 Use Act"},{"id":"OL1.DT2","topic":"Definition fallback","logic":"Not defined?","outcome":"Use GCA"},{"id":"OL1.DT3","topic":"Conflict check","logic":"Repugnant context?","outcome":"Yes \u2192 Ignore GCA"},{"id":"OL1.DT4","topic":"Definition type","logic":"\u201cMeans\u201d used?","outcome":"Exhaustive"},{"id":"OL1.DT5","topic":"Definition type","logic":"\u201cIncludes\u201d used?","outcome":"Expansive"},{"id":"OL1.DT6","topic":"Timeline","logic":"\u201cFrom\u201d used?","outcome":"Exclude first day"},{"id":"OL1.DT7","topic":"Timeline","logic":"\u201cTo\u201d used?","outcome":"Include last day"},{"id":"OL1.DT8","topic":"Repeal","logic":"Rights already accrued?","outcome":"Protected"},{"id":"OL1.DT9","topic":"Authority","logic":"Power to appoint given?","outcome":"Includes removal"},{"id":"OL1.DT10","topic":"Delegation","logic":"Power to issue rules?","outcome":"Includes amend/rescind"}]},{"id":"OL2","name":"Interpretation of Statutes","mcqs":[{"id":"OL2.Q1","q":"Primary rule of interpretation is:","opts":["Logical","Literal","Mischief","Harmonious"],"ans":1,"exp":"Literal rule applied first","type":"Concept","diff":1},{"id":"OL2.Q2","q":"Golden rule applies when:","opts":["Always","Absurdity","Conflict","None"],"ans":1,"exp":"Used to avoid absurd results","type":"Trap","diff":2},{"id":"OL2.Q3","q":"Mischief rule considers:","opts":["Words only","Intention","Past defect","Grammar"],"ans":2,"exp":"Looks at defect in prior law","type":"Concept","diff":2},{"id":"OL2.Q4","q":"\u201cSubject to\u201d means:","opts":["Override","Subordinate","Equal","Independent"],"ans":1,"exp":"Lower priority clause","type":"Trap","diff":2},{"id":"OL2.Q5","q":"\u201cNotwithstanding\u201d means:","opts":["Subordinate","Override","Equal","Ignore"],"ans":1,"exp":"Overrides other provisions","type":"Trap","diff":2},{"id":"OL2.Q6","q":"\u201cMay\u201d generally means:","opts":["Mandatory","Optional","Binding","Strict"],"ans":1,"exp":"Permissive word","type":"Concept","diff":1},{"id":"OL2.Q7","q":"Ejusdem generis applies when:","opts":["Always","Specific + general words","Only general","Only specific"],"ans":1,"exp":"Same category restriction","type":"Trap","diff":3},{"id":"OL2.Q8","q":"Marginal notes are:","opts":["Binding","Aid","Not part of Act","Override"],"ans":2,"exp":"Not part of statute","type":"Trap","diff":2},{"id":"OL2.Q9","q":"Preamble is:","opts":["Binding","Aid","Irrelevant","Override"],"ans":1,"exp":"Used only if ambiguity exists","type":"Concept","diff":1},{"id":"OL2.Q10","q":"Proviso is:","opts":["Main rule","Exception","Explanation","Addition"],"ans":1,"exp":"Carves out exception","type":"Concept","diff":2},{"id":"OL2.Q11","q":"Explanation can:","opts":["Override","Expand","Clarify","Ignore"],"ans":2,"exp":"Only clarifies meaning","type":"Concept","diff":2},{"id":"OL2.Q12","q":"Noscitur a sociis means:","opts":["Literal rule","Words take meaning from context","Override rule","Ignore rule"],"ans":1,"exp":"Words derive meaning from surrounding words","type":"Concept","diff":2}],"tricky":[{"id":"OL2.T1","point":"Literal rule is primary rule","mistake":"Jump directly to logical rule","why":"Core foundation","priority":"Very High"},{"id":"OL2.T2","point":"Logical (Golden) rule only if absurdity","mistake":"Apply logic everywhere","why":"Misapplication trap","priority":"Very High"},{"id":"OL2.T3","point":"Mischief rule = 4-step test","mistake":"Forget steps","why":"Classic ICAI structure","priority":"Very High"},{"id":"OL2.T4","point":"Harmonious construction \u2192 avoid conflict","mistake":"Ignore specific vs general rule","why":"Multi-layer trap","priority":"High"},{"id":"OL2.T5","point":"\u201cSubject to\u201d = subordinate","mistake":"Reverse meaning","why":"Direct ICAI trap","priority":"Very High"},{"id":"OL2.T6","point":"\u201cNotwithstanding\u201d = override","mistake":"Confuse with subject to","why":"High-frequency trap","priority":"Very High"},{"id":"OL2.T7","point":"\u201cMay\u201d can be mandatory","mistake":"Treat as optional always","why":"Context-based interpretation","priority":"Very High"},{"id":"OL2.T8","point":"Ejusdem generis needs conditions","mistake":"Apply blindly","why":"Conditional logic testing","priority":"Very High"},{"id":"OL2.T9","point":"Noscitur a sociis = words take colour","mistake":"Ignore context grouping","why":"Advanced logic","priority":"High"},{"id":"OL2.T10","point":"Marginal notes not part of Act","mistake":"Treat as valid aid","why":"Direct MCQ trap","priority":"Very High"},{"id":"OL2.T11","point":"Preamble = aid only","mistake":"Treat as override","why":"Repeated ICAI trap","priority":"High"},{"id":"OL2.T12","point":"Definition clause binding","mistake":"Ignore context override","why":"Cross-chapter trap","priority":"High"},{"id":"OL2.T13","point":"Proviso = exception","mistake":"Treat as independent rule","why":"Concept trap","priority":"High"},{"id":"OL2.T14","point":"Explanation cannot override section","mistake":"Assume expansion allowed","why":"Advanced trap","priority":"High"}],"amendments":[],"cases":[{"id":"OL2.C1","scenario":"Clear statutory wording","question":"Which rule?","answer":"Literal","reasoning":"No interpretation needed","trap":"Concept trap","diff":3},{"id":"OL2.C2","scenario":"Literal leads to absurd result","question":"What to apply?","answer":"Golden rule","reasoning":"Modify meaning","trap":"Classic trap","diff":4},{"id":"OL2.C3","scenario":"Ambiguous law","question":"Approach?","answer":"Mischief rule","reasoning":"Identify defect + remedy","trap":"ICAI favorite","diff":5},{"id":"OL2.C4","scenario":"Conflict between provisions","question":"Resolution?","answer":"Harmonious","reasoning":"Specific overrides general","trap":"Structural trap","diff":4},{"id":"OL2.C5","scenario":"Clause says \u201csubject to\u201d","question":"Effect?","answer":"Subordinate","reasoning":"Lower hierarchy","trap":"Language trap","diff":3},{"id":"OL2.C6","scenario":"Clause says \u201cnotwithstanding\u201d","question":"Effect?","answer":"Override","reasoning":"Higher hierarchy","trap":"Language trap","diff":3},{"id":"OL2.C7","scenario":"\u201cMay\u201d used but duty implied","question":"Mandatory?","answer":"Yes","reasoning":"Context governs","trap":"Interpretation trap","diff":5},{"id":"OL2.C8","scenario":"List followed by general term","question":"Scope?","answer":"Restricted","reasoning":"Same category only","trap":"Logic trap","diff":5},{"id":"OL2.C9","scenario":"Words grouped together","question":"Meaning?","answer":"Context-based","reasoning":"Noscitur applies","trap":"Advanced trap","diff":4},{"id":"OL2.C10","scenario":"Preamble conflicts with section","question":"Which prevails?","answer":"Section","reasoning":"Preamble cannot override","trap":"Core trap","diff":3}],"trees":[{"id":"OL2.DT1","topic":"Literal Rule","logic":"Words clear?","outcome":"Yes \u2192 Apply literal rule"},{"id":"OL2.DT2","topic":"Golden Rule","logic":"Literal leads to absurdity?","outcome":"Yes \u2192 Apply logical interpretation"},{"id":"OL2.DT3","topic":"Mischief Rule","logic":"Ambiguity exists?","outcome":"Yes \u2192 Apply 4-step test"},{"id":"OL2.DT4","topic":"Harmonious","logic":"Conflict between provisions?","outcome":"Yes \u2192 Harmonize"},{"id":"OL2.DT5","topic":"Clause Type","logic":"\u201cSubject to\u201d?","outcome":"Subordinate"},{"id":"OL2.DT6","topic":"Clause Type","logic":"\u201cNotwithstanding\u201d?","outcome":"Override"},{"id":"OL2.DT7","topic":"Ejusdem Generis","logic":"Specific + general words?","outcome":"Restrict to same class"},{"id":"OL2.DT8","topic":"Noscitur","logic":"Words grouped?","outcome":"Context-based meaning"},{"id":"OL2.DT9","topic":"Proviso","logic":"Exists?","outcome":"Exception to main rule"},{"id":"OL2.DT10","topic":"Explanation","logic":"Present?","outcome":"Clarifies, not override"}]},{"id":"OL3","name":"Foreign Exchange Management Act, 1999","mcqs":[{"id":"OL3.Q1","q":"FEMA objective is:","opts":["Control","Regulation","Ban","Tax"],"ans":1,"exp":"Regulatory law","type":"Concept","diff":1},{"id":"OL3.Q2","q":"Resident test includes:","opts":["Days only","Intention only","Days + intention","Citizenship"],"ans":2,"exp":"Sec 2(v)","type":"Trap","diff":3},{"id":"OL3.Q3","q":"Residential status determined:","opts":["Yearly","Transaction-wise","Date-based","Monthly"],"ans":2,"exp":"FEMA logic","type":"Trap","diff":3},{"id":"OL3.Q4","q":"Current account transaction is:","opts":["Asset change","Liability change","No asset/liability change","Investment"],"ans":2,"exp":"Definition","type":"Concept","diff":2},{"id":"OL3.Q5","q":"Capital account transaction is:","opts":["Expense","Revenue","Asset/liability change","Salary"],"ans":2,"exp":"Sec 2(e)","type":"Concept","diff":2},{"id":"OL3.Q6","q":"Current account transactions are:","opts":["Prohibited","Allowed","Restricted unless allowed","Taxed"],"ans":1,"exp":"General rule","type":"Concept","diff":1},{"id":"OL3.Q7","q":"Capital account transactions are:","opts":["Free","Allowed unless restricted","Restricted unless allowed","None"],"ans":2,"exp":"Core logic","type":"Trap","diff":2},{"id":"OL3.Q8","q":"Forex dealings allowed via:","opts":["Anyone","RBI only","Authorised person","Govt"],"ans":2,"exp":"Sec 3","type":"Concept","diff":2},{"id":"OL3.Q9","q":"Schedule I includes:","opts":["Allowed","Govt approval","Prohibited","RBI approval"],"ans":2,"exp":"Prohibited list","type":"Trap","diff":2},{"id":"OL3.Q10","q":"Schedule II requires:","opts":["RBI approval","Govt approval","No approval","Court"],"ans":1,"exp":"Govt control","type":"Trap","diff":2},{"id":"OL3.Q11","q":"Schedule III requires:","opts":["Govt","RBI","Court","SEBI"],"ans":1,"exp":"RBI approval","type":"Trap","diff":2},{"id":"OL3.Q12","q":"LRS limit is:","opts":["100k","200k","250k","500k"],"ans":2,"exp":"USD 250,000","type":"Concept","diff":1}],"tricky":[{"id":"OL3.T1","point":"FEMA regulates forex, not prohibits (vs FERA)","mistake":"Think strict control law","why":"Concept clarity","priority":"High"},{"id":"OL3.T2","point":"Resident status \u2260 Income Tax","mistake":"Apply IT rules","why":"Core confusion","priority":"Very High"},{"id":"OL3.T3","point":"182 days + intention test","mistake":"Only count days","why":"ICAI favorite","priority":"Very High"},{"id":"OL3.T4","point":"Residential status changes from date (not year)","mistake":"Apply yearly basis","why":"Concept trap","priority":"Very High"},{"id":"OL3.T5","point":"Branch outside India can be resident","mistake":"Ignore control test","why":"Advanced trap","priority":"High"},{"id":"OL3.T6","point":"Current vs Capital = asset/liability test","mistake":"Memorize examples only","why":"Core classification","priority":"Very High"},{"id":"OL3.T7","point":"Current account = freely permitted","mistake":"Assume unrestricted","why":"Exception-based trap","priority":"High"},{"id":"OL3.T8","point":"Capital account = restricted unless allowed","mistake":"Assume freedom","why":"Reverse logic trap","priority":"Very High"},{"id":"OL3.T9","point":"Section 3 prohibits forex dealings except via authorised person","mistake":"Ignore AP role","why":"Compliance trap","priority":"Very High"},{"id":"OL3.T10","point":"Holding foreign exchange restricted","mistake":"Think allowed freely","why":"Direct trap","priority":"High"},{"id":"OL3.T11","point":"Schedule I = prohibited transactions","mistake":"Mix schedules","why":"ICAI pattern","priority":"Very High"},{"id":"OL3.T12","point":"Schedule II = Govt approval","mistake":"Confuse with RBI","why":"Authority trap","priority":"Very High"},{"id":"OL3.T13","point":"Schedule III = RBI approval","mistake":"Mix with Govt","why":"Classic trap","priority":"Very High"},{"id":"OL3.T14","point":"LRS limit = USD 250,000","mistake":"Forget limit","why":"Direct factual","priority":"Very High"}],"amendments":[{"id":"OL3.A1","topic":"Capital account powers split","what":"Debt \u2192 RBI, Non-debt \u2192 CG","relevance":"High","priority":"High"}],"cases":[{"id":"OL3.C1","scenario":"Person stays 200 days but leaves for job abroad","question":"Resident?","answer":"No","reasoning":"Intention overrides","trap":"Core trap","diff":5},{"id":"OL3.C2","scenario":"Person comes for temporary visit >182 days","question":"Resident?","answer":"No","reasoning":"No intention to stay","trap":"ICAI favorite","diff":5},{"id":"OL3.C3","scenario":"Payment made outside authorised person","question":"Valid?","answer":"No","reasoning":"Sec 3 violation","trap":"Compliance trap","diff":4},{"id":"OL3.C4","scenario":"Gift sent abroad","question":"Current or capital?","answer":"Current","reasoning":"No asset creation","trap":"Concept trap","diff":5},{"id":"OL3.C5","scenario":"Loan given abroad","question":"Type?","answer":"Capital","reasoning":"Liability created","trap":"Classification trap","diff":5},{"id":"OL3.C6","scenario":"Import of goods","question":"Type?","answer":"Current","reasoning":"Trade transaction","trap":"Concept trap","diff":4},{"id":"OL3.C7","scenario":"Investment abroad","question":"Type?","answer":"Capital","reasoning":"Asset created","trap":"Direct trap","diff":3},{"id":"OL3.C8","scenario":"Transaction not in schedules","question":"Allowed?","answer":"Yes","reasoning":"Freely allowed","trap":"Logic trap","diff":4},{"id":"OL3.C9","scenario":"Forex sent beyond LRS limit","question":"Valid?","answer":"No","reasoning":"Needs approval","trap":"Limit trap","diff":4},{"id":"OL3.C10","scenario":"Branch outside India controlled by Indian company","question":"Resident?","answer":"Yes","reasoning":"Control test","trap":"Advanced trap","diff":5}],"trees":[{"id":"OL3.DT1","topic":"Residential Status","logic":">182 days + intention?","outcome":"PRII"},{"id":"OL3.DT2","topic":"Exit India","logic":"Leaving for job/business?","outcome":"PROI from date"},{"id":"OL3.DT3","topic":"Entry India","logic":"Coming for job/business?","outcome":"PRII from date"},{"id":"OL3.DT4","topic":"Transaction Type","logic":"Asset/liability change?","outcome":"Yes \u2192 Capital"},{"id":"OL3.DT5","topic":"Transaction Type","logic":"No change?","outcome":"Current"},{"id":"OL3.DT6","topic":"Current Account","logic":"Listed in Schedule I?","outcome":"Prohibited"},{"id":"OL3.DT7","topic":"Current Account","logic":"Schedule II?","outcome":"Govt approval"},{"id":"OL3.DT8","topic":"Current Account","logic":"Schedule III?","outcome":"RBI approval"},{"id":"OL3.DT9","topic":"Forex Deal","logic":"Through authorised person?","outcome":"Valid"},{"id":"OL3.DT10","topic":"LRS Limit","logic":"\u2264 USD 250k?","outcome":"Allowed"}]}]
+export const P2_DATA = [
+  {
+    "id": "P2C1",
+    "name": "Preliminary",
+    "mcqs": [
+      {
+        "id": "P2C1.Q1",
+        "q": "Companies Act, 2013 extends to:",
+        "opts": [
+          "Whole India",
+          "Only Companies",
+          "Only Corporates",
+          "SEZ only"
+        ],
+        "ans": 0,
+        "exp": "Act applies to whole of India",
+        "type": "Concept",
+        "diff": 1
+      },
+      {
+        "id": "P2C1.Q2",
+        "q": "\"Except in so far as\" implies:",
+        "opts": [
+          "Full applicability",
+          "Partial exclusion",
+          "Ignore law",
+          "Dual application"
+        ],
+        "ans": 1,
+        "exp": "Means exclusion to the extent specified",
+        "type": "Trap",
+        "diff": 2
+      },
+      {
+        "id": "P2C1.Q3",
+        "q": "Associate company requires:",
+        "opts": [
+          "10% control",
+          "15% control",
+          "20% voting power",
+          "25% voting power"
+        ],
+        "ans": 2,
+        "exp": "Defined as 20% voting power or participation",
+        "type": "Concept",
+        "diff": 1
+      },
+      {
+        "id": "P2C1.Q4",
+        "q": "Associate company condition includes:",
+        "opts": [
+          "Only voting power",
+          "Only contracts",
+          "Either voting or participation",
+          "None"
+        ],
+        "ans": 2,
+        "exp": "\"OR\" condition is key trap",
+        "type": "Trap",
+        "diff": 2
+      },
+      {
+        "id": "P2C1.Q5",
+        "q": "Definition section is:",
+        "opts": [
+          "External aid",
+          "Internal aid",
+          "Judicial aid",
+          "None"
+        ],
+        "ans": 1,
+        "exp": "Definitions act as internal aid",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "P2C1.Q6",
+        "q": "Subsidiary of public company is treated as:",
+        "opts": [
+          "Private",
+          "Public",
+          "Either",
+          "Optional"
+        ],
+        "ans": 1,
+        "exp": "Always treated as public",
+        "type": "Trap",
+        "diff": 2
+      },
+      {
+        "id": "P2C1.Q7",
+        "q": "Small company excludes:",
+        "opts": [
+          "Private company",
+          "Holding company",
+          "OPC",
+          "LLP"
+        ],
+        "ans": 1,
+        "exp": "Holding companies excluded",
+        "type": "Trap",
+        "diff": 2
+      },
+      {
+        "id": "P2C1.Q8",
+        "q": "Fiduciary holding is:",
+        "opts": [
+          "Counted",
+          "Ignored",
+          "Optional",
+          "Taxed"
+        ],
+        "ans": 1,
+        "exp": "Not considered for control calculation",
+        "type": "Trap",
+        "diff": 3
+      },
+      {
+        "id": "P2C1.Q9",
+        "q": "Financial year normally ends on:",
+        "opts": [
+          "31 Dec",
+          "31 March",
+          "30 June",
+          "Flexible"
+        ],
+        "ans": 1,
+        "exp": "Defined under Act",
+        "type": "Concept",
+        "diff": 1
+      },
+      {
+        "id": "P2C1.Q10",
+        "q": "Net worth excludes:",
+        "opts": [
+          "Paid-up capital",
+          "Free reserves",
+          "Revaluation reserve",
+          "Securities premium"
+        ],
+        "ans": 2,
+        "exp": "Revaluation reserve excluded",
+        "type": "Trap",
+        "diff": 2
+      },
+      {
+        "id": "P2C1.Q11",
+        "q": "Small company paid-up capital limit is:",
+        "opts": [
+          "₹4 Cr",
+          "₹5 Cr",
+          "₹10 Cr",
+          "₹50 Lakh"
+        ],
+        "ans": 2,
+        "exp": "Revised to ₹10 Cr",
+        "type": "Amendment",
+        "diff": 1
+      },
+      {
+        "id": "P2C1.Q12",
+        "q": "Small company turnover limit is:",
+        "opts": [
+          "₹40 Cr",
+          "₹50 Cr",
+          "₹100 Cr",
+          "₹2 Cr"
+        ],
+        "ans": 2,
+        "exp": "Revised to ₹100 Cr",
+        "type": "Amendment",
+        "diff": 1
+      }
+    ],
+    "tricky": [
+      {
+        "id": "P2C1.T1",
+        "point": "\"Except in so far as\" meaning",
+        "mistake": "Assume both laws apply fully",
+        "why": "Tests interpretation precision",
+        "priority": "High"
+      },
+      {
+        "id": "P2C1.T2",
+        "point": "Commencement of Act (different dates)",
+        "mistake": "Assume entire Act applies together",
+        "why": "Tests conceptual clarity",
+        "priority": "Medium"
+      },
+      {
+        "id": "P2C1.T3",
+        "point": "Definition = internal aid",
+        "mistake": "Confuse with external aid",
+        "why": "ICAI tests conceptual depth",
+        "priority": "Medium"
+      },
+      {
+        "id": "P2C1.T4",
+        "point": "Associate = 20% OR participation",
+        "mistake": "Ignore \"OR\" condition",
+        "why": "Classic ICAI trap",
+        "priority": "High"
+      },
+      {
+        "id": "P2C1.T5",
+        "point": "Fiduciary holding exclusion",
+        "mistake": "Include fiduciary shares",
+        "why": "Advanced differentiation question",
+        "priority": "High"
+      },
+      {
+        "id": "P2C1.T6",
+        "point": "Small company exclusions",
+        "mistake": "Forget Section 8 / holding exclusions",
+        "why": "Repeated exam logic",
+        "priority": "Very High"
+      },
+      {
+        "id": "P2C1.T7",
+        "point": "Private company (200 members rule)",
+        "mistake": "Count employees wrongly",
+        "why": "Numerical trap",
+        "priority": "High"
+      },
+      {
+        "id": "P2C1.T8",
+        "point": "Subsidiary of public = public",
+        "mistake": "Assume private remains private",
+        "why": "Counterintuitive → high testability",
+        "priority": "Very High"
+      },
+      {
+        "id": "P2C1.T9",
+        "point": "Financial year exception",
+        "mistake": "Ignore foreign subsidiary rule",
+        "why": "Application-based testing",
+        "priority": "Medium"
+      },
+      {
+        "id": "P2C1.T10",
+        "point": "Net worth excludes revaluation",
+        "mistake": "Include revaluation reserve",
+        "why": "Practical + conceptual trap",
+        "priority": "High"
+      }
+    ],
+    "amendments": [
+      {
+        "id": "P2C1.A1",
+        "topic": "Small Company Threshold",
+        "what": "Paid-up capital limit increased to ₹10 Cr and turnover to ₹100 Cr (replacing earlier ₹4 Cr / ₹40 Cr)",
+        "relevance": "Very High",
+        "priority": "Very High"
+      }
+    ],
+    "cases": [
+      {
+        "id": "P2C1.C1",
+        "scenario": "Company applies Companies Act provisions ignoring exception clause",
+        "question": "Is this correct?",
+        "answer": "No",
+        "reasoning": "\"Except in so far as\" limits applicability",
+        "trap": "Interpretation trap",
+        "diff": 3
+      }
+    ],
+    "trees": [
+      {
+        "id": "P2C1.DT1",
+        "topic": "Applicability Clause",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Does provision contain \"except in so far as\"?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Limited application",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Full application",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C1.DT2",
+        "topic": "Associate Company",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "≥20% voting power OR participation?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Associate",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Not associate",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C1.DT3",
+        "topic": "Fiduciary Holding",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Shares held in fiduciary capacity?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Ignore for control",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Count",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C1.DT4",
+        "topic": "Small Company Status",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Capital ≤ ₹10 Cr AND turnover ≤ ₹100 Cr? AND not excluded?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Small company",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Not",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C1.DT5",
+        "topic": "Public vs Private Status",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Is it subsidiary of public company?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Deemed public",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Normal classification",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C1.DT6",
+        "topic": "Financial Year",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Ends on 31 March?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Valid",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Invalid unless exception",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C1.DT7",
+        "topic": "Net Worth Calculation",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Includes revaluation reserve?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Incorrect",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Correct",
+            "reference": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P2C2",
+    "name": "Incorporation of Company",
+    "mcqs": [],
+    "tricky": [],
+    "amendments": [],
+    "cases": [],
+    "trees": [
+      {
+        "id": "P2C2.DT1",
+        "topic": "Promoter Identification",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Does person have direct OR indirect control?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Promoter",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Not promoter",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C2.DT2",
+        "topic": "Professional Exception",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Acting in professional capacity only?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Not promoter",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "May be promoter",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C2.DT3",
+        "topic": "Minimum Members",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Members ≥ required (7/2/1)?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Valid",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Invalid incorporation",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C2.DT4",
+        "topic": "OPC Eligibility",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Natural person + Indian citizen + not minor?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Eligible",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Not eligible",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C2.DT5",
+        "topic": "OPC Nominee",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Nominee appointed within time?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Valid",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Non-compliance",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C2.DT6",
+        "topic": "Member Liability",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Members < minimum for >6 months?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Personal liability arises",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C2.DT7",
+        "topic": "MOA Validity",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Signed + witnessed?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Valid",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Invalid",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C2.DT8",
+        "topic": "Incorporation Validity",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Any fraud/misrepresentation?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Can be challenged",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Valid",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C2.DT9",
+        "topic": "Name Approval",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Identical/phonetic similarity exists?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Rejected",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Approved",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C2.DT10",
+        "topic": "OPC Restriction",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Is company Section 8?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "OPC not allowed",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Allowed",
+            "reference": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P2C3",
+    "name": "Prospectus & Allotment",
+    "mcqs": [],
+    "tricky": [],
+    "amendments": [],
+    "cases": [],
+    "trees": [
+      {
+        "id": "P2C3.DT1",
+        "topic": "Public vs Private Issue",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Is communication made to a section of public?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Public issue",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Private communication",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C3.DT2",
+        "topic": "Deemed Prospectus",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Shares to intermediary AND offered to public within 6 months?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Deemed prospectus",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Not triggered",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C3.DT3",
+        "topic": "Prospectus Validity",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Is issue within 90 days of filing?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Valid",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Invalid prospectus",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C3.DT4",
+        "topic": "Signing Requirement",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Signed by all named directors?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Yes",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Invalid prospectus",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Valid",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C3.DT5",
+        "topic": "Misstatement",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Is statement false OR omission misleading?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Misstatement exists",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "No misstatement",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C3.DT6",
+        "topic": "Liability Type",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Criminal or civil?",
+            "branches": [
+              {
+                "label": "Sec 34",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Sec 35",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Criminal",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Civil liability",
+            "reference": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P2C4",
+    "name": "Share Capital and Debentures",
+    "mcqs": [],
+    "tricky": [],
+    "amendments": [],
+    "cases": [],
+    "trees": [
+      {
+        "id": "P2C4.DT1",
+        "topic": "Preference Share Voting",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Dividend unpaid ≥ 2 years?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Full voting rights on all matters",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Only on matters affecting rights",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C4.DT2",
+        "topic": "DVR Validity",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Voting power ≤ 74% AND no default?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Valid DVR issue",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Invalid",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C4.DT3",
+        "topic": "Variation of Rights",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Approval ≥ 75% of share VALUE?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Yes",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Invalid",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Valid",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C4.DT4",
+        "topic": "Issue at Discount",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Normal issue OR debt conversion?",
+            "branches": [
+              {
+                "label": "Normal issue",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Debt conversion",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Invalid",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Allowed",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C4.DT5",
+        "topic": "Securities Premium Usage",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Used for allowed purposes?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Allowed",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Not allowed",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C4.DT6",
+        "topic": "Duplicate Certificate",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Listed or Unlisted company?",
+            "branches": [
+              {
+                "label": "Listed",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Unlisted",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Issue within 45 days",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Within 3 months",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C4.DT7",
+        "topic": "Sweat Equity",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Special resolution passed AND within limits (≤25%)?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Valid",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Invalid",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C4.DT8",
+        "topic": "Preference Redemption",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Irredeemable OR redemption >20 years?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Invalid",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Valid",
+            "reference": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P2C5",
+    "name": "Acceptance of Deposits",
+    "mcqs": [],
+    "tricky": [],
+    "amendments": [],
+    "cases": [],
+    "trees": [
+      {
+        "id": "P2C5.DT1",
+        "topic": "Deposit Definition",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Is money received as loan/deposit/any form?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Deposit unless excluded",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C5.DT2",
+        "topic": "Exclusion Test",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Falls under exclusions (govt, bank, ICD, director)?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Not deposit",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Deposit",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C5.DT3",
+        "topic": "Advance for Goods",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Adjusted within 365 days?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Not deposit",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Becomes deposit after 15 days",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C5.DT4",
+        "topic": "Share Application Money",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Allotted within 60 days OR refunded within 15 days?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Becomes deposit",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C5.DT5",
+        "topic": "Eligible Company",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Net worth ≥100 Cr OR turnover ≥500 Cr?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Eligible",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Cannot take public deposits",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C5.DT6",
+        "topic": "Deposit Tenure",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Deposit tenure between 6-36 months?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Valid",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C5.DT7",
+        "topic": "Penal Interest",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Delay in repayment?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "18% interest applicable",
+            "reference": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P2C6",
+    "name": "Registration of Charges",
+    "mcqs": [],
+    "tricky": [],
+    "amendments": [],
+    "cases": [],
+    "trees": [
+      {
+        "id": "P2C6.DT1",
+        "topic": "Fixed vs Floating",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Specific asset OR fluctuating asset?",
+            "branches": [
+              {
+                "label": "Specific",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Fluctuating",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Fixed",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Floating",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C6.DT2",
+        "topic": "Crystallization",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Default/liquidation occurs?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Floating becomes fixed",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C6.DT3",
+        "topic": "Registration Timeline",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Filed within 30 days?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Valid",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C6.DT4",
+        "topic": "Deemed Notice",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Charge registered?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Third party deemed aware",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C6.DT5",
+        "topic": "Non-registration",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Registered?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Void against liquidator (debt survives)",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C6.DT6",
+        "topic": "Priority",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Which registered earlier?",
+            "branches": [
+              {
+                "label": "Earlier registration",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Higher priority",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C6.DT7",
+        "topic": "Satisfaction",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Paid off?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "File within 30 days",
+            "reference": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P2C7",
+    "name": "Management and Administration",
+    "mcqs": [],
+    "tricky": [],
+    "amendments": [],
+    "cases": [],
+    "trees": [
+      {
+        "id": "P2C7.DT1",
+        "topic": "Entry Timeline",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Entry made within 7 days?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Non-compliance",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C7.DT2",
+        "topic": "Beneficial Interest",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Declaration filed within 30 days?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Rights not enforceable",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C7.DT3",
+        "topic": "SBO Test",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Holding ≥10% or control?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "SBO",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C7.DT4",
+        "topic": "Register Closure",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Within 45 days/year and 30 at a time?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Invalid",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C7.DT5",
+        "topic": "Annual Return",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Filed within 60 days of AGM?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Penalty",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C7.DT6",
+        "topic": "Form Selection",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "OPC/small company?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "MGT-7A",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "MGT-7",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C7.DT7",
+        "topic": "Quorum",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Quorum present?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Adjourn meeting",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C7.DT8",
+        "topic": "Proxy Voting",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Voting via show of hands?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Proxy cannot vote",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C7.DT9",
+        "topic": "Resolution Type",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "≥75% votes?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Special",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Ordinary",
+            "reference": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P2C8",
+    "name": "Declaration & Payment of Dividend",
+    "mcqs": [],
+    "tricky": [],
+    "amendments": [],
+    "cases": [],
+    "trees": [
+      {
+        "id": "P2C8.DT1",
+        "topic": "Declaration Validity",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Profits + depreciation + set-off satisfied?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Proceed",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C8.DT2",
+        "topic": "Source Check",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Using free reserves only?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Invalid",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C8.DT3",
+        "topic": "Board Control",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Dividend ≤ recommendation?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Invalid",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C8.DT4",
+        "topic": "Deposit Timeline",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Deposited within 5 days?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Non-compliance",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C8.DT5",
+        "topic": "UDA Flow",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Unpaid after 30 days?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Transfer within 7 days",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C8.DT6",
+        "topic": "IEPF Transfer",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Unclaimed for 7 years?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Transfer to IEPF",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C8.DT7",
+        "topic": "Penal Interest",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Delay in payment?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "18% interest applies",
+            "reference": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P2C9",
+    "name": "Accounts of Companies",
+    "mcqs": [],
+    "tricky": [],
+    "amendments": [],
+    "cases": [],
+    "trees": [
+      {
+        "id": "P2C9.DT1",
+        "topic": "Books Validity",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Accrual + double entry followed?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Invalid",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C9.DT2",
+        "topic": "Preservation",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "≥8 years maintained?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Non-compliance",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C9.DT3",
+        "topic": "Consolidation",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Subsidiary exists?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "CFS required",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C9.DT4",
+        "topic": "Reopening",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Tribunal order present?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Invalid",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C9.DT5",
+        "topic": "Revision",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Within 3 years + Tribunal?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Invalid",
+            "reference": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P2C10",
+    "name": "Audit & Auditors",
+    "mcqs": [],
+    "tricky": [],
+    "amendments": [],
+    "cases": [],
+    "trees": [
+      {
+        "id": "P2C10.DT1",
+        "topic": "Appointment",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "First auditor?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Board within 30 days",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C10.DT2",
+        "topic": "Tenure",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Appointed at AGM?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Till 6th AGM",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C10.DT3",
+        "topic": "Rotation",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Individual or Firm?",
+            "branches": [
+              {
+                "label": "5 yrs",
+                "target": "outcomeA"
+              },
+              {
+                "label": "10 yrs",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Individual",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Firm",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C10.DT4",
+        "topic": "Cooling",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Term completed?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "5-year gap required",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C10.DT5",
+        "topic": "Vacancy",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Due to resignation?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "GM approval required",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C10.DT6",
+        "topic": "Removal",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Before term?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "CG approval + SR required",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C10.DT7",
+        "topic": "Disqualification",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Any shareholding in company?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Disqualified",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C10.DT8",
+        "topic": "Fraud",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Auditor involved in fraud?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "NCLT removal + 5-year ban",
+            "reference": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P2C11",
+    "name": "Companies Incorporated Outside India",
+    "mcqs": [],
+    "tricky": [],
+    "amendments": [],
+    "cases": [],
+    "trees": [
+      {
+        "id": "P2C11.DT1",
+        "topic": "Foreign Company Test",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Incorporated outside + business in India?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Foreign company",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C11.DT2",
+        "topic": "Electronic Mode",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Business via digital mode?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Covered",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C11.DT3",
+        "topic": "Initial Filing",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Filed within 30 days?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Non-compliance",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C11.DT4",
+        "topic": "Accounts Filing",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Filed within 6 months?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Non-compliance",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "P2C11.DT5",
+        "topic": "Contract Validity",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Non-compliance exists?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Contract still valid",
+            "reference": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OL1",
+    "name": "General Clauses Act, 1897",
+    "mcqs": [],
+    "tricky": [],
+    "amendments": [],
+    "cases": [],
+    "trees": [
+      {
+        "id": "OL1.DT1",
+        "topic": "Applicability",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Word defined in Act?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Use Act definition",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL1.DT2",
+        "topic": "Definition fallback",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Not defined in Act?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Use GCA definition",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL1.DT3",
+        "topic": "Definition type",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "\"Means\" used?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Exhaustive definition",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL1.DT4",
+        "topic": "Definition type",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "\"Includes\" used?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Expansive definition",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL1.DT5",
+        "topic": "Timeline - From",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "\"From\" used in timeline?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Exclude first day",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL1.DT6",
+        "topic": "Timeline - To",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "\"To\" used in timeline?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Include last day",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL1.DT7",
+        "topic": "Repeal",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Rights already accrued before repeal?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Protected under Sec 6",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL1.DT8",
+        "topic": "Authority",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Power to appoint given?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Includes power to remove",
+            "reference": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OL2",
+    "name": "Interpretation of Statutes",
+    "mcqs": [],
+    "tricky": [],
+    "amendments": [],
+    "cases": [],
+    "trees": [
+      {
+        "id": "OL2.DT1",
+        "topic": "Literal Rule",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Words clear and unambiguous?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Apply literal rule",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL2.DT2",
+        "topic": "Golden Rule",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Literal leads to absurdity?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Apply logical interpretation",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL2.DT3",
+        "topic": "Mischief Rule",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Ambiguity exists?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Apply 4-step test",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL2.DT4",
+        "topic": "Harmonious",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Conflict between provisions?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Harmonize",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL2.DT5",
+        "topic": "Clause Type",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "\"Subject to\" present?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Subordinate clause",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL2.DT6",
+        "topic": "Clause Type",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "\"Notwithstanding\" present?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Override clause",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL2.DT7",
+        "topic": "Ejusdem Generis",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Specific + general words together?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Restrict to same class",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL2.DT8",
+        "topic": "Proviso",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Proviso exists?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Exception to main rule",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL2.DT9",
+        "topic": "Explanation",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Explanation present?",
+            "branches": [
+              {
+                "label": "Show result",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Clarifies only; cannot override",
+            "reference": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OL3",
+    "name": "Foreign Exchange Management Act, 1999",
+    "mcqs": [],
+    "tricky": [],
+    "amendments": [],
+    "cases": [],
+    "trees": [
+      {
+        "id": "OL3.DT1",
+        "topic": "Residential Status",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": ">182 days + intention to stay?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "PRII (Person Resident in India)",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL3.DT2",
+        "topic": "Transaction Type",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Does transaction create/change asset or liability abroad?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Capital account",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Current account",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL3.DT3",
+        "topic": "Current Account",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Listed in Schedule I?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Prohibited",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL3.DT4",
+        "topic": "Current Account",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Listed in Schedule II?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Govt approval required",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL3.DT5",
+        "topic": "Current Account",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Listed in Schedule III?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "RBI approval required",
+            "reference": ""
+          }
+        ]
+      },
+      {
+        "id": "OL3.DT6",
+        "topic": "LRS Limit",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Amount ≤ USD 250,000?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Allowed under LRS",
+            "reference": ""
+          },
+          {
+            "id": "outcomeB",
+            "label": "Needs special approval",
+            "reference": ""
+          }
+        ]
+      }
+    ]
+  }
+]

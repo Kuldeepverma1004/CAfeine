@@ -13,6 +13,8 @@ import { MCQTest } from './components/MCQTest'
 import { ScenarioTest } from './components/ScenarioTest'
 import { Result } from './components/Result'
 import { Ledger } from './components/Ledger'
+import { FlashcardScreen } from './components/FlashcardScreen'
+import { PracticeProblems } from './components/PracticeProblems'
 
 export default function App() {
   const [phase, setPhase] = useState("splash")
@@ -94,6 +96,15 @@ export default function App() {
     persist(nd)
   }
 
+  const savePractice = (subId, chId, problemId, status) => {
+    const nd = { ...cd }
+    if (!nd[subId]) nd[subId] = {}
+    if (!nd[subId][chId]) nd[subId][chId] = {}
+    if (!nd[subId][chId].practiceStatus) nd[subId][chId].practiceStatus = {}
+    nd[subId][chId].practiceStatus[problemId] = status
+    persist(nd)
+  }
+
   const nav = (name, extra = {}) => setScreen({ name, ...extra })
   const sc = screen
 
@@ -111,7 +122,14 @@ export default function App() {
 
   if (sc.name === "mcq" && sub && ch) {
     const prevTest = cd?.[sc.subId]?.[sc.chId]?.lastTest
-    return <MCQTest subject={sub} chapter={ch} mistakesOnly={sc.mistakesOnly} mistakeIds={sc.mistakeIds}
+    return <MCQTest subject={sub} chapter={ch} mode="mcq" mistakesOnly={sc.mistakesOnly} mistakeIds={sc.mistakeIds}
+      onComplete={result => { saveTest(sc.subId, sc.chId, result, "mcq"); nav("result", { subId: sc.subId, chId: sc.chId, result, prevResult: prevTest, resultType: "mcq" }) }}
+      onBack={() => nav("mirror", { subId: sc.subId, chId: sc.chId })}/>
+  }
+
+  if (sc.name === "casemcq" && sub && ch) {
+    const prevTest = cd?.[sc.subId]?.[sc.chId]?.lastTest
+    return <MCQTest subject={sub} chapter={ch} mode="casemcq"
       onComplete={result => { saveTest(sc.subId, sc.chId, result, "mcq"); nav("result", { subId: sc.subId, chId: sc.chId, result, prevResult: prevTest, resultType: "mcq" }) }}
       onBack={() => nav("mirror", { subId: sc.subId, chId: sc.chId })}/>
   }
@@ -131,6 +149,20 @@ export default function App() {
       onFeedback={(t, d) => console.log("feedback", t, d)}/>
   }
 
+  if (sc.name === "flashcards" && sub && ch) {
+    return <FlashcardScreen subject={sub} chapter={ch}
+      onBack={() => nav("mirror", { subId: sc.subId, chId: sc.chId })}/>
+  }
+
+  if (sc.name === "practice" && sub && ch) {
+    return <PracticeProblems
+      subject={sub}
+      chapter={ch}
+      practiceData={cd?.[sc.subId]?.[sc.chId]?.practiceStatus || {}}
+      onSave={(problemId, status) => savePractice(sc.subId, sc.chId, problemId, status)}
+      onBack={() => nav("mirror", { subId: sc.subId, chId: sc.chId })}/>
+  }
+
   return (
     <div>
       {sc.name === "home" && <Home auth={auth} profile={profile} cd={cd} onNavigate={(n, extra) => nav(n, typeof extra === "string" ? { subId: extra } : extra)}/>}
@@ -139,6 +171,7 @@ export default function App() {
         onBack={() => nav("home")}/>}
       {sc.name === "mirror" && sub && ch && <ChapterMirror subject={sub} chapter={ch} chapterData={cd}
         onStart={type => nav(type, { subId: sc.subId, chId: sc.chId })}
+        onUpdateStatus={val => updateStatus(sc.subId, sc.chId, val)}
         onBack={() => nav("chapters", { subId: sc.subId })}/>}
       {sc.name === "ledger" && <Ledger cd={cd} onBack={() => nav("home")}/>}
     </div>
