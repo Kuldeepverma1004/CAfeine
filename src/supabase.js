@@ -1,6 +1,6 @@
 // Keys are read from environment variables — never hardcoded.
 // In development: create a .env file (copy .env.example and fill in your values).
-// In Netlify: add these as Environment Variables in Site Settings → Build & Deploy.
+// In Vercel: add these as Environment Variables in Project Settings → Environment Variables.
 const SB = import.meta.env.VITE_SUPABASE_URL
 const SK = import.meta.env.VITE_SUPABASE_ANON_KEY
 
