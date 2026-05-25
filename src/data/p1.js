@@ -2102,5 +2102,1168 @@ export const P1_DATA = [
     ],
     "cases": [],
     "trees": []
+  },
+  {
+    "id": "AA4",
+    "name": "Presentation & Disclosures Based Accounting Standards (AS 1, AS 3, AS 17, AS 18, AS 20)",
+    "dangerZones": [
+      {
+        "id": "AA4.DZ1",
+        "point": "Fundamental Accounting Assumptions disclosure requirement - disclosure only when NOT followed",
+        "mistake": "Students assume all three fundamental accounting assumptions (Going Concern, Consistency, Accrual) must always be disclosed in financial statements",
+        "why": "ICAI tests whether students understand that disclosure is required ONLY when assumptions are NOT followed - if followed, no specific disclosure is needed (AS 1 Para 17)",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA4.DZ2",
+        "point": "AS 17 Segment Reporting - 10% test uses TOTAL revenue (internal + external) but 75% test uses only EXTERNAL revenue",
+        "mistake": "Students apply the same revenue base for both tests - either using total revenue for both or external revenue for both",
+        "why": "ICAI specifically tests the distinction: 10% materiality test = Internal + External revenue; 75% overall test = External revenue only (AS 17 Para 27-28)",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA4.DZ3",
+        "point": "AS 18 Related Party - Two companies with common director are NOT automatically related parties",
+        "mistake": "Students assume any common director creates related party relationship between two companies",
+        "why": "ICAI tests the condition that common director must be able to AFFECT POLICIES OF BOTH COMPANIES in their mutual dealings to create related party relationship (AS 18 Para 9)",
+        "priority": "High"
+      },
+      {
+        "id": "AA4.DZ4",
+        "point": "AS 3 Cash Flow - Interest paid classification differs for financial vs non-financial enterprises",
+        "mistake": "Students classify interest paid uniformly as financing activity for all enterprises",
+        "why": "For financial enterprises: Interest paid = Operating activity; For non-financial enterprises: Interest paid = Financing activity (AS 3 Para 32-33)",
+        "priority": "High"
+      },
+      {
+        "id": "AA4.DZ5",
+        "point": "AS 17 Profit/Loss test - Compare with HIGHER of absolute profit or absolute loss, not net profit/loss",
+        "mistake": "Students compare segment result with net profit/loss of all segments combined",
+        "why": "When some segments have profit and others have loss, compare segment result with the GREATER in absolute amount of (i) combined profits or (ii) combined losses (AS 17 Para 27)",
+        "priority": "High"
+      },
+      {
+        "id": "AA4-DZ6",
+        "title": "AS 20 - Amalgamation Purchase vs Merger Treatment for EPS",
+        "description": "In amalgamation in the nature of PURCHASE, shares issued are weighted from DATE OF ACQUISITION. In amalgamation in the nature of MERGER, shares are included from BEGINNING of reporting period as if combined entity existed from start.",
+        "commonMistake": "Treating both types of amalgamation identically - weighting shares from acquisition date for merger type",
+        "correctApproach": "Purchase = Date of acquisition weighting; Merger = Full year weighting from beginning of earliest period reported",
+        "examTip": "The nature of amalgamation (purchase vs merger) determines whether retrospective treatment applies to share count"
+      },
+      {
+        "id": "AA4-DZ7",
+        "title": "AS 20 - Rights Issue Adjustment Factor Application",
+        "description": "Rights issue adjustment factor applies RETROSPECTIVELY to all periods PRIOR to the rights issue, multiplying pre-issue shares by the factor. Post-issue shares are NOT multiplied.",
+        "commonMistake": "Applying adjustment factor to post-rights issue shares or ignoring retrospective application to prior year EPS",
+        "correctApproach": "Adjustment Factor = Fair value prior to exercise ÷ Theoretical ex-rights value. Apply ONLY to shares outstanding BEFORE the rights issue",
+        "examTip": "Rights issue at fair value has NO bonus element - adjustment factor equals 1.00 in such cases"
+      },
+      {
+        "id": "AA4-DZ8",
+        "title": "AS 20 - Anti-dilutive Potential Equity Shares - Control Factor",
+        "description": "The control factor for determining dilutive vs anti-dilutive is CONTINUING ORDINARY ACTIVITIES profit/loss, NOT total profit/loss including discontinued operations.",
+        "commonMistake": "Using total net profit/loss to determine if potential equity shares are dilutive",
+        "correctApproach": "If conversion INCREASES EPS from continuing ordinary activities or DECREASES loss per share from continuing ordinary activities, it is anti-dilutive and IGNORED",
+        "examTip": "Continuing ordinary activities is the benchmark - discontinuing operations do not affect dilution classification"
+      },
+      {
+        "id": "AA4-DZ9",
+        "title": "AS 24 - Initial Disclosure Event Timing",
+        "description": "Initial disclosure event is the EARLIER of: (a) binding sale agreement, OR (b) Board approval AND announcement of detailed formal plan. Both conditions in (b) must be met.",
+        "commonMistake": "Treating board approval alone as initial disclosure event without announcement",
+        "correctApproach": "For (b) to trigger disclosure: Board must BOTH approve AND announce. A binding sale agreement alone triggers disclosure immediately.",
+        "examTip": "Announcement must be to affected parties in sufficiently specific manner to create demonstrable commitment"
+      },
+      {
+        "id": "AA4-DZ10",
+        "title": "AS 25 - Seasonal Revenue and Cost Treatment",
+        "description": "Seasonal revenues should NOT be anticipated or deferred at interim date if such treatment would not be appropriate at year-end. Same accounting policies as annual statements apply.",
+        "commonMistake": "Deferring expenses to high-revenue quarters to match costs with revenue in seasonal businesses",
+        "correctApproach": "Revenue recognized when earned; expenses recognized when incurred. No smoothing across interim periods.",
+        "examTip": "Cost deferral only appropriate at interim if it would also be appropriate to defer at financial year-end"
+      }
+    ],
+    "formulaGuide": [
+      {
+        "id": "AA4.FG1",
+        "topic": "AS 1 - Disclosure of Fundamental Accounting Assumptions",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Are Going Concern, Consistency, and Accrual assumptions followed?",
+            "branches": [
+              {
+                "label": "All three assumptions followed",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Any assumption NOT followed",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "No specific disclosure required - assumptions are presumed unless stated otherwise",
+            "reference": "AS 1 Para 17"
+          },
+          {
+            "id": "outcomeB",
+            "label": "Mandatory disclosure required stating which assumption is not followed and the fact thereof",
+            "reference": "AS 1 Para 17"
+          }
+        ]
+      },
+      {
+        "id": "AA4.FG2",
+        "topic": "AS 1 - Change in Accounting Policy Disclosure",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Does the change in accounting policy have material effect?",
+            "branches": [
+              {
+                "label": "Material effect in CURRENT period",
+                "target": "n2"
+              },
+              {
+                "label": "No material effect in current period but expected in LATER periods",
+                "target": "outcomeC"
+              },
+              {
+                "label": "No material effect at all",
+                "target": "outcomeD"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Is the amount of effect ascertainable?",
+            "branches": [
+              {
+                "label": "Amount ascertainable",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Amount NOT ascertainable (wholly or in part)",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Disclose the change AND the amount by which financial statement items are affected",
+            "reference": "AS 1 Para 28"
+          },
+          {
+            "id": "outcomeB",
+            "label": "Disclose the change AND indicate the fact that amount is not ascertainable",
+            "reference": "AS 1 Para 28"
+          },
+          {
+            "id": "outcomeC",
+            "label": "Disclose the fact of such change in the period in which the change is adopted",
+            "reference": "AS 1 Para 29"
+          },
+          {
+            "id": "outcomeD",
+            "label": "No disclosure required",
+            "reference": "AS 1 Para 28"
+          }
+        ]
+      },
+      {
+        "id": "AA4.FG3",
+        "topic": "AS 3 - Classification of Interest and Dividends",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "What type of enterprise is the reporting entity?",
+            "branches": [
+              {
+                "label": "Financial Enterprise (Bank, NBFC)",
+                "target": "n2"
+              },
+              {
+                "label": "Non-Financial Enterprise",
+                "target": "n3"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Type of cash flow for financial enterprise?",
+            "branches": [
+              {
+                "label": "Interest paid, Interest received, Dividends received",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Dividends paid",
+                "target": "outcomeB"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Type of cash flow for non-financial enterprise?",
+            "branches": [
+              {
+                "label": "Interest received, Dividends received",
+                "target": "outcomeC"
+              },
+              {
+                "label": "Interest paid",
+                "target": "outcomeD"
+              },
+              {
+                "label": "Dividends paid",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Operating Activity",
+            "reference": "AS 3 Para 32-33"
+          },
+          {
+            "id": "outcomeB",
+            "label": "Financing Activity",
+            "reference": "AS 3 Para 34"
+          },
+          {
+            "id": "outcomeC",
+            "label": "Investing Activity",
+            "reference": "AS 3 Para 33"
+          },
+          {
+            "id": "outcomeD",
+            "label": "Financing Activity",
+            "reference": "AS 3 Para 32"
+          }
+        ]
+      },
+      {
+        "id": "AA4.FG4",
+        "topic": "AS 17 - Identifying Reportable Segments (10% Tests)",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Apply Revenue Test: Is segment revenue (internal + external) ≥ 10% of total revenue of all segments?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "n2"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Apply Profit/Loss Test: Is segment result ≥ 10% of GREATER of (combined profits OR combined losses in absolute terms)?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "n3"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Apply Asset Test: Are segment assets ≥ 10% of total assets of all segments?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "REPORTABLE SEGMENT - Must be reported separately",
+            "reference": "AS 17 Para 27"
+          },
+          {
+            "id": "outcomeB",
+            "label": "NOT a reportable segment under 10% test - May be designated by management or included as unallocated reconciling item",
+            "reference": "AS 17 Para 28"
+          }
+        ]
+      },
+      {
+        "id": "AA4.FG5",
+        "topic": "AS 17 - 75% Overall Test for Reportable Segments",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "After applying 10% tests, is total EXTERNAL revenue of reportable segments ≥ 75% of total ENTERPRISE revenue?",
+            "branches": [
+              {
+                "label": "Yes (≥ 75%)",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No (< 75%)",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Sufficient reportable segments identified - No additional segments required",
+            "reference": "AS 17 Para 29"
+          },
+          {
+            "id": "outcomeB",
+            "label": "Identify additional segments as reportable (even if they fail 10% tests) until ≥ 75% of total enterprise revenue is covered",
+            "reference": "AS 17 Para 29"
+          }
+        ]
+      },
+      {
+        "id": "AA4.FG6",
+        "topic": "AS 18 - Related Party Identification Decision Tree",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "What is the nature of the party?",
+            "branches": [
+              {
+                "label": "Holding/Subsidiary/Fellow Subsidiary",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Associate or Joint Venture",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Individual with significant shareholding (control/significant influence)",
+                "target": "n2"
+              },
+              {
+                "label": "Key Management Personnel (KMP)",
+                "target": "n3"
+              },
+              {
+                "label": "Provider of finance/Trade union/Public utility/Government",
+                "target": "n4"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Are relatives of such individual involved?",
+            "branches": [
+              {
+                "label": "Yes - Spouse, son, daughter, brother, sister, father, mother who may influence dealings",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No relatives involved",
+                "target": "outcomeA"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Are relatives of KMP involved?",
+            "branches": [
+              {
+                "label": "Yes - Specified relatives",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No relatives involved",
+                "target": "outcomeA"
+              }
+            ]
+          },
+          {
+            "id": "n4",
+            "label": "Are they acting in normal course of dealings by virtue ONLY of those dealings?",
+            "branches": [
+              {
+                "label": "Yes - Only normal dealings",
+                "target": "outcomeB"
+              },
+              {
+                "label": "No - Have additional control/influence",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "RELATED PARTY - Disclosure required under AS 18",
+            "reference": "AS 18 Para 3"
+          },
+          {
+            "id": "outcomeB",
+            "label": "NOT a Related Party - No AS 18 disclosure required",
+            "reference": "AS 18 Para 9"
+          }
+        ]
+      },
+      {
+        "id": "AA4.FG7",
+        "topic": "AS 20 - Basic EPS Computation",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Calculate Numerator: Net Profit/Loss attributable to equity shareholders",
+            "branches": [
+              {
+                "label": "Proceed to adjustments",
+                "target": "n2"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "What type of preference shares exist?",
+            "branches": [
+              {
+                "label": "Non-cumulative preference shares",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Cumulative preference shares",
+                "target": "outcomeB"
+              },
+              {
+                "label": "No preference shares",
+                "target": "outcomeC"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Deduct preference dividend ONLY IF PROVIDED for in respect of the period",
+            "reference": "AS 20 Para 13"
+          },
+          {
+            "id": "outcomeB",
+            "label": "Deduct FULL preference dividend for the period WHETHER OR NOT provided/declared",
+            "reference": "AS 20 Para 14"
+          },
+          {
+            "id": "outcomeC",
+            "label": "No adjustment for preference dividend - Use full net profit",
+            "reference": "AS 20 Para 10"
+          }
+        ]
+      },
+      {
+        "id": "AA4-FG8",
+        "title": "AS 20 - Partly Paid Shares Treatment for EPS",
+        "condition": "Shares are partly paid with entitlement to dividend",
+        "steps": [
+          "Determine paid-up proportion: Paid amount ÷ Face value",
+          "Convert to equivalent fully paid: Number of partly paid shares × (Paid amount ÷ Face value)",
+          "Apply time-weighting based on when partly paid shares were outstanding",
+          "Include in Basic EPS if entitled to dividends proportionally"
+        ],
+        "formula": "Equivalent shares = Partly paid shares × (Amount paid ÷ Face value)",
+        "example": "600 shares of ₹10 FV, ₹5 paid = 600 × (5/10) = 300 equivalent shares"
+      },
+      {
+        "id": "AA4-FG9",
+        "title": "AS 20 - Rights Issue Theoretical Ex-Rights Value",
+        "condition": "Computing EPS adjustment for rights issue with bonus element",
+        "steps": [
+          "Calculate aggregate fair value of shares before exercise: (Fair value × Old shares)",
+          "Add proceeds from rights exercise: (Rights price × New shares)",
+          "Divide total by shares after exercise: (Old shares + New shares)",
+          "Compute adjustment factor: Fair value before ÷ Theoretical ex-rights value"
+        ],
+        "formula": "TERP = [(FV × Old) + (Rights Price × New)] ÷ (Old + New); Adjustment Factor = FV ÷ TERP",
+        "example": "5,00,000 shares at ₹21 FV, rights 1:5 at ₹15: TERP = [(21×5,00,000)+(15×1,00,000)]÷6,00,000 = ₹20; Factor = 21÷20 = 1.05"
+      },
+      {
+        "id": "AA4-FG10",
+        "title": "AS 20 - Diluted EPS with Convertible Debentures",
+        "condition": "Computing Diluted EPS with convertible debt instruments",
+        "steps": [
+          "Start with net profit attributable to equity shareholders",
+          "Add back interest expense on convertible debentures",
+          "Deduct tax saving on that interest (Interest × Tax rate)",
+          "Divide adjusted profit by (Existing shares + Potential shares from conversion)"
+        ],
+        "formula": "Diluted EPS = [Net Profit + Interest(1-t)] ÷ [Existing shares + Conversion shares]",
+        "example": "Profit ₹1Cr, 50L shares, 1L debentures converting to 10L shares, 12% interest, 30% tax: Adjusted = 1Cr + 12L(1-0.3) = ₹1.084Cr; Diluted EPS = 1.084Cr ÷ 60L = ₹1.81"
+      },
+      {
+        "id": "AA4-FG11",
+        "title": "AS 20 - Options/Warrants Dilution (Treasury Stock Method)",
+        "condition": "Computing incremental shares for diluted EPS from share options",
+        "steps": [
+          "Calculate proceeds from exercise: Options × Exercise price",
+          "Determine shares that would be issued at fair value: Proceeds ÷ Average fair value",
+          "Incremental shares = Options outstanding - Shares at fair value",
+          "Only include if exercise price < average fair value (dilutive)"
+        ],
+        "formula": "Incremental shares = Options × [1 - (Exercise price ÷ Fair value)]",
+        "example": "1,00,000 options at ₹15, fair value ₹20: Proceeds = ₹15L; Shares at FV = 75,000; Incremental = 25,000"
+      },
+      {
+        "id": "AA4-FG12",
+        "title": "AS 25 - Interim Tax Expense using Weighted Average Rate",
+        "condition": "Computing tax expense for interim period with graduated tax rates",
+        "steps": [
+          "Estimate annual taxable income",
+          "Calculate full year tax using applicable slab rates",
+          "Compute weighted average annual tax rate: Total tax ÷ Total estimated income",
+          "Apply weighted average rate to interim period income"
+        ],
+        "formula": "Weighted Avg Rate = Total estimated tax ÷ Total estimated income; Interim tax = Interim income × Weighted Avg Rate",
+        "example": "Annual income ₹10L, tax 20% on first ₹5L + 40% on rest = ₹3.5L; Rate = 35%; Q1 income ₹75,000 → Tax = ₹26,250"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "AA4.FC1",
+        "front": "Fundamental Accounting Assumptions (AS 1)",
+        "back": "Going Concern, Consistency, Accrual - These are usually not specifically stated because their acceptance and use are assumed. Disclosure is necessary only if they are not followed.",
+        "section": "AS 1 Para 17"
+      },
+      {
+        "id": "AA4.FC2",
+        "front": "Prudence (AS 1)",
+        "back": "In view of uncertainty associated with future events, profits are not anticipated, but losses are provided for as a matter of conservatism. Provision should be created for all known liabilities and losses even though the amount cannot be determined with certainty.",
+        "section": "AS 1 Para 17"
+      },
+      {
+        "id": "AA4.FC3",
+        "front": "Cash Equivalents (AS 3)",
+        "back": "Short term, highly liquid investments that are readily convertible into known amounts of cash and are subject to insignificant risk of change in value. A short-term investment is one which is due for maturity within three months from the date of acquisition.",
+        "section": "AS 3 Para 6"
+      },
+      {
+        "id": "AA4.FC4",
+        "front": "Business Segment (AS 17)",
+        "back": "A distinguishable component of an enterprise that is engaged in providing an individual product or service or a group of related products or services and that is subject to risks and returns that are different from those of other business segments.",
+        "section": "AS 17 Para 9"
+      },
+      {
+        "id": "AA4.FC5",
+        "front": "Geographical Segment (AS 17)",
+        "back": "A distinguishable component of an enterprise that is engaged in providing products or services within a particular economic environment and that is subject to risks and returns that are different from those of components operating in other economic environments.",
+        "section": "AS 17 Para 10"
+      },
+      {
+        "id": "AA4.FC6",
+        "front": "Segment Revenue (AS 17)",
+        "back": "The aggregate of (i) portion of enterprise revenue directly attributable to a segment, (ii) relevant portion allocable on reasonable basis, and (iii) revenue from transactions with other segments. EXCLUDES: Extraordinary items, interest/dividend income, gains on investments (unless segment is primarily financial).",
+        "section": "AS 17 Para 15-16"
+      },
+      {
+        "id": "AA4.FC7",
+        "front": "Related Party (AS 18)",
+        "back": "Parties are considered to be related if at any time during the reporting period one party has the ability to control the other party or exercise significant influence over the other party in making financial and/or operating decisions.",
+        "section": "AS 18 Para 3"
+      },
+      {
+        "id": "AA4.FC8",
+        "front": "Control (AS 18)",
+        "back": "(a) ownership, directly or indirectly, of more than one half of the voting power of an enterprise, or (b) control of the composition of the board of directors, or (c) a substantial interest in voting power AND the power to direct financial and/or operating policies.",
+        "section": "AS 18 Para 4"
+      },
+      {
+        "id": "AA4.FC9",
+        "front": "Key Management Personnel (AS 18)",
+        "back": "Those persons who have the authority and responsibility for planning, directing and controlling the activities of the reporting enterprise. In case of a company: managing director(s), whole time director(s), manager, and any person in accordance with whose directions the board is accustomed to act.",
+        "section": "AS 18 Para 7"
+      },
+      {
+        "id": "AA4.FC10",
+        "front": "Potential Equity Share (AS 20)",
+        "back": "A financial instrument or other contract that entitles, or may entitle, its holder to equity shares. Examples: Convertible debentures/preference shares, share warrants, employee stock options, contingently issuable shares.",
+        "section": "AS 20 Para 5"
+      },
+      {
+        "id": "AA4.FC11",
+        "front": "Substantial Interest (AS 18)",
+        "back": "An enterprise is considered to have a substantial interest in another enterprise if that enterprise owns, directly or indirectly, 20% or more interest in the voting power of the other enterprise.",
+        "section": "AS 18 Para 5"
+      },
+      {
+        "id": "AA4.FC12",
+        "front": "Materiality (AS 1)",
+        "back": "Financial statements should disclose all material items, i.e. items the knowledge of which might influence the decisions of the user of the financial statement. Materiality is not always a matter of relative size.",
+        "section": "AS 1 Para 21"
+      },
+      {
+        "id": "AA4-FC13",
+        "term": "Contingently Issuable Shares (AS 20)",
+        "definition": "Equity shares issuable upon satisfaction of certain conditions from contractual arrangements. Included in basic EPS from date conditions are satisfied; in diluted EPS from beginning of period if conditions not yet met.",
+        "reference": "AS 20 Paragraph on Contingently Issuable Shares"
+      },
+      {
+        "id": "AA4-FC14",
+        "term": "Theoretical Ex-Rights Fair Value (AS 20)",
+        "definition": "Calculated by adding aggregate fair value of shares immediately prior to rights exercise to proceeds from exercise, divided by total shares outstanding after exercise.",
+        "reference": "AS 20 Rights Issue Calculation"
+      },
+      {
+        "id": "AA4-FC15",
+        "term": "Discontinuing Operation (AS 24)",
+        "definition": "A component of an enterprise that is being disposed of pursuant to a single plan, represents a separate major line of business or geographical area, and can be distinguished operationally and for financial reporting purposes.",
+        "reference": "AS 24 Paragraph 3"
+      },
+      {
+        "id": "AA4-FC16",
+        "term": "Initial Disclosure Event (AS 24)",
+        "definition": "The earlier of: (a) enterprise entering binding sale agreement for substantially all assets of discontinuing operation, or (b) board approving AND announcing detailed formal plan for discontinuance.",
+        "reference": "AS 24 Paragraph 15"
+      },
+      {
+        "id": "AA4-FC17",
+        "term": "Interim Period (AS 25)",
+        "definition": "A financial reporting period shorter than a full financial year. During first year of operations, a shorter annual period is NOT considered an interim period.",
+        "reference": "AS 25 Definitions"
+      },
+      {
+        "id": "AA4-FC18",
+        "term": "Interim Financial Report (AS 25)",
+        "definition": "A financial report containing either a complete set of financial statements or a set of condensed financial statements for an interim period.",
+        "reference": "AS 25 Definitions"
+      },
+      {
+        "id": "AA4-FC19",
+        "term": "Anti-Dilutive Potential Equity Shares (AS 20)",
+        "definition": "Potential equity shares whose conversion would increase EPS or decrease loss per share from continuing ordinary activities. Such shares are IGNORED in calculating diluted EPS.",
+        "reference": "AS 20 Section 5.9"
+      },
+      {
+        "id": "AA4-FC20",
+        "term": "Share Application Money Pending Allotment - EPS Treatment (AS 20)",
+        "definition": "Treated as dilutive potential equity shares for diluted EPS calculation when not statutorily required to be kept separately and is being utilized in business of the enterprise.",
+        "reference": "AS 20 Section 5.6"
+      }
+    ],
+    "practiceProblems": [
+      {
+        "id": "AA4.PP1",
+        "title": "AS 17 - Identification of Reportable Segments",
+        "difficulty": 4,
+        "problem": "XYZ Ltd. has 5 business segments with the following data for FY 2024-25:\n\nSegment | Revenue (₹ lakhs) | Result (₹ lakhs) | Assets (₹ lakhs)\nA | 450 (including ₹50 inter-segment) | 80 | 200\nB | 320 (including ₹70 inter-segment) | (45) | 180\nC | 180 (all external) | 25 | 120\nD | 150 (including ₹30 inter-segment) | (15) | 80\nE | 100 (all external) | 5 | 70\nTotal | 1,200 | 50 | 650\n\nExternal Revenue: A-₹400 lakhs, B-₹250 lakhs, C-₹180 lakhs, D-₹120 lakhs, E-₹100 lakhs = ₹1,050 lakhs\n\nIdentify reportable segments applying AS 17 criteria.",
+        "steps": [
+          "Step 1 - Revenue Test (10% of ₹1,200 lakhs = ₹120 lakhs): Segments A (₹450), B (₹320), C (₹180), D (₹150) qualify. E (₹100) fails.",
+          "Step 2 - Profit/Loss Test: Combined profits = ₹80 + ₹25 + ₹5 = ₹110 lakhs; Combined losses = ₹45 + ₹15 = ₹60 lakhs. Higher = ₹110 lakhs. 10% = ₹11 lakhs. Segments A (₹80), B (₹45), C (₹25), D (₹15) qualify. E (₹5) fails.",
+          "Step 3 - Asset Test (10% of ₹650 lakhs = ₹65 lakhs): Segments A (₹200), B (₹180), C (₹120), D (₹80), E (₹70) - ALL qualify.",
+          "Step 4 - Apply 75% Test: External revenue of reportable segments (A, B, C, D, E) = ₹1,050 lakhs. Total enterprise revenue = ₹1,050 lakhs (external). 100% covered, exceeds 75%."
+        ],
+        "answer": "ALL 5 segments (A, B, C, D, E) are reportable segments. Though Segment E fails the Revenue Test and Profit/Loss Test, it qualifies under the Asset Test (₹70 lakhs > ₹65 lakhs threshold). The 75% overall test is satisfied with 100% coverage.",
+        "topic": "AS 17 Segment Reporting"
+      },
+      {
+        "id": "AA4.PP2",
+        "title": "AS 3 - Cash Flow Classification",
+        "difficulty": 3,
+        "problem": "Classify the following items for ABC Ltd. (a manufacturing company) as per AS 3 for FY 2024-25:\n(a) Interest paid on term loan ₹5,00,000\n(b) Dividend received on investment in shares ₹2,00,000\n(c) Insurance claim received for loss of machinery by fire ₹8,00,000\n(d) TDS deducted on interest received from subsidiary company ₹50,000\n(e) Loans given to employees ₹3,00,000\n(f) Interest received from employees on above loan ₹30,000",
+        "steps": [
+          "Step 1 - Interest paid on term loan: For non-financial enterprise, interest paid = Financing Activity (AS 3 Para 32)",
+          "Step 2 - Dividend received on investment: For non-financial enterprise = Investing Activity (AS 3 Para 33)",
+          "Step 3 - Insurance claim for loss of machinery: Extraordinary item under Investing Activity as it relates to fixed assets (AS 3 Para 29)",
+          "Step 4 - TDS on interest from subsidiary: Interest from subsidiary = Investing activity, hence TDS = Investing Activity (outflow already reduced)",
+          "Step 5 - Loans to employees and interest thereon: Loans to employees and interest earned = Operating Activity for all enterprises (AS 3 Para 14)"
+        ],
+        "answer": "(a) Financing Activity - ₹5,00,000 outflow; (b) Investing Activity - ₹2,00,000 inflow; (c) Investing Activity (Extraordinary) - ₹8,00,000 inflow; (d) Investing Activity - ₹50,000 outflow; (e) Operating Activity - ₹3,00,000 outflow; (f) Operating Activity - ₹30,000 inflow",
+        "topic": "AS 3 Cash Flow Statement"
+      },
+      {
+        "id": "AA4.PP3",
+        "title": "AS 1 - Change in Accounting Policy Disclosure",
+        "difficulty": 3,
+        "problem": "Prashant Ltd. had closing inventory of ₹1,63,000 as at 31.03.2025 using FIFO method. The company decided to change to weighted average method from FY 2024-25. Using weighted average, closing inventory = ₹1,47,000. Net Realisable Value = ₹1,95,000. What disclosure is required as per AS 1?",
+        "steps": [
+          "Step 1 - Identify the change: Change from FIFO to Weighted Average method for inventory valuation - this is a change in accounting policy.",
+          "Step 2 - Determine inventory value: Since NRV (₹1,95,000) > Cost under both methods, inventory to be valued at cost. Under new policy = ₹1,47,000.",
+          "Step 3 - Calculate impact: Reduction in inventory value = ₹1,63,000 - ₹1,47,000 = ₹16,000. This reduces current year profit by ₹16,000.",
+          "Step 4 - Draft disclosure as per AS 1 Para 28"
+        ],
+        "answer": "Disclosure required: 'The company values its inventory at lower of cost and net realizable value. Since net realizable value of all items of inventory in the current year was greater than respective costs, the company valued its inventory at cost. In the present year i.e. 2024-25, the company has changed to weighted average method, which better reflects the consumption pattern of inventory, for ascertaining inventory costs from the earlier practice of using FIFO for the purpose. The change in policy has reduced current profit and value of inventory by ₹16,000.'",
+        "topic": "AS 1 Disclosure of Accounting Policies"
+      },
+      {
+        "id": "AA4.PP4",
+        "title": "AS 20 - Basic EPS with Weighted Average Shares",
+        "difficulty": 4,
+        "problem": "Delta Ltd. has the following share capital movements during FY 2024-25:\n- 1st April 2024: 10,00,000 equity shares of ₹10 each\n- 1st July 2024: Issue of 2,00,000 shares for cash at ₹15\n- 1st October 2024: Bonus issue 1:5 (on shares outstanding on that date)\n- 1st January 2025: Buyback of 50,000 shares at ₹20\nNet Profit after tax for FY 2024-25: ₹48,00,000\n10% Cumulative Preference Shares: ₹20,00,000 (dividend not provided)\nCalculate Basic EPS.",
+        "steps": [
+          "Step 1 - Adjust for bonus issue retrospectively: Opening shares = 10,00,000 × 6/5 = 12,00,000; Issue on 1.7.24 = 2,00,000 × 6/5 = 2,40,000",
+          "Step 2 - Calculate weighted average: (12,00,000 × 12/12) + (2,40,000 × 9/12) - (50,000 × 3/12) = 12,00,000 + 1,80,000 - 12,500 = 13,67,500 shares",
+          "Step 3 - Calculate earnings: Net Profit = ₹48,00,000; Less: Cumulative preference dividend (must deduct whether provided or not) = ₹20,00,000 × 10% = ₹2,00,000; Earnings for equity = ₹46,00,000",
+          "Step 4 - Calculate Basic EPS = ₹46,00,000 ÷ 13,67,500 = ₹3.36 per share"
+        ],
+        "answer": "Basic EPS = ₹3.36 per share. Key points: (1) Bonus shares adjusted retrospectively for all periods, (2) Cumulative preference dividend deducted irrespective of provision, (3) Buyback reduces weighted average only from date of buyback.",
+        "topic": "AS 20 Earnings Per Share"
+      },
+      {
+        "id": "AA4-PP5",
+        "type": "Computational",
+        "difficulty": "Medium",
+        "topic": "AS 20 - Basic EPS with Bonus Issue and Retrospective Adjustment",
+        "problem": "ABC Ltd. had 20,00,000 equity shares outstanding until 30th September 20X2. On 1st October 20X2, it made a bonus issue of 2 shares for each share outstanding. Net profit for 20X2 was ₹60,00,000 and for 20X1 was ₹18,00,000. Compute Basic EPS for both years as required to be reported in 20X2 financial statements.",
+        "solution": {
+          "approach": [
+            "Bonus shares = 20,00,000 × 2 = 40,00,000",
+            "Total shares after bonus = 60,00,000",
+            "For bonus issue, treat as if occurred at beginning of earliest period",
+            "EPS 20X2 = ₹60,00,000 ÷ 60,00,000 = ₹1.00",
+            "EPS 20X1 (restated) = ₹18,00,000 ÷ 60,00,000 = ₹0.30"
+          ],
+          "answer": "Basic EPS 20X2: ₹1.00; Restated Basic EPS 20X1: ₹0.30"
+        }
+      },
+      {
+        "id": "AA4-PP6",
+        "type": "Computational",
+        "difficulty": "Hard",
+        "topic": "AS 20 - Rights Issue with Bonus Element",
+        "problem": "XYZ Ltd. had 5,00,000 shares prior to rights issue. Rights issue: 1 new share for each 5 outstanding at ₹15. Fair value immediately prior to exercise was ₹21. Net profit: 20X1 = ₹11,00,000; 20X2 = ₹15,00,000. Rights exercised on 1st March 20X2. Compute EPS for 20X2 including comparative for 20X1.",
+        "solution": {
+          "approach": [
+            "TERP = [(21×5,00,000) + (15×1,00,000)] ÷ 6,00,000 = ₹20",
+            "Adjustment Factor = 21 ÷ 20 = 1.05",
+            "20X1 restated EPS = 11,00,000 ÷ (5,00,000 × 1.05) = ₹2.10",
+            "20X2 weighted shares = (5,00,000 × 1.05 × 2/12) + (6,00,000 × 10/12) = 5,87,500",
+            "20X2 EPS = 15,00,000 ÷ 5,87,500 = ₹2.55"
+          ],
+          "answer": "EPS 20X2: ₹2.55; Restated EPS 20X1: ₹2.10"
+        }
+      },
+      {
+        "id": "AA4-PP7",
+        "type": "Computational",
+        "difficulty": "Hard",
+        "topic": "AS 20 - Diluted EPS with Stock Options",
+        "problem": "Net profit ₹12,00,000. Weighted average equity shares: 5,00,000. Average fair value: ₹20. Shares under option: 1,00,000. Exercise price: ₹15. Compute Basic and Diluted EPS.",
+        "solution": {
+          "approach": [
+            "Basic EPS = 12,00,000 ÷ 5,00,000 = ₹2.40",
+            "Shares at fair value = (1,00,000 × 15) ÷ 20 = 75,000",
+            "Incremental dilutive shares = 1,00,000 - 75,000 = 25,000",
+            "Diluted EPS = 12,00,000 ÷ 5,25,000 = ₹2.29"
+          ],
+          "answer": "Basic EPS: ₹2.40; Diluted EPS: ₹2.29"
+        }
+      },
+      {
+        "id": "AA4-PP8",
+        "type": "Conceptual",
+        "difficulty": "Medium",
+        "topic": "AS 24 - Discontinuing Operations Identification",
+        "problem": "Company MN operates Hotels, Airlines, and Software segments. It decides to sell Airline business (25% of revenue) piecemeal by selling aircraft and settling liabilities. Has it commenced discontinuing operations disclosure requirements?",
+        "solution": {
+          "approach": [
+            "Check if single plan exists for disposal - Yes",
+            "Check if separate major line of business - Yes (25% revenue)",
+            "Check if operationally and financially distinguishable - Yes (separate segment)",
+            "All three criteria of AS 24 met"
+          ],
+          "answer": "Yes, Airline business qualifies as discontinuing operation. Disclosure requirements of AS 24 apply from the initial disclosure event."
+        }
+      }
+    ],
+    "caseMCQs": {
+      "scenario": "Pinnacle Ltd. is a listed manufacturing company preparing financial statements for FY ending 31st March 2025. The company has the following situations:\n\nSituation 1: The company has 4 business segments with revenues (internal + external): X-₹800 lakhs, Y-₹600 lakhs, Z-₹400 lakhs, W-₹200 lakhs (Total ₹2,000 lakhs). External revenues: X-₹700, Y-₹550, Z-₹350, W-₹150 (Total ₹1,750 lakhs). Segment results: X-₹100 profit, Y-₹80 profit, Z-₹60 loss, W-₹20 loss.\n\nSituation 2: Mr. Sharma, the Managing Director of Pinnacle Ltd., owns 100% shares of Sharma Enterprises. During the year, Pinnacle Ltd. sold goods worth ₹45,00,000 to Sharma Enterprises at normal selling price.\n\nSituation 3: The company changed its inventory valuation from FIFO to Weighted Average. Closing inventory: FIFO ₹28,00,000, Weighted Average ₹24,00,000. The company disclosed only 'Inventory valued at Weighted Average method' in notes.",
+      "questions": [
+        {
+          "id": "AA4.CQ1",
+          "q": "Based on the profit/loss test under AS 17, what is the threshold amount for a segment to qualify as reportable?",
+          "opts": [
+            "₹18 lakhs (10% of ₹180 lakhs combined profit)",
+            "₹20 lakhs (10% of ₹200 lakhs total absolute amount)",
+            "₹10 lakhs (10% of ₹100 lakhs net profit)",
+            "₹8 lakhs (10% of ₹80 lakhs combined loss)"
+          ],
+          "ans": 0,
+          "exp": "Combined profits (X+Y) = ₹180 lakhs; Combined losses (Z+W) = ₹80 lakhs. Since ₹180 lakhs > ₹80 lakhs in absolute terms, threshold = 10% × ₹180 lakhs = ₹18 lakhs. AS 17 Para 27 requires comparison with the GREATER of combined profits or combined losses.",
+          "type": "Trap",
+          "diff": 3
+        },
+        {
+          "id": "AA4.CQ2",
+          "q": "What is the treatment of ₹45,00,000 sale to Sharma Enterprises under AS 18?",
+          "opts": [
+            "No disclosure required as transaction is at arm's length price",
+            "Disclose as related party transaction with Sharma Enterprises",
+            "No disclosure as Sharma Enterprises is not a subsidiary",
+            "Disclose only if transaction exceeds ₹50,00,000"
+          ],
+          "ans": 1,
+          "exp": "Sharma Enterprises is an enterprise over which a key management personnel (Mr. Sharma, MD) is able to exercise significant influence as he owns 100% shares. Under AS 18 Para 3(e), this creates a related party relationship. Disclosure is mandatory IRRESPECTIVE of whether transaction is at normal selling price.",
+          "type": "Concept",
+          "diff": 2
+        },
+        {
+          "id": "AA4.CQ3",
+          "q": "What is the amount of impact that should have been disclosed due to change in inventory valuation policy?",
+          "opts": [
+            "Nil - no disclosure of amount required",
+            "₹4,00,000 reduction in profit",
+            "₹28,00,000 being closing inventory",
+            "₹24,00,000 being revised inventory"
+          ],
+          "ans": 1,
+          "exp": "As per AS 1 Para 28, when change in accounting policy has material effect in current period, the AMOUNT by which financial statement items are affected must be disclosed. Impact = ₹28,00,000 - ₹24,00,000 = ₹4,00,000 reduction in profit and inventory value.",
+          "type": "Concept",
+          "diff": 2
+        },
+        {
+          "id": "AA4.CQ4",
+          "q": "For the 75% overall test under AS 17, what percentage of total enterprise revenue is covered by reportable segments X and Y?",
+          "opts": [
+            "70% (₹1,400 ÷ ₹2,000)",
+            "71.43% (₹1,250 ÷ ₹1,750)",
+            "80% (₹1,600 ÷ ₹2,000)",
+            "62.5% (₹1,250 ÷ ₹2,000)"
+          ],
+          "ans": 1,
+          "exp": "The 75% test uses EXTERNAL revenue only. External revenue of X and Y = ₹700 + ₹550 = ₹1,250 lakhs. Total enterprise external revenue = ₹1,750 lakhs. Percentage = ₹1,250 ÷ ₹1,750 = 71.43%. Since this is less than 75%, additional segments must be identified as reportable.",
+          "type": "Trap",
+          "diff": 3
+        }
+      ]
+    },
+    "mcqs": [
+      {
+        "id": "AA4.Q1",
+        "q": "Under AS 1, when is disclosure of fundamental accounting assumptions mandatory?",
+        "opts": [
+          "Always in all financial statements",
+          "Only when all three assumptions are followed",
+          "Only when any assumption is NOT followed",
+          "Only for listed companies"
+        ],
+        "ans": 2,
+        "exp": "As per AS 1 Para 17, fundamental accounting assumptions are usually not specifically stated because their acceptance and use are assumed. Disclosure is necessary ONLY if they are not followed.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA4.Q2",
+        "q": "Which of the following is NOT considered cash equivalent under AS 3?",
+        "opts": [
+          "Treasury bills maturing in 60 days from acquisition",
+          "Commercial paper maturing in 45 days from acquisition",
+          "Fixed deposit with bank maturing in 4 months from acquisition",
+          "Money market fund investment maturing in 75 days"
+        ],
+        "ans": 2,
+        "exp": "As per AS 3 Para 6, cash equivalents are short-term investments due for maturity within THREE MONTHS from date of acquisition. Fixed deposit maturing in 4 months (120 days) exceeds this threshold and is not a cash equivalent.",
+        "type": "Trap",
+        "diff": 2
+      },
+      {
+        "id": "AA4.Q3",
+        "q": "Under AS 18, two companies with a common non-executive director are related parties if:",
+        "opts": [
+          "Always, by virtue of common directorship",
+          "The director holds at least 20% shares in both companies",
+          "The director is able to affect policies of both companies in their mutual dealings",
+          "Never, as non-executive directors are excluded from AS 18"
+        ],
+        "ans": 2,
+        "exp": "As per AS 18 Para 9(a), two companies are NOT related parties simply because they have a director in common. They become related ONLY if the director is able to affect the policies of BOTH companies in their mutual dealings.",
+        "type": "Trap",
+        "diff": 2
+      },
+      {
+        "id": "AA4.Q4",
+        "q": "For computing Basic EPS under AS 20, preference dividend on cumulative preference shares is deducted:",
+        "opts": [
+          "Only if declared by the Board of Directors",
+          "Only if provided for in the books of accounts",
+          "For the full amount required for the period, whether or not provided",
+          "Only if actually paid during the period"
+        ],
+        "ans": 2,
+        "exp": "As per AS 20 Para 14, for cumulative preference shares, the FULL amount of required preference dividend for the period is deducted WHETHER OR NOT the dividends have been provided for.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA4.Q5",
+        "q": "Under AS 17, segment assets do NOT include:",
+        "opts": [
+          "Trade receivables directly attributable to the segment",
+          "Plant and machinery used by the segment",
+          "Deferred tax assets",
+          "Inventory held by the segment"
+        ],
+        "ans": 2,
+        "exp": "As per AS 17 Para 22, segment assets do not include income tax assets (including deferred tax assets) and assets used for general enterprise or head-office purposes.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA4.Q6",
+        "q": "Under AS 3, dividends paid by a non-financial enterprise should be classified as:",
+        "opts": [
+          "Operating Activity",
+          "Investing Activity",
+          "Financing Activity",
+          "Either Operating or Financing at management's choice"
+        ],
+        "ans": 2,
+        "exp": "As per AS 3 Para 34, dividends paid should be classified as cash flows from FINANCING activities for ALL enterprises (both financial and non-financial).",
+        "type": "Concept",
+        "diff": 1
+      },
+      {
+        "id": "AA4.Q7",
+        "q": "Which of the following is NOT a consideration in selection of accounting policies under AS 1?",
+        "opts": [
+          "Prudence",
+          "Substance over form",
+          "Comparability",
+          "Materiality"
+        ],
+        "ans": 2,
+        "exp": "As per AS 1 Para 17, major considerations governing selection of accounting policies are: Prudence, Substance over form, and Materiality. Comparability is NOT listed as a consideration for selection of accounting policies.",
+        "type": "Trap",
+        "diff": 2
+      },
+      {
+        "id": "AA4.Q8",
+        "q": "Under AS 18, 'associate of an associate' relationship creates:",
+        "opts": [
+          "Related party relationship requiring full disclosure",
+          "No related party relationship under AS 18",
+          "Related party only for consolidated financial statements",
+          "Related party only if shareholding exceeds 25%"
+        ],
+        "ans": 1,
+        "exp": "As per AS 18, 'associate of an associate' is NOT a related party. The related party relationship extends only to direct associates and joint ventures, not to indirect relationships through them.",
+        "type": "Trap",
+        "diff": 3
+      },
+      {
+        "id": "AA4-Q12",
+        "question": "Under AS 20, in an amalgamation in the nature of merger, equity shares issued as consideration are included in weighted average calculation from:",
+        "options": {
+          "a": "Date of amalgamation",
+          "b": "Beginning of the reporting period",
+          "c": "Date of board approval",
+          "d": "Date of court approval"
+        },
+        "correctAnswer": "b",
+        "explanation": "In amalgamation in the nature of merger, financial statements are prepared as if the combined entity existed from beginning of the reporting period. Hence, shares are weighted from beginning of the period, not acquisition date."
+      },
+      {
+        "id": "AA4-Q13",
+        "question": "Under AS 24, which of the following does NOT qualify as a discontinuing operation?",
+        "options": {
+          "a": "Disposal of a business segment in a single transaction",
+          "b": "Gradual evolutionary phasing out of a product line",
+          "c": "Termination through abandonment of a geographical segment",
+          "d": "Piecemeal disposal of a major line of business"
+        },
+        "correctAnswer": "b",
+        "explanation": "Gradual or evolutionary phasing out of a product line does not automatically satisfy the definition of discontinuing operation under AS 24. It must be pursuant to a single plan and represent a separate major line of business."
+      },
+      {
+        "id": "AA4-Q14",
+        "question": "Under AS 25, how should seasonal revenue received in Q3 be treated in Q1 interim financial statements?",
+        "options": {
+          "a": "Anticipated and recognized in Q1",
+          "b": "Deferred from Q1 to Q3",
+          "c": "Not recognized until earned in Q3",
+          "d": "Spread equally across all quarters"
+        },
+        "correctAnswer": "c",
+        "explanation": "Revenues received seasonally or occasionally should not be anticipated or deferred at interim date if such treatment would not be appropriate at year-end. Revenue is recognized when earned."
+      },
+      {
+        "id": "AA4-Q15",
+        "question": "For computing Diluted EPS with stock options, shares are treated as issued for no consideration to the extent:",
+        "options": {
+          "a": "The full number of shares under option",
+          "b": "Exercise price exceeds fair value",
+          "c": "Fair value exceeds exercise price",
+          "d": "Shares cannot be issued at average fair value from proceeds"
+        },
+        "correctAnswer": "c",
+        "explanation": "Under treasury stock method, incremental shares = Total shares under option minus shares that would be issued at fair value from proceeds. The difference represents shares issued for no consideration, creating dilution."
+      },
+      {
+        "id": "AA4-Q16",
+        "question": "Under AS 24, pre-tax gain or loss on disposal of assets attributable to discontinuing operation should be disclosed:",
+        "options": {
+          "a": "Only in notes to accounts",
+          "b": "On the face of Statement of Profit and Loss",
+          "c": "In Director's Report",
+          "d": "Either on face or in notes"
+        },
+        "correctAnswer": "b",
+        "explanation": "AS 24 specifically requires pre-tax profit/loss from discontinuing operations and gain/loss on disposal of related assets to be shown on the face of Statement of Profit and Loss, not merely in notes."
+      }
+    ],
+    "tricky": [
+      {
+        "id": "AA4.T1",
+        "point": "AS 17 - 10% test vs 75% test revenue base",
+        "mistake": "Using same revenue base (total or external) for both tests",
+        "why": "10% materiality test: Total revenue (internal + external) of all segments; 75% overall test: External revenue only of enterprise. ICAI tests this distinction specifically.",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA4.T2",
+        "point": "AS 1 - Change in accounting POLICY vs change in accounting ESTIMATE",
+        "mistake": "Treating change in method of estimating provision as change in accounting policy",
+        "why": "Change in method of making provision for non-moving inventory (e.g., from 12-month basis to technical evaluation) is NOT a change in accounting policy - it's change in estimate. Only the policy to MAKE provision is the accounting policy.",
+        "priority": "High"
+      },
+      {
+        "id": "AA4.T3",
+        "point": "AS 3 - Exchange gains/losses on foreign currency cash",
+        "mistake": "Including exchange gain/loss on foreign currency bank balances in cash flows",
+        "why": "Exchange gains/losses due to restatement of foreign currency cash balances are NOT cash flows (no actual inflow/outflow). These are reconciled separately in notes to Cash Flow Statement (AS 3 Para 28).",
+        "priority": "High"
+      },
+      {
+        "id": "AA4.T4",
+        "point": "AS 18 - Period for identifying related parties",
+        "mistake": "Identifying related parties only as at balance sheet date",
+        "why": "Related parties must be identified 'at any time during the reporting period' - not just at year-end. If relationship existed for part of year, that party is related for entire year for disclosure purposes.",
+        "priority": "High"
+      },
+      {
+        "id": "AA4.T5",
+        "point": "AS 20 - Non-cumulative vs Cumulative preference dividend deduction",
+        "mistake": "Deducting cumulative preference dividend only if provided in books",
+        "why": "Non-cumulative: Deduct only if PROVIDED for the period; Cumulative: Deduct FULL amount WHETHER OR NOT provided. This is a direct testing point in ICAI exams.",
+        "priority": "High"
+      },
+      {
+        "id": "AA4.T6",
+        "point": "AS 3 - Interest capitalised as part of inventory",
+        "mistake": "Treating capitalised interest as financing activity",
+        "why": "When interest is included in cost of inventories as per AS 16 read with AS 2, such interest becomes part of operating cash flows (not financing), as inventory is an operating item.",
+        "priority": "Medium"
+      },
+      {
+        "id": "AA4-T7",
+        "point": "AS 20 - Bonus Issue Factor for two-for-one",
+        "trap": "Two-for-one bonus means multiply by factor of THREE (original + 2 bonus = 3 total), not TWO",
+        "insight": "The PDF example states: 'upon a two-for-one bonus issue, the number of shares outstanding prior to the issue is multiplied by a factor of three'"
+      },
+      {
+        "id": "AA4-T8",
+        "point": "AS 20 - Potential equity shares cancelled mid-year",
+        "trap": "Students either ignore cancelled potential shares entirely or include them for full year",
+        "insight": "Potential equity shares cancelled during the year are included in diluted EPS calculation only for the portion of the period during which they were outstanding"
+      },
+      {
+        "id": "AA4-T9",
+        "point": "AS 24 - Discontinuing operations and going concern",
+        "trap": "Assuming discontinuing operation disclosure implies going concern problems",
+        "insight": "AS 24 explicitly states that classification as discontinuing operation does NOT, in itself, bring into question the enterprise's ability to continue as going concern"
+      },
+      {
+        "id": "AA4-T10",
+        "point": "AS 25 - Materiality assessment for interim reports",
+        "trap": "Using annual materiality thresholds for interim period items",
+        "insight": "Materiality should be assessed in relation to interim period financial data, not annual data. Items material to interim period must be disclosed even if immaterial annually."
+      },
+      {
+        "id": "AA4-T11",
+        "point": "AS 20 - Partly paid shares NOT entitled to dividends",
+        "trap": "Including all partly paid shares in Basic EPS calculation",
+        "insight": "Partly paid shares where holder is NOT entitled to dividends are treated as POTENTIAL equity shares for Diluted EPS, not included in Basic EPS"
+      },
+      {
+        "id": "AA4-T12",
+        "point": "AS 25 - First year of operations shorter period",
+        "trap": "Treating the shorter first-year operating period as an interim period",
+        "insight": "During first year of operations, if annual reporting period is shorter than a financial year, that shorter period is NOT considered an interim period under AS 25"
+      }
+    ],
+    "amendments": [
+      {
+        "id": "AA4.A1",
+        "topic": "AS 3 - Companies exempt from Cash Flow Statement",
+        "what": "Startup private companies added to exemption list from preparing Cash Flow Statement",
+        "oldPosition": "Cash flow statement exemption available only to One Person Company (OPC), Small Company, and Dormant Company",
+        "newPosition": "Exemption extended to include Startup Private Companies besides OPC, Small Company, and Dormant Company (vide Notification dated 13th June, 2017 under Section 462)",
+        "effectiveFrom": "13th June 2017",
+        "pdfStatus": "confirmed",
+        "priority": "Medium"
+      },
+      {
+        "id": "AA4.A2",
+        "topic": "AS 20 - Disclosure exemption for SMCs",
+        "what": "SMCs exempted from mandatory disclosure of diluted EPS",
+        "oldPosition": "All companies required to disclose both Basic and Diluted EPS",
+        "newPosition": "Disclosure of diluted earnings per share (both including and excluding extraordinary items) is NOT mandatory for SMCs. Such companies are however encouraged to make these disclosures.",
+        "effectiveFrom": "Applicable from inception of AS 20",
+        "pdfStatus": "confirmed",
+        "priority": "Medium"
+      },
+      {
+        "id": "AA4.A3",
+        "topic": "Schedule III - Materiality threshold for disclosure",
+        "what": "Specific quantitative limit for materiality in Statement of Profit and Loss",
+        "oldPosition": "General materiality principle without specific threshold",
+        "newPosition": "Company should disclose by way of notes additional information regarding any item of income or expenditure which exceeds 1% of the revenue from operations or ₹1,00,000 whichever is higher",
+        "effectiveFrom": "Companies Act 2013 Schedule III",
+        "pdfStatus": "confirmed",
+        "priority": "Medium"
+      },
+      {
+        "id": "AA4-A4",
+        "standard": "AS 20",
+        "topic": "EPS Presentation Requirement",
+        "amendment": "Basic and diluted EPS must be presented on the face of Statement of Profit and Loss with EQUAL PROMINENCE for all periods presented, even if amounts are negative (loss per share).",
+        "effectiveFrom": "Current",
+        "examRelevance": "High"
+      },
+      {
+        "id": "AA4-A5",
+        "standard": "AS 24",
+        "topic": "Discontinuing Operations Pre-tax Disclosure Location",
+        "amendment": "Pre-tax profit/loss from discontinuing operation and related tax expense must be shown on FACE of Statement of Profit and Loss, not just in notes.",
+        "effectiveFrom": "Current",
+        "examRelevance": "High"
+      },
+      {
+        "id": "AA4-A6",
+        "standard": "AS 25",
+        "topic": "Clause 41 Listing Agreement Results",
+        "amendment": "Quarterly results under Clause 41 do NOT meet definition of 'interim financial report' under AS 25. Presentation/disclosure requirements of AS 25 not applicable, but recognition and measurement principles still apply.",
+        "effectiveFrom": "Current",
+        "examRelevance": "Medium"
+      }
+    ],
+    "cases": [],
+    "trees": []
   }
 ]
