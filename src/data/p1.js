@@ -1340,5 +1340,767 @@ export const P1_DATA = [
     ],
     "cases": [],
     "trees": []
+  },
+  {
+    "id": "AA3",
+    "name": "Applicability of Accounting Standards",
+    "dangerZones": [
+      {
+        "id": "AA3.DZ1",
+        "point": "Confusing MSME classification thresholds for non-company entities — Turnover ≤ ₹250 crore vs ≤ ₹50 crore for AS 18/AS 28 exemption",
+        "mistake": "Students apply the general MSME turnover limit of ₹250 crore to claim exemption from AS 18 (Related Party Disclosures) and AS 28 (Impairment of Assets), when these specific standards require turnover ≤ ₹50 crore and borrowings ≤ ₹10 crore",
+        "why": "ICAI tests whether students have read the layered exemption structure — there are two tiers within MSMEs with different AS applicability",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA3.DZ2",
+        "point": "Two-consecutive-year rule for newly qualifying MSMEs before availing exemptions",
+        "mistake": "Students assume that a non-company entity can avail MSME exemptions immediately upon first qualifying as an MSME, when in fact it must remain an MSME for two consecutive years before claiming exemptions",
+        "why": "ICAI specifically tests transitional provisions — this rule prevents entities from gaming the system by temporarily reducing turnover/borrowings",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA3.DZ3",
+        "point": "Borrowing threshold for MSME classification is ₹50 crore 'at any time' during the year, not year-end",
+        "mistake": "Students check borrowings only at year-end balance sheet date, ignoring that exceeding ₹50 crore even for a single day during the year disqualifies MSME status",
+        "why": "ICAI tests precise reading of 'at any time during the immediately preceding accounting year' — this is different from turnover which is cumulative",
+        "priority": "High"
+      },
+      {
+        "id": "AA3.DZ4",
+        "point": "SMC classification for companies differs from MSME classification for non-company entities",
+        "mistake": "Students apply MSME thresholds (₹250 crore turnover, ₹50 crore borrowings) to companies, when companies follow SMC definition under Companies (Accounting Standards) Rules, 2021 which has different criteria",
+        "why": "ICAI tests awareness that corporate and non-corporate entities have separate classification frameworks issued by MCA and ICAI respectively",
+        "priority": "High"
+      },
+      {
+        "id": "AA3.DZ5",
+        "point": "Holding/subsidiary of a non-MSME cannot be classified as MSME regardless of own size",
+        "mistake": "Students classify an entity as MSME based solely on its own turnover and borrowings, ignoring that being a holding or subsidiary of a Large entity automatically disqualifies it",
+        "why": "ICAI tests the anti-avoidance provision preventing group structures from claiming exemptions through subsidiaries",
+        "priority": "High"
+      }
+    ],
+    "formulaGuide": [
+      {
+        "id": "AA3.FG1",
+        "topic": "Is the Non-Company Entity an MSME?",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Is entity's equity/debt listed or in process of listing?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "n2"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Is entity a bank, financial institution, or insurance company?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "n3"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Does turnover (excluding other income) exceed ₹250 crore in immediately preceding year?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "n4"
+              }
+            ]
+          },
+          {
+            "id": "n4",
+            "label": "Did borrowings exceed ₹50 crore at any time during immediately preceding year?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "n5"
+              }
+            ]
+          },
+          {
+            "id": "n5",
+            "label": "Is entity a holding or subsidiary of a non-MSME?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Large Entity — Must comply with ALL Accounting Standards in full",
+            "reference": "ICAI Announcement August 2024"
+          },
+          {
+            "id": "outcomeB",
+            "label": "MSME — Eligible for exemptions/relaxations (subject to two-consecutive-year rule for new MSMEs)",
+            "reference": "ICAI Announcement August 2024"
+          }
+        ]
+      },
+      {
+        "id": "AA3.FG2",
+        "topic": "Which Accounting Standards are NOT Applicable to MSMEs?",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Is the entity classified as MSME?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Yes",
+                "target": "n2"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Check which category of exemption applies:",
+            "branches": [
+              {
+                "label": "General MSME exemption (all MSMEs)",
+                "target": "outcomeB"
+              },
+              {
+                "label": "Additional exemption (Turnover ≤₹50Cr & Borrowings ≤₹10Cr)",
+                "target": "n3"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Does MSME have Turnover ≤₹50Cr AND Borrowings ≤₹10Cr AND not holding/subsidiary of larger MSME?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeC"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Large Entity — All AS applicable in full",
+            "reference": "ICAI Announcement August 2024"
+          },
+          {
+            "id": "outcomeB",
+            "label": "MSME Tier 1 — AS 3, AS 17, AS 20, AS 24 NOT applicable; Relaxations in AS 10, AS 11, AS 15, AS 19, AS 22, AS 26, AS 28, AS 29",
+            "reference": "ICAI Announcement Annexure 1 Para 2(A)(i)"
+          },
+          {
+            "id": "outcomeC",
+            "label": "MSME Tier 2 — Additional exemption: AS 18 and AS 28 also NOT applicable in entirety",
+            "reference": "ICAI Announcement Annexure 1 Para 2(A)(ii)"
+          }
+        ]
+      },
+      {
+        "id": "AA3.FG3",
+        "topic": "Can Entity Avail MSME Exemptions This Year?",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Was entity an MSME in the immediately preceding year?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "n2"
+              },
+              {
+                "label": "No (was Large Entity)",
+                "target": "n3"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Does entity qualify as MSME in current year?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeB"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Does entity qualify as MSME in current year (newly qualifying)?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "n4"
+              },
+              {
+                "label": "No",
+                "target": "outcomeC"
+              }
+            ]
+          },
+          {
+            "id": "n4",
+            "label": "Has entity remained MSME for two consecutive years?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No",
+                "target": "outcomeD"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Can avail MSME exemptions — Disclose MSME status and Standards from which exemptions availed",
+            "reference": "ICAI Announcement Additional Requirement (1)"
+          },
+          {
+            "id": "outcomeB",
+            "label": "Cannot avail MSME exemptions — Apply full AS from current year; Disclose prior MSME status and that previous year figures not revised",
+            "reference": "ICAI Announcement Additional Requirement (2)"
+          },
+          {
+            "id": "outcomeC",
+            "label": "Large Entity — Full AS compliance required",
+            "reference": "ICAI Announcement Para 4"
+          },
+          {
+            "id": "outcomeD",
+            "label": "Cannot avail MSME exemptions yet — Must remain MSME for two consecutive years before claiming",
+            "reference": "ICAI Announcement Additional Requirement (3)"
+          }
+        ]
+      },
+      {
+        "id": "AA3.FG4",
+        "topic": "Applicability of Accounting Standards to Enterprises",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Is the enterprise engaged in commercial, industrial, or business activities?",
+            "branches": [
+              {
+                "label": "No activity is commercial/industrial/business",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Even a small proportion is commercial/industrial/business",
+                "target": "n2"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Is the financial item material?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "outcomeB"
+              },
+              {
+                "label": "No (immaterial)",
+                "target": "outcomeC"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Accounting Standards do NOT apply (e.g., purely charitable activities like collecting donations for flood relief)",
+            "reference": "Preface to Statements of Accounting Standards"
+          },
+          {
+            "id": "outcomeB",
+            "label": "Accounting Standards apply to ALL activities including non-commercial ones",
+            "reference": "Preface to Statements of Accounting Standards"
+          },
+          {
+            "id": "outcomeC",
+            "label": "Accounting Standards intended to apply only to material items — immaterial items need not strictly comply",
+            "reference": "Preface to Statements of Accounting Standards"
+          }
+        ]
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "AA3.FC1",
+        "front": "Definition of MSME (Micro, Small and Medium Sized Entity) for Non-Company Entities",
+        "back": "MSME means a non-company entity: (i) whose equity or debt securities are not listed or are not in the process of listing on any stock exchange, whether in India or outside India; (ii) which is not a bank, financial institution or an insurance company; (iii) whose turnover (excluding other income) does not exceed ₹250 crore in the immediately preceding accounting year; (iv) which does not have borrowings in excess of ₹50 crore at any time during the immediately preceding accounting year; and (v) which is not a holding or subsidiary of an entity which is not a micro, small and medium-sized entity.",
+        "section": "ICAI Announcement August 2024 Para 2"
+      },
+      {
+        "id": "AA3.FC2",
+        "front": "Accounting Standards NOT applicable to ALL MSMEs in their entirety",
+        "back": "AS 3 (Cash Flow Statements), AS 17 (Segment Reporting), AS 20 (Earnings per Share), AS 24 (Discontinuing Operations)",
+        "section": "ICAI Announcement Annexure 1 Para 2(A)(i)"
+      },
+      {
+        "id": "AA3.FC3",
+        "front": "Additional AS exemption for smaller MSMEs (Turnover ≤₹50Cr, Borrowings ≤₹10Cr)",
+        "back": "AS 18 (Related Party Disclosures) and AS 28 (Impairment of Assets) are NOT applicable in their entirety to MSMEs: (a) whose turnover (excluding other income) does not exceed ₹50 crore in the immediately preceding accounting year; (b) which does not have borrowings in excess of ₹10 crore at any time during the immediately preceding accounting year; and (c) which is not a Holding and subsidiary of an MSME not covered above.",
+        "section": "ICAI Announcement Annexure 1 Para 2(A)(ii)"
+      },
+      {
+        "id": "AA3.FC4",
+        "front": "Two-Consecutive-Year Rule for Newly Qualifying MSMEs",
+        "back": "An entity which was previously not an MSME and subsequently becomes an MSME, shall not be qualified for exemption/relaxation in respect of Accounting Standards available to an MSME until the entity remains an MSME for two consecutive years.",
+        "section": "ICAI Announcement Additional Requirement (3)"
+      },
+      {
+        "id": "AA3.FC5",
+        "front": "Disclosure requirement when MSME loses its status",
+        "back": "Where an MSME had qualified for any exemption or relaxation previously but no longer qualifies for the relevant exemption or relaxation in the current accounting period, the relevant standards or requirements become applicable from the current period and the figures for the corresponding period of the previous accounting period need not be revised merely by reason of its having ceased to be an MSME. The fact that it was an MSME in the previous period and it had availed of the exemptions or relaxations available to it shall be disclosed in the notes to the financial statements.",
+        "section": "ICAI Announcement Additional Requirement (2)"
+      },
+      {
+        "id": "AA3.FC6",
+        "front": "Section 129(1) of Companies Act, 2013 — AS Compliance Requirement",
+        "back": "Section 129(1) of the Companies Act, 2013 requires companies to present their financial statements in accordance with the accounting standards notified under Section 133 of the Companies Act, 2013.",
+        "section": "Companies Act 2013 Section 129(1)"
+      },
+      {
+        "id": "AA3.FC7",
+        "front": "Section 143(3)(e) of Companies Act, 2013 — Auditor's Reporting Duty",
+        "back": "The auditor is required by Section 143(3)(e) to report whether, in his opinion, the financial statements of the company audited, comply with the accounting standards referred to in Section 133 of the Companies Act, 2013.",
+        "section": "Companies Act 2013 Section 143(3)(e)"
+      },
+      {
+        "id": "AA3.FC8",
+        "front": "Definition of Materiality for Accounting Standards",
+        "back": "An item is considered material, if its omission or misstatement is likely to affect economic decision of the user. Materiality is not necessarily a function of size; it is the information content i.e., the financial item which is important.",
+        "section": "Preface to Statements of Accounting Standards"
+      },
+      {
+        "id": "AA3.FC9",
+        "front": "AS 22 Transitional Requirement for MSMEs availing exemption",
+        "back": "On the first occasion when an MSME avails this exemption (from deferred tax requirements), the accumulated deferred tax asset/liability appearing in the financial statements of immediate previous accounting period, shall be adjusted against the opening revenue reserves/owner's funds.",
+        "section": "ICAI Announcement Annexure 1 Para 2(B)(v)(b)"
+      },
+      {
+        "id": "AA3.FC10",
+        "front": "Section 145(2) of Income Tax Act, 1961 — ICDS Authority",
+        "back": "Section 145(2) of the Income Tax Act, 1961, empowers the Central Government to notify in the Official Gazette from time to time, Income Computation and Disclosure Standards to be followed by any class of assesses or in respect of any class of income.",
+        "section": "Income Tax Act 1961 Section 145(2)"
+      },
+      {
+        "id": "AA3.FC11",
+        "front": "Accounting Standard not applicable to SMCs (Companies) in entirety",
+        "back": "AS 17 (Segment Reporting) is NOT applicable to SMCs in their entirety.",
+        "section": "Companies (Accounting Standards) Rules, 2021"
+      },
+      {
+        "id": "AA3.FC12",
+        "front": "Three questions to assess AS applicability",
+        "back": "(a) Does it apply to the enterprise concerned? (b) Does it apply to the financial statement concerned? (c) Does it apply to the financial item concerned?",
+        "section": "Preface to Statements of Accounting Standards"
+      }
+    ],
+    "practiceProblems": [
+      {
+        "id": "AA3.PP1",
+        "title": "Classification of Partnership Firm as MSME or Large Entity",
+        "difficulty": 3,
+        "problem": "Sharma & Associates, a partnership firm, provides the following information for FY 2023-24:\n- Turnover from operations: ₹240 crore\n- Other income (interest, rent): ₹15 crore\n- Maximum borrowings at any point during the year: ₹48 crore\n- Year-end borrowings: ₹35 crore\n- The firm is not listed and is not a bank/FI/insurance company\n- It is not a subsidiary or holding of any other entity\n\nDetermine whether the firm qualifies as an MSME for FY 2024-25 and list the Accounting Standards from which it would be exempt.",
+        "steps": [
+          "Step 1: Check listing status — Not listed, satisfies condition (i)",
+          "Step 2: Check nature — Not bank/FI/insurance, satisfies condition (ii)",
+          "Step 3: Check turnover — ₹240 crore (excluding other income ₹15 crore) < ₹250 crore, satisfies condition (iii)",
+          "Step 4: Check borrowings — Maximum during year ₹48 crore < ₹50 crore (not year-end figure), satisfies condition (iv)",
+          "Step 5: Check holding/subsidiary status — Not applicable, satisfies condition (v)",
+          "Step 6: All five conditions satisfied — Entity qualifies as MSME",
+          "Step 7: List exempt AS — AS 3, AS 17, AS 20, AS 24 not applicable; Relaxations available in AS 10, AS 11, AS 15, AS 19, AS 22, AS 26, AS 28, AS 29"
+        ],
+        "answer": "Sharma & Associates qualifies as an MSME for FY 2024-25. It is exempt from AS 3 (Cash Flow Statements), AS 17 (Segment Reporting), AS 20 (Earnings per Share), and AS 24 (Discontinuing Operations) in their entirety. Since turnover (₹240 crore) exceeds ₹50 crore, the additional exemption from AS 18 and AS 28 is NOT available — these standards remain applicable with certain relaxations.",
+        "topic": "MSME Classification and AS Exemptions"
+      },
+      {
+        "id": "AA3.PP2",
+        "title": "Transitional Provisions for Entity Losing MSME Status",
+        "difficulty": 4,
+        "problem": "ABC LLP was classified as an MSME in FY 2022-23 and FY 2023-24. It availed exemptions from AS 3, AS 17, AS 20, and AS 24. In FY 2023-24, its borrowings peaked at ₹65 crore in October 2023 (though year-end borrowings were only ₹40 crore). Turnover was ₹200 crore.\n\nFor FY 2024-25, the LLP shows:\n- Turnover: ₹180 crore\n- Maximum borrowings during year: ₹45 crore\n\nAdvise on the AS applicability and disclosure requirements for FY 2024-25.",
+        "steps": [
+          "Step 1: Analyze FY 2023-24 status — Borrowings exceeded ₹50 crore at some point (₹65 crore in October 2023), hence ABC LLP was NOT an MSME in FY 2023-24",
+          "Step 2: The fact that year-end borrowings were ₹40 crore is irrelevant — the test is 'at any time during the year'",
+          "Step 3: For FY 2024-25 — Turnover ₹180 crore < ₹250 crore, Max borrowings ₹45 crore < ₹50 crore, satisfies MSME criteria",
+          "Step 4: Apply two-consecutive-year rule — Entity was not MSME in FY 2023-24 and newly qualifies in FY 2024-25",
+          "Step 5: Cannot avail exemptions until MSME for two consecutive years — Must comply with full AS in FY 2024-25",
+          "Step 6: If entity remains MSME in FY 2025-26 as well, exemptions can be availed from FY 2025-26 onwards"
+        ],
+        "answer": "ABC LLP must comply with ALL Accounting Standards in full for FY 2024-25 despite meeting MSME thresholds. This is because it was not an MSME in FY 2023-24 (borrowings exceeded ₹50 crore during the year) and is newly qualifying. As per ICAI Announcement Additional Requirement (3), it must remain MSME for two consecutive years before availing exemptions. The LLP should disclose that it incorrectly classified itself as MSME in prior years and restate comparatives if material.",
+        "topic": "Two-Consecutive-Year Rule and Transitional Provisions"
+      },
+      {
+        "id": "AA3.PP3",
+        "title": "AS 22 Deferred Tax Transitional Adjustment for MSME",
+        "difficulty": 4,
+        "problem": "Delta Enterprises, a partnership firm, has been classified as an MSME since FY 2020-21. However, it had been fully complying with AS 22 including deferred tax provisions voluntarily. The deferred tax liability as on 31st March 2024 is ₹8,50,000 and deferred tax asset is ₹2,30,000. From FY 2024-25, the firm decides to avail the MSME exemption under AS 22 (i.e., comply only with current tax requirements).\n\nPrepare the transitional journal entry and compute the impact on owner's funds.",
+        "steps": [
+          "Step 1: Identify accumulated deferred tax position — DTL ₹8,50,000, DTA ₹2,30,000, Net DTL ₹6,20,000",
+          "Step 2: Apply transitional requirement — Accumulated deferred tax asset/liability shall be adjusted against opening revenue reserves/owner's funds",
+          "Step 3: Journal Entry to reverse net DTL:\n   Dr. Deferred Tax Liability A/c  ₹8,50,000\n   Cr. Deferred Tax Asset A/c      ₹2,30,000\n   Cr. Owner's Funds/Capital A/c   ₹6,20,000",
+          "Step 4: This adjustment increases owner's funds by ₹6,20,000 (reversal of net liability)",
+          "Step 5: From FY 2024-25 onwards, only current tax as per paragraph 9 and measurement as per paragraph 20 of AS 22 is required"
+        ],
+        "answer": "The transitional journal entry on 1st April 2024:\nDr. Deferred Tax Liability ₹8,50,000\nCr. Deferred Tax Asset ₹2,30,000\nCr. Opening Capital/Owner's Funds ₹6,20,000\n\nImpact: Owner's funds increase by ₹6,20,000 as the net deferred tax liability is reversed against opening reserves. Henceforth, Delta Enterprises will account only for current tax under AS 22 and must disclose that it is an MSME availing exemption from deferred tax provisions.",
+        "topic": "AS 22 Transitional Provisions for MSME"
+      },
+      {
+        "id": "AA3.PP4",
+        "title": "Determining AS 18 and AS 28 Applicability to MSME",
+        "difficulty": 3,
+        "problem": "Consider two partnership firms for FY 2024-25:\n\nFirm X:\n- Turnover: ₹45 crore\n- Other income: ₹3 crore\n- Maximum borrowings: ₹8 crore\n- Not a holding/subsidiary\n\nFirm Y:\n- Turnover: ₹48 crore\n- Other income: ₹5 crore\n- Maximum borrowings: ₹12 crore\n- Not a holding/subsidiary\n\nBoth firms are unlisted and not banks/FIs. Determine whether AS 18 (Related Party Disclosures) and AS 28 (Impairment of Assets) are applicable to each firm.",
+        "steps": [
+          "Step 1: Check basic MSME qualification for both firms — Both qualify as MSMEs (turnover < ₹250 crore, borrowings < ₹50 crore)",
+          "Step 2: Check additional exemption criteria for AS 18 and AS 28 — Turnover ≤ ₹50 crore AND borrowings ≤ ₹10 crore",
+          "Step 3: Firm X — Turnover ₹45 crore ≤ ₹50 crore (✓), Borrowings ₹8 crore ≤ ₹10 crore (✓)",
+          "Step 4: Firm X qualifies for additional exemption — AS 18 and AS 28 NOT applicable in entirety",
+          "Step 5: Firm Y — Turnover ₹48 crore ≤ ₹50 crore (✓), Borrowings ₹12 crore > ₹10 crore (✗)",
+          "Step 6: Firm Y does NOT qualify for additional exemption — AS 18 and AS 28 ARE applicable (though with certain relaxations for AS 28)"
+        ],
+        "answer": "Firm X: AS 18 and AS 28 are NOT applicable in their entirety as it meets both thresholds (turnover ₹45 crore ≤ ₹50 crore; borrowings ₹8 crore ≤ ₹10 crore).\n\nFirm Y: AS 18 (Related Party Disclosures) IS fully applicable. AS 28 (Impairment of Assets) IS applicable but with relaxation — Firm Y may measure 'value in use' based on reasonable estimate instead of present value technique, and certain disclosures under para 121 are exempted. The borrowings threshold of ₹10 crore is breached.",
+        "topic": "Tiered MSME Exemptions for AS 18 and AS 28"
+      }
+    ],
+    "caseMCQs": {
+      "scenario": "Zenith Traders LLP, an unlisted partnership firm, provides the following data for FY 2023-24 and FY 2024-25:\n\nFY 2023-24:\n- Turnover from operations: ₹235 crore\n- Other income: ₹12 crore\n- Maximum borrowings during year: ₹52 crore (in June 2023)\n- Year-end borrowings: ₹38 crore\n\nFY 2024-25:\n- Turnover from operations: ₹195 crore\n- Other income: ₹8 crore\n- Maximum borrowings during year: ₹42 crore\n- Year-end borrowings: ₹42 crore\n\nThe LLP is not a bank, financial institution, or insurance company. It is not a holding or subsidiary of any other entity. The LLP has never been classified as MSME before and wishes to avail MSME exemptions.",
+      "questions": [
+        {
+          "id": "AA3.CQ1",
+          "q": "What is the relevant turnover figure for MSME classification for FY 2024-25?",
+          "opts": [
+            "₹195 crore",
+            "₹203 crore",
+            "₹235 crore",
+            "₹247 crore"
+          ],
+          "ans": 2,
+          "exp": "For MSME classification in the current year, the turnover of the 'immediately preceding accounting year' is considered. For FY 2024-25, this means FY 2023-24 turnover of ₹235 crore (excluding other income of ₹12 crore). The current year turnover of ₹195 crore is not relevant for classification purposes.",
+          "type": "Trap",
+          "diff": 2
+        },
+        {
+          "id": "AA3.CQ2",
+          "q": "Was Zenith Traders LLP classified as an MSME in FY 2023-24?",
+          "opts": [
+            "Yes, because turnover ₹235 crore < ₹250 crore and year-end borrowings ₹38 crore < ₹50 crore",
+            "No, because borrowings exceeded ₹50 crore at some point during the year",
+            "Yes, because total income ₹247 crore < ₹250 crore",
+            "No, because turnover including other income exceeds ₹250 crore"
+          ],
+          "ans": 1,
+          "exp": "The borrowing threshold test requires that borrowings should not exceed ₹50 crore 'at any time during the immediately preceding accounting year'. Since borrowings peaked at ₹52 crore in June 2023, the LLP was NOT an MSME in FY 2023-24. Year-end borrowings of ₹38 crore are irrelevant.",
+          "type": "Trap",
+          "diff": 3
+        },
+        {
+          "id": "AA3.CQ3",
+          "q": "Can Zenith Traders LLP avail MSME exemptions from Accounting Standards in FY 2024-25?",
+          "opts": [
+            "Yes, because it meets all five MSME criteria based on FY 2023-24 data",
+            "Yes, because FY 2024-25 turnover and borrowings are within limits",
+            "No, because it must remain MSME for two consecutive years before availing exemptions",
+            "No, because borrowings exceeded ₹50 crore in June 2023"
+          ],
+          "ans": 2,
+          "exp": "Even though Zenith Traders LLP meets MSME criteria for FY 2024-25, it cannot avail exemptions immediately. As per ICAI Announcement Additional Requirement (3), an entity which was previously not an MSME and subsequently becomes an MSME shall not be qualified for exemptions until it remains an MSME for two consecutive years.",
+          "type": "Concept",
+          "diff": 3
+        },
+        {
+          "id": "AA3.CQ4",
+          "q": "From which financial year can Zenith Traders LLP avail MSME exemptions, assuming it continues to meet MSME criteria?",
+          "opts": [
+            "FY 2024-25",
+            "FY 2025-26",
+            "FY 2026-27",
+            "Never, as it was once a Large Entity"
+          ],
+          "ans": 1,
+          "exp": "Zenith Traders LLP was not an MSME in FY 2023-24 (borrowings exceeded ₹50 crore). It newly qualifies as MSME in FY 2024-25. If it remains MSME in FY 2025-26 as well, it would have been MSME for two consecutive years (FY 2024-25 and FY 2025-26), and can avail exemptions from FY 2025-26 onwards.",
+          "type": "Concept",
+          "diff": 2
+        }
+      ]
+    },
+    "mcqs": [
+      {
+        "id": "AA3.Q1",
+        "q": "Omega LLP has turnover of ₹48 crore (excluding other income) and maximum borrowings of ₹9 crore during FY 2023-24. For FY 2024-25, which of the following Accounting Standards is NOT applicable to it in its entirety?",
+        "opts": [
+          "AS 18 — Related Party Disclosures",
+          "AS 22 — Accounting for Taxes on Income",
+          "AS 15 — Employee Benefits",
+          "AS 29 — Provisions, Contingent Liabilities and Contingent Assets"
+        ],
+        "ans": 0,
+        "exp": "Since Omega LLP has turnover ≤ ₹50 crore AND borrowings ≤ ₹10 crore, it qualifies for additional MSME exemption. AS 18 (Related Party Disclosures) and AS 28 (Impairment of Assets) are NOT applicable in their entirety to such smaller MSMEs. AS 22, AS 15, and AS 29 are applicable but with certain relaxations.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA3.Q2",
+        "q": "A company's financial statements do not disclose certain matters as they are not required by the Banking Regulation Act, 1949. As per Companies Act, 2013, such financial statements:",
+        "opts": [
+          "Cannot be treated as showing true and fair view",
+          "Should not be treated as not disclosing true and fair view merely for this reason",
+          "Require qualification in auditor's report",
+          "Must separately disclose deviation from Accounting Standards"
+        ],
+        "ans": 1,
+        "exp": "As per Section 129 of Companies Act, 2013, financial statements shall not be treated as not disclosing a true and fair view merely by reason of the fact that they do not disclose matters which are not required to be disclosed by the Banking Regulation Act, 1949 (in case of banking company).",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA3.Q3",
+        "q": "Ram Trust collects donations from public and distributes them to flood-affected families. It also runs a small canteen generating ₹2 lakh annual revenue. Regarding applicability of Accounting Standards:",
+        "opts": [
+          "AS not applicable as primary activity is charitable",
+          "AS applicable only to canteen operations, not charitable activities",
+          "AS applicable to all activities including charitable activities",
+          "AS applicable only if canteen revenue exceeds ₹10 lakh"
+        ],
+        "ans": 2,
+        "exp": "Even if a very small proportion of the activities of an enterprise were considered to be commercial, industrial or business in nature, the Accounting Standards would apply to ALL its activities including those which are not commercial, industrial or business in nature. The canteen activity makes AS applicable to the entire Trust.",
+        "type": "Trap",
+        "diff": 2
+      },
+      {
+        "id": "AA3.Q4",
+        "q": "A company paid ₹50,000 penalty for breach of environmental law. Its annual revenue is ₹500 crore. This penalty should be:",
+        "opts": [
+          "Clubbed with legal charges as it is immaterial in size",
+          "Shown separately as materiality is based on information content, not just size",
+          "Ignored as it is less than 0.01% of revenue",
+          "Disclosed only in notes to accounts"
+        ],
+        "ans": 1,
+        "exp": "Materiality is not necessarily a function of size; it is the information content which is important. A penalty for breach of law is a material item because of the information it conveys, regardless of the amount. It should be shown separately instead of clubbing with other items like legal charges.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA3.Q5",
+        "q": "XYZ Ltd. took machinery on finance lease. As per AS 19, depreciation is charged by XYZ Ltd. (lessee). For income tax purposes, depreciation is allowed to:",
+        "opts": [
+          "XYZ Ltd. (lessee) as it charges depreciation in books",
+          "Lessor, being legal owner of the asset",
+          "Both lessee and lessor proportionately",
+          "Neither, as it is a leased asset"
+        ],
+        "ans": 1,
+        "exp": "Depreciation on assets taken on finance lease is charged in the books of lessee as per AS 19, but depreciation for tax purposes is allowed to the lessor, being the legal owner of the asset, rather than to the lessee. Accounting Standards and Income Tax Act treatment may differ.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA3.Q6",
+        "q": "Which of the following ICDSs corresponds to AS 7 (Construction Contracts)?",
+        "opts": [
+          "ICDS I",
+          "ICDS II",
+          "ICDS III",
+          "ICDS IV"
+        ],
+        "ans": 2,
+        "exp": "ICDS III deals with Construction Contracts, corresponding to AS 7. ICDS I deals with Accounting Policies, ICDS II with Valuation of Inventories, and ICDS IV with Revenue Recognition.",
+        "type": "Concept",
+        "diff": 1
+      },
+      {
+        "id": "AA3.Q7",
+        "q": "For SMCs (Small and Medium-sized Companies) as per Companies (Accounting Standards) Rules, 2021, which of the following relaxations is available under AS 20?",
+        "opts": [
+          "AS 20 is not applicable at all",
+          "Only basic EPS disclosure required, diluted EPS exempt",
+          "EPS disclosure only for extraordinary items exempt",
+          "Disclosure of diluted EPS (both including and excluding extraordinary items) is exempt"
+        ],
+        "ans": 3,
+        "exp": "As per Companies (Accounting Standards) Rules, 2021, SMCs are exempted from disclosure of diluted earnings per share (both including and excluding extraordinary items). However, basic EPS must still be disclosed. This is different from MSMEs where AS 20 is not applicable in entirety.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA3.Q8",
+        "q": "As per the revised scheme effective from April 1, 2024, how many categories are non-company entities classified into for AS applicability?",
+        "opts": [
+          "Four (Level I, II, III, IV)",
+          "Three (Large, Medium, Small)",
+          "Two (MSMEs and Large entities)",
+          "One (All treated equally)"
+        ],
+        "ans": 2,
+        "exp": "As per the ICAI Council's announcement at its 433rd meeting (August 13-15, 2024), non-company entities are classified into two categories: Micro, Small and Medium Sized Entities (MSMEs) and Large entities. This replaces the earlier four-level classification.",
+        "type": "Concept",
+        "diff": 1
+      },
+      {
+        "id": "AA3.Q9",
+        "q": "Delta Partnership Firm (an MSME) chooses to avail exemption from AS 3 and AS 17 but decides to fully comply with AS 20. What disclosure is required?",
+        "opts": [
+          "Disclose only that it is an MSME",
+          "Disclose that it is an MSME and mention AS 3 and AS 17 as Standards from which exemptions availed",
+          "No disclosure required as partial exemption is permissible",
+          "Disclose deviation from AS 20 as it is mandatory for all"
+        ],
+        "ans": 1,
+        "exp": "As per ICAI Announcement Additional Requirement (4), if an MSME opts not to avail exemptions in respect of any but not all of the Accounting Standards, it shall disclose the Standard(s) in respect of which it has availed the exemption or relaxation. Here, AS 3 and AS 17 should be specifically mentioned.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA3.Q10",
+        "q": "National Financial Reporting Authority (NFRA) is mentioned in context of Accounting Standards for:",
+        "opts": [
+          "Issuing Accounting Standards for non-company entities",
+          "Consultation by Central Government before prescribing accounting standards",
+          "Classification of enterprises into SMC and non-SMC",
+          "Notification of ICDS under Income Tax Act"
+        ],
+        "ans": 1,
+        "exp": "As per Companies Act, 2013, the Central Government may prescribe standards of accounting or addendum thereto, as recommended by the Institute of Chartered Accountants of India, in consultation with the National Financial Reporting Authority (NFRA).",
+        "type": "Concept",
+        "diff": 2
+      }
+    ],
+    "tricky": [
+      {
+        "id": "AA3.1",
+        "point": "Borrowings threshold uses 'at any time during the year' not 'at year-end'",
+        "mistake": "Students check only balance sheet date borrowings of ₹40 crore and classify as MSME, ignoring that borrowings peaked at ₹55 crore during the year",
+        "why": "ICAI tests precise reading of definitions — the phrase 'at any time during the immediately preceding accounting year' is fundamentally different from year-end measurement",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA3.2",
+        "point": "Turnover threshold excludes 'other income' for MSME classification",
+        "mistake": "Students add turnover (₹240 crore) and other income (₹15 crore) to get ₹255 crore and wrongly classify entity as Large",
+        "why": "ICAI specifically states 'turnover (excluding other income)' — this tests whether students read the definition carefully",
+        "priority": "High"
+      },
+      {
+        "id": "AA3.3",
+        "point": "SMC definition for companies differs from MSME definition for non-company entities",
+        "mistake": "Students apply ICAI's MSME thresholds (₹250 crore turnover, ₹50 crore borrowings) to companies governed by MCA rules",
+        "why": "Companies follow Companies (Accounting Standards) Rules, 2021 for SMC classification, while non-company entities follow ICAI's August 2024 announcement for MSME classification",
+        "priority": "High"
+      },
+      {
+        "id": "AA3.4",
+        "point": "Two-tiered MSME exemption structure — AS 18/AS 28 have stricter thresholds",
+        "mistake": "Students assume all MSMEs are exempt from AS 18 and AS 28, when only MSMEs with turnover ≤ ₹50 crore AND borrowings ≤ ₹10 crore qualify",
+        "why": "ICAI tests whether students understand the layered exemption structure within the MSME category itself",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA3.5",
+        "point": "AS compliance and Income Tax treatment can differ — depreciation on finance lease assets",
+        "mistake": "Students assume that charging depreciation as per AS 19 (in lessee's books) automatically allows tax deduction for lessee",
+        "why": "ICAI emphasizes that AS compliance does not override tax law — fiscal policy differs from accounting policy",
+        "priority": "High"
+      },
+      {
+        "id": "AA3.6",
+        "point": "Subsidiary of a Large entity cannot be MSME regardless of own size",
+        "mistake": "Students classify a small subsidiary (turnover ₹50 crore, borrowings ₹5 crore) as MSME, ignoring that its parent is a Large entity",
+        "why": "The anti-avoidance provision prevents gaming through group structures — tests understanding of 'holding or subsidiary of a non-MSME' condition",
+        "priority": "High"
+      }
+    ],
+    "amendments": [
+      {
+        "id": "AA3.A1",
+        "topic": "Revised Classification Criteria for Non-Company Entities",
+        "what": "ICAI Council's 433rd meeting (August 13-15, 2024) revised the criteria for classification of non-company entities and applicability of Accounting Standards",
+        "oldPosition": "Four-level classification (Level I, II, III, IV) with different AS applicability for each level as per March 2021 announcement",
+        "newPosition": "Two-level classification: (1) MSMEs — turnover ≤ ₹250 crore, borrowings ≤ ₹50 crore, not listed, not bank/FI/insurance, not holding/subsidiary of non-MSME; (2) Large entities — all others. Effective from accounting periods commencing on or after April 1, 2024",
+        "effectiveFrom": "Accounting periods commencing on or after April 1, 2024 (i.e., FY 2024-25 onwards)",
+        "pdfStatus": "mentioned",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA3.A2",
+        "topic": "Two-Consecutive-Year Rule for Newly Qualifying MSMEs",
+        "what": "New transitional provision introduced requiring entities to remain MSME for two consecutive years before availing exemptions",
+        "oldPosition": "No specific waiting period mentioned for newly qualifying MSMEs under earlier four-level classification",
+        "newPosition": "An entity which was previously not an MSME and subsequently becomes an MSME shall not be qualified for exemption/relaxation in respect of Accounting Standards available to an MSME until the entity remains an MSME for two consecutive years",
+        "effectiveFrom": "Accounting periods commencing on or after April 1, 2024",
+        "pdfStatus": "mentioned",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA3.A3",
+        "topic": "Additional MSME Tier for AS 18 and AS 28 Exemption",
+        "what": "Introduction of stricter thresholds within MSME category for exemption from AS 18 and AS 28",
+        "oldPosition": "Earlier scheme had multiple levels with different AS applicability",
+        "newPosition": "Within MSMEs, AS 18 and AS 28 are NOT applicable in entirety only to those with: (a) turnover ≤ ₹50 crore; (b) borrowings ≤ ₹10 crore; (c) not holding/subsidiary of MSME not meeting above criteria",
+        "effectiveFrom": "Accounting periods commencing on or after April 1, 2024",
+        "pdfStatus": "mentioned",
+        "priority": "High"
+      },
+      {
+        "id": "AA3.A4",
+        "topic": "Companies (Accounting Standards) Rules, 2021",
+        "what": "MCA notification dated June 23, 2021 prescribing SMC definition and AS applicability for companies",
+        "oldPosition": "Earlier Companies (Accounting Standards) Rules, 2006",
+        "newPosition": "Two-level classification for companies: SMCs and Non-SMCs. SMCs get exemption from AS 17 in entirety and relaxations in AS 15, AS 19, AS 20, AS 28, AS 29",
+        "effectiveFrom": "Financial years commencing on or after April 1, 2021",
+        "pdfStatus": "mentioned",
+        "priority": "High"
+      }
+    ],
+    "cases": [],
+    "trees": []
   }
 ]
