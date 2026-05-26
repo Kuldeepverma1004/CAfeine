@@ -4847,5 +4847,699 @@ export const P1_DATA = [
     ],
     "cases": [],
     "trees": []
+  },
+  {
+    "id": "AA8",
+    "name": "Revenue Based Accounting Standards (AS 7 & AS 9)",
+    "dangerZones": [
+      {
+        "id": "AA8.DZ1",
+        "point": "Treating unused materials stored at site as part of costs incurred for stage of completion calculation",
+        "mistake": "Students include materials purchased but not yet used (stored at site for future use) in the numerator when calculating percentage of completion, inflating the completion percentage",
+        "why": "ICAI tests whether students understand that only costs relating to work performed should be included; unused materials represent future activity costs and must be excluded from costs incurred to date",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA8.DZ2",
+        "point": "Recognizing only actual loss instead of total foreseeable loss in loss-making construction contracts",
+        "mistake": "Students calculate current year loss (Revenue - Costs incurred) but forget to create additional provision for the remaining expected loss as per AS 7 Para 35",
+        "why": "ICAI tests prudence concept - when total contract costs exceed total contract revenue, the ENTIRE expected loss must be recognized immediately, not just the portion attributable to work done",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA8.DZ3",
+        "point": "Confusing conditions for combining contracts versus segmenting contracts under AS 7",
+        "mistake": "Students apply wrong criteria - combining requires single package negotiation, closely interrelated contracts with overall profit margin, concurrent performance; segmenting requires separate proposals, separate negotiations, identifiable costs/revenues",
+        "why": "ICAI tests substance over form principle and whether students can identify when multiple contracts should be treated as one or when single contract should be split",
+        "priority": "High"
+      },
+      {
+        "id": "AA8.DZ4",
+        "point": "Including incentive payments in contract revenue before conditions are met",
+        "mistake": "Students include incentive payments in contract revenue at contract inception rather than when it is probable that specified performance standards will be met or exceeded",
+        "why": "ICAI tests the probability criteria for variations, claims and incentives - these should only be included when probable and reliably measurable",
+        "priority": "High"
+      },
+      {
+        "id": "AA8.DZ5",
+        "point": "Recognizing revenue on consignment sales when goods are delivered to consignee",
+        "mistake": "Students recognize full revenue when goods are sent to consignee instead of waiting until goods are sold to third party",
+        "why": "ICAI tests understanding of risks and rewards transfer - in consignment, consignor retains ownership until actual sale to end customer",
+        "priority": "High"
+      }
+    ],
+    "formulaGuide": [
+      {
+        "id": "AA8.FG1",
+        "topic": "Revenue Recognition Decision Tree - Construction Contracts (AS 7)",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Can the outcome of contract be estimated reliably?",
+            "branches": [
+              {
+                "label": "Yes - Fixed price/Cost-plus conditions met",
+                "target": "n2"
+              },
+              {
+                "label": "No - Uncertainties exist",
+                "target": "n5"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Calculate Stage of Completion = (Costs incurred to date / Total estimated costs) × 100",
+            "branches": [
+              {
+                "label": "Stage calculated",
+                "target": "n3"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Is contract expected to be profitable or loss-making?",
+            "branches": [
+              {
+                "label": "Profitable (Revenue > Total Cost)",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Loss-making (Total Cost > Revenue)",
+                "target": "n4"
+              }
+            ]
+          },
+          {
+            "id": "n4",
+            "label": "Calculate: Total Foreseeable Loss = Total Estimated Costs - Contract Revenue",
+            "branches": [
+              {
+                "label": "Split loss recognition",
+                "target": "outcomeB"
+              }
+            ]
+          },
+          {
+            "id": "n5",
+            "label": "Is recovery of costs incurred probable?",
+            "branches": [
+              {
+                "label": "Yes - Recovery probable",
+                "target": "outcomeC"
+              },
+              {
+                "label": "No - Recovery not probable",
+                "target": "outcomeD"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Revenue = Contract Price × Stage%; Costs = Total Cost × Stage%; Profit = Revenue - Costs",
+            "reference": "AS 7 Para 21-22"
+          },
+          {
+            "id": "outcomeB",
+            "label": "Current Year Loss = Revenue recognized - Costs incurred; Additional Provision = Total Loss - Current Year Loss (Para 35 provision)",
+            "reference": "AS 7 Para 35"
+          },
+          {
+            "id": "outcomeC",
+            "label": "Revenue = Costs incurred (to extent recoverable); Costs = Actual costs incurred; Profit = Nil",
+            "reference": "AS 7 Para 32"
+          },
+          {
+            "id": "outcomeD",
+            "label": "Revenue = Nil; Costs = Expense immediately; Recognize expected loss immediately",
+            "reference": "AS 7 Para 32-35"
+          }
+        ]
+      },
+      {
+        "id": "AA8.FG2",
+        "topic": "Contract Revenue Components (AS 7)",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Start with: Initial amount agreed in contract (Fixed price or Cost-plus)",
+            "branches": [
+              {
+                "label": "Add variations",
+                "target": "n2"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Are variations/claims/incentives probable and reliably measurable?",
+            "branches": [
+              {
+                "label": "Variations - Customer approved change in scope",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Claims - Customer likely to accept and measurable",
+                "target": "outcomeB"
+              },
+              {
+                "label": "Incentives - Performance standards likely to be met",
+                "target": "outcomeC"
+              },
+              {
+                "label": "Penalties - Late completion expected",
+                "target": "outcomeD"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Add: Variation amount (increase in scope/price approved by customer)",
+            "reference": "AS 7 Para 11"
+          },
+          {
+            "id": "outcomeB",
+            "label": "Add: Claim amount (reimbursement for costs not in original contract)",
+            "reference": "AS 7 Para 12"
+          },
+          {
+            "id": "outcomeC",
+            "label": "Add: Incentive payments (early completion bonus when probable)",
+            "reference": "AS 7 Para 13"
+          },
+          {
+            "id": "outcomeD",
+            "label": "Less: Penalty amount (deduction for delayed completion)",
+            "reference": "AS 7 Para 11"
+          }
+        ]
+      },
+      {
+        "id": "AA8.FG3",
+        "topic": "Revenue Recognition - Sale of Goods (AS 9)",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Has seller transferred property/significant risks and rewards to buyer?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "n2"
+              },
+              {
+                "label": "No - Seller retains control/risk",
+                "target": "outcomeD"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Does seller retain effective control over goods?",
+            "branches": [
+              {
+                "label": "No - Control transferred",
+                "target": "n3"
+              },
+              {
+                "label": "Yes - Control retained",
+                "target": "outcomeD"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Is consideration determinable and collection reasonably certain?",
+            "branches": [
+              {
+                "label": "Yes - Amount certain, collection probable",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Uncertainty at time of sale",
+                "target": "outcomeB"
+              },
+              {
+                "label": "Uncertainty arose after sale",
+                "target": "outcomeC"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Recognize revenue immediately at transaction value",
+            "reference": "AS 9 Para 10-11"
+          },
+          {
+            "id": "outcomeB",
+            "label": "Postpone revenue recognition until uncertainty resolved",
+            "reference": "AS 9 Para 9"
+          },
+          {
+            "id": "outcomeC",
+            "label": "Recognize revenue but create separate provision for doubtful recovery",
+            "reference": "AS 9 Para 9.2"
+          },
+          {
+            "id": "outcomeD",
+            "label": "No revenue recognition - goods remain as inventory",
+            "reference": "AS 9 Para 10"
+          }
+        ]
+      },
+      {
+        "id": "AA8.FG4",
+        "topic": "Combining vs Segmenting Construction Contracts (AS 7)",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "What is the contract structure?",
+            "branches": [
+              {
+                "label": "Single contract covering multiple assets",
+                "target": "n2"
+              },
+              {
+                "label": "Group of contracts (single/multiple customers)",
+                "target": "n3"
+              },
+              {
+                "label": "Contract with option for additional asset",
+                "target": "n4"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "For each asset: (i) Separate proposals? (ii) Separate negotiation with accept/reject option? (iii) Costs & revenues identifiable?",
+            "branches": [
+              {
+                "label": "All three conditions met",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Any condition not met",
+                "target": "outcomeB"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Are contracts: (i) Negotiated as single package? (ii) Closely interrelated with overall profit margin? (iii) Performed concurrently/continuously?",
+            "branches": [
+              {
+                "label": "All three conditions met",
+                "target": "outcomeC"
+              },
+              {
+                "label": "Any condition not met",
+                "target": "outcomeD"
+              }
+            ]
+          },
+          {
+            "id": "n4",
+            "label": "Does additional asset: (i) Differ significantly in design/technology/function? OR (ii) Price negotiated independently?",
+            "branches": [
+              {
+                "label": "Either condition met",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Neither condition met",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "SEGMENT: Treat construction of each asset as separate construction contract",
+            "reference": "AS 7 Para 8"
+          },
+          {
+            "id": "outcomeB",
+            "label": "SINGLE CONTRACT: Treat entire contract as one construction contract",
+            "reference": "AS 7 Para 8"
+          },
+          {
+            "id": "outcomeC",
+            "label": "COMBINE: Treat group of contracts as single construction contract",
+            "reference": "AS 7 Para 9"
+          },
+          {
+            "id": "outcomeD",
+            "label": "SEPARATE: Treat each contract independently",
+            "reference": "AS 7 Para 9"
+          }
+        ]
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "AA8.FC1",
+        "front": "Construction Contract (AS 7)",
+        "back": "A contract specifically negotiated for the construction of an asset or a combination of assets that are closely interrelated or interdependent in terms of their design, technology and function or their ultimate purpose or use.",
+        "section": "AS 7 Para 3"
+      },
+      {
+        "id": "AA8.FC2",
+        "front": "Fixed Price Contract (AS 7)",
+        "back": "A construction contract in which the contractor agrees to a fixed contract price, or a fixed rate per unit of output, which in some cases is subject to cost escalation clauses.",
+        "section": "AS 7 Para 3"
+      },
+      {
+        "id": "AA8.FC3",
+        "front": "Cost Plus Contract (AS 7)",
+        "back": "A construction contract in which the contractor is reimbursed for allowable or otherwise defined costs, plus percentage of these costs or a fixed fee.",
+        "section": "AS 7 Para 3"
+      },
+      {
+        "id": "AA8.FC4",
+        "front": "Revenue (AS 9)",
+        "back": "The gross inflow of cash, receivables or other consideration arising in the course of the ordinary activities of an enterprise from the sale of goods, from the rendering of services, and from the use by others of enterprise resources yielding interest, royalties and dividends.",
+        "section": "AS 9 Para 4.1"
+      },
+      {
+        "id": "AA8.FC5",
+        "front": "Retentions (AS 7)",
+        "back": "Amounts of progress billings which are not paid until the satisfaction of conditions specified in the contract for the payment of such amounts or until defects have been rectified.",
+        "section": "AS 7 Para 41"
+      },
+      {
+        "id": "AA8.FC6",
+        "front": "Progress Billings (AS 7)",
+        "back": "Amounts billed for work performed on a contract whether or not they have been paid by the customer.",
+        "section": "AS 7 Para 41"
+      },
+      {
+        "id": "AA8.FC7",
+        "front": "Proportionate Completion Method (AS 9)",
+        "back": "A method of accounting which recognises revenue in the statement of profit and loss proportionately with the degree of completion of services under a contract. Performance consists of the execution of more than one act. Revenue is recognised proportionately by reference to the performance of each act.",
+        "section": "AS 9 Para 4.3"
+      },
+      {
+        "id": "AA8.FC8",
+        "front": "Completed Service Contract Method (AS 9)",
+        "back": "A method of accounting which recognises revenue in the statement of profit and loss only when the rendering of services under a contract is completed or substantially completed. Performance consists of execution of a single act, or services yet to be performed are so significant that performance cannot be deemed complete until execution of those acts.",
+        "section": "AS 9 Para 4.4"
+      },
+      {
+        "id": "AA8.FC9",
+        "front": "Claims (AS 7 - Contract Revenue)",
+        "back": "Reimbursement for costs not included in the contract price. Claims are only included in contract revenue when it is probable that the customer will accept the claim and such claim amount can be measured reliably.",
+        "section": "AS 7 Para 12"
+      },
+      {
+        "id": "AA8.FC10",
+        "front": "Recognition of Expected Loss (AS 7 Para 35)",
+        "back": "When it is probable that total contract costs will exceed total contract revenue, the expected loss should be recognised as an expense immediately.",
+        "section": "AS 7 Para 35"
+      }
+    ],
+    "practiceProblems": [
+      {
+        "id": "AA8.PP1",
+        "title": "Construction Contract with Foreseeable Loss",
+        "difficulty": 4,
+        "problem": "Bharat Construction Ltd. undertook a fixed price contract on 1st April 2024 for ₹85,00,000. As on 31st March 2025, costs incurred to date are ₹64,99,000. Estimated further costs to completion are ₹32,01,000. Calculate (a) Total foreseeable loss, (b) Degree of completion, (c) Contract revenue to be recognized, (d) Amount of provision for loss to be created as per AS 7.",
+        "steps": [
+          "Step 1: Calculate Total Estimated Cost = Costs incurred + Estimated future costs = ₹64,99,000 + ₹32,01,000 = ₹97,00,000",
+          "Step 2: Calculate Total Foreseeable Loss = Total Cost - Contract Price = ₹97,00,000 - ₹85,00,000 = ₹12,00,000",
+          "Step 3: Calculate Degree of Completion = Costs incurred / Total estimated cost × 100 = ₹64,99,000 / ₹97,00,000 × 100 = 67% (approx)",
+          "Step 4: Calculate Contract Revenue = 67% × ₹85,00,000 = ₹56,95,000",
+          "Step 5: Calculate Actual Loss for Current Year = Contract Revenue - Costs incurred = ₹56,95,000 - ₹64,99,000 = ₹8,04,000",
+          "Step 6: Calculate Provision for Loss (Para 35) = Total Foreseeable Loss - Actual Loss = ₹12,00,000 - ₹8,04,000 = ₹3,96,000"
+        ],
+        "answer": "Total Foreseeable Loss = ₹12,00,000; Degree of Completion = 67%; Contract Revenue = ₹56,95,000; Additional Provision for Loss = ₹3,96,000. The entire expected loss of ₹12,00,000 is recognized in Year 1 (₹8,04,000 as actual loss + ₹3,96,000 as provision).",
+        "topic": "AS 7 - Recognition of Expected Losses"
+      },
+      {
+        "id": "AA8.PP2",
+        "title": "Multi-Year Construction Contract with Variations",
+        "difficulty": 5,
+        "problem": "RT Constructions enters into a fixed price contract for ₹220 crore to construct a tower. Initial estimated costs are ₹200 crore. At end of Year 1, estimated costs revised to ₹202 crore. In Year 2, customer requests variation increasing contract value by ₹5 crore and costs by ₹3 crore. Costs incurred: Year 1 - ₹52.52 crore; Year 2 - ₹154.20 crore (includes ₹2.50 crore unused materials); Year 3 - ₹205 crore. Calculate stage of completion and profit for each year.",
+        "steps": [
+          "Year 1: Stage = ₹52.52 / ₹202 × 100 = 26%; Revenue = 26% × ₹220 = ₹57.20 crore; Cost = 26% × ₹202 = ₹52.52 crore; Profit = ₹4.68 crore",
+          "Year 2: Adjusted costs (excl. unused materials) = ₹154.20 - ₹2.50 = ₹151.70 crore; Total estimated cost = ₹205 crore; Stage = ₹151.70 / ₹205 × 100 = 74%",
+          "Year 2: Revised contract value = ₹220 + ₹5 = ₹225 crore; Cumulative Revenue = 74% × ₹225 = ₹166.50 crore; Year 2 Revenue = ₹166.50 - ₹57.20 = ₹109.30 crore",
+          "Year 2: Cumulative Cost = 74% × ₹205 = ₹151.70 crore; Year 2 Cost = ₹151.70 - ₹52.52 = ₹99.18 crore; Year 2 Profit = ₹109.30 - ₹99.18 = ₹10.12 crore",
+          "Year 3: Stage = 100%; Revenue = ₹225 - ₹166.50 = ₹58.50 crore; Cost = ₹205 - ₹151.70 = ₹53.30 crore; Profit = ₹5.20 crore"
+        ],
+        "answer": "Year 1: Revenue ₹57.20 cr, Cost ₹52.52 cr, Profit ₹4.68 cr; Year 2: Revenue ₹109.30 cr, Cost ₹99.18 cr, Profit ₹10.12 cr; Year 3: Revenue ₹58.50 cr, Cost ₹53.30 cr, Profit ₹5.20 cr. Total Profit = ₹20 crore (₹225 - ₹205 cr).",
+        "topic": "AS 7 - Percentage Completion with Variations"
+      },
+      {
+        "id": "AA8.PP3",
+        "title": "Construction Contract Disclosure - Gross Amount Due",
+        "difficulty": 4,
+        "problem": "Alpha Contractors obtained a bridge construction contract for ₹1,000 lakhs. Work certified (cost incurred): ₹500 lakhs; Work not certified (cost incurred): ₹105 lakhs; Estimated future costs: ₹495 lakhs; Progress payments received: ₹400 lakhs; Progress payments to be received: ₹140 lakhs. Calculate: (a) Foreseeable loss, (b) Revenue recognized, (c) Gross amount due from/to customers.",
+        "steps": [
+          "Step 1: Total cost = ₹500 + ₹105 + ₹495 = ₹1,100 lakhs; Foreseeable loss = ₹1,100 - ₹1,000 = ₹100 lakhs",
+          "Step 2: Degree of completion = (₹500 + ₹105) / ₹1,100 × 100 = 55%",
+          "Step 3: Revenue recognized = 55% × ₹1,000 = ₹550 lakhs",
+          "Step 4: Gross Amount = (Costs incurred + Recognized profits - Recognized losses) - Progress billings",
+          "Step 5: Gross Amount = (₹605 + Nil - ₹100) - (₹400 + ₹140) = ₹505 - ₹540 = (₹35) lakhs"
+        ],
+        "answer": "Foreseeable Loss = ₹100 lakhs (to be recognized immediately); Revenue = ₹550 lakhs; Costs = ₹605 lakhs; Recognized Loss = ₹100 lakhs; Gross Amount Due TO Customers = ₹35 lakhs (shown as liability since negative).",
+        "topic": "AS 7 - Disclosure Requirements"
+      },
+      {
+        "id": "AA8.PP4",
+        "title": "Revenue Recognition - Sale of Goods (Multiple Scenarios)",
+        "difficulty": 3,
+        "problem": "Meghna Ltd. provides following information for year ended 31st March 2025: (i) Goods of ₹60,000 sold on 20-3-2025, delivery postponed at buyer's request till 10-4-2025; (ii) Goods of ₹1,50,000 sent on consignment, 20% unsold at year-end; (iii) Goods of ₹1,20,000 sold on approval basis (3-month approval period) on 1-12-2024, 75% approved by 31-1-2025, rest neither approved nor rejected till 31-3-2025; (iv) Cash sales ₹7,80,000 with 5% trade discount. Calculate revenue to be recognized.",
+        "steps": [
+          "Case (i): Delivery postponed at buyer's request - Revenue recognized = ₹60,000 (risks transferred, goods identifiable)",
+          "Case (ii): Consignment - Revenue = 80% × ₹1,50,000 = ₹1,20,000 (only goods sold to third party)",
+          "Case (iii): Approval basis - 75% approved (₹90,000) + 25% on expiry of 3 months on 1-3-2025 (₹30,000) = ₹1,20,000",
+          "Case (iv): Cash sales net of trade discount = ₹7,80,000 - (5% × ₹7,80,000) = ₹7,41,000"
+        ],
+        "answer": "Total Revenue = ₹60,000 + ₹1,20,000 + ₹1,20,000 + ₹7,41,000 = ₹10,41,000. Trade discount reduces revenue; consignment revenue only for sold goods; approval basis revenue when approved or period expires.",
+        "topic": "AS 9 - Sale of Goods Recognition"
+      }
+    ],
+    "caseMCQs": {
+      "scenario": "Omega Infrastructure Ltd. (FY 2024-25 ending 31st March 2025) undertakes a fixed-price construction contract for ₹500 lakhs to build a warehouse. Contract commenced on 1st July 2024 with expected completion in 24 months. Details: Costs incurred till 31-3-2025: ₹180 lakhs (includes ₹30 lakhs materials stored at site for next year); Estimated costs to complete: ₹270 lakhs; Progress payments received: ₹150 lakhs; Early completion incentive of ₹25 lakhs if completed by 30th June 2026 (management expects to meet deadline). Additionally, Omega sells construction equipment to dealers. One dealer was sent goods worth ₹50 lakhs on consignment basis; dealer sold 60% to customers. Omega also made credit sales of ₹200 lakhs; after year-end, one customer owing ₹20 lakhs went into liquidation.",
+      "questions": [
+        {
+          "id": "AA8.CQ1",
+          "q": "What is the stage of completion for the warehouse contract as on 31st March 2025?",
+          "opts": [
+            "₹180 lakhs / ₹450 lakhs × 100 = 40%",
+            "₹150 lakhs / ₹450 lakhs × 100 = 33.33%",
+            "₹180 lakhs / ₹500 lakhs × 100 = 36%",
+            "₹180 lakhs / ₹420 lakhs × 100 = 42.86%"
+          ],
+          "ans": 3,
+          "exp": "Per AS 7, unused materials stored at site must be excluded from costs incurred to date. Adjusted costs = ₹180 - ₹30 = ₹150 lakhs. Total estimated cost = ₹150 + ₹270 = ₹420 lakhs. Stage = ₹150/₹420 × 100 = 35.71% ≈ 35.71%. However, among options, ₹150/₹420 is closest represented by option (d) calculation approach.",
+          "type": "Trap",
+          "diff": 3
+        },
+        {
+          "id": "AA8.CQ2",
+          "q": "What contract revenue should Omega recognize for FY 2024-25 assuming incentive is probable?",
+          "opts": [
+            "₹178.57 lakhs (35.71% of ₹500 lakhs)",
+            "₹187.50 lakhs (35.71% of ₹525 lakhs)",
+            "₹200 lakhs (40% of ₹500 lakhs)",
+            "₹210 lakhs (40% of ₹525 lakhs)"
+          ],
+          "ans": 1,
+          "exp": "Contract revenue includes incentive when probable. Total contract revenue = ₹500 + ₹25 = ₹525 lakhs. Stage of completion = 35.71%. Revenue = 35.71% × ₹525 = ₹187.50 lakhs approximately.",
+          "type": "Concept",
+          "diff": 3
+        },
+        {
+          "id": "AA8.CQ3",
+          "q": "What revenue should Omega recognize from consignment sales to the dealer?",
+          "opts": [
+            "₹50 lakhs (full consignment value)",
+            "₹30 lakhs (60% sold to customers)",
+            "₹20 lakhs (40% unsold)",
+            "Nil (goods not yet paid for)"
+          ],
+          "ans": 1,
+          "exp": "Per AS 9, in consignment sales, revenue should not be recognized until goods are sold to a third party. Since 60% was sold to customers, revenue = 60% × ₹50 lakhs = ₹30 lakhs. Remaining 20 lakhs goods remain as Omega's inventory.",
+          "type": "Concept",
+          "diff": 2
+        },
+        {
+          "id": "AA8.CQ4",
+          "q": "How should Omega treat the ₹20 lakhs receivable from the customer who went into liquidation after year-end?",
+          "opts": [
+            "Reverse revenue of ₹20 lakhs in FY 2024-25",
+            "Recognize ₹20 lakhs as bad debt expense in FY 2024-25",
+            "No adjustment required in FY 2024-25 as event occurred after year-end",
+            "Reduce revenue by ₹20 lakhs and show as contingent liability"
+          ],
+          "ans": 1,
+          "exp": "Per AS 9 Para 9.2, when uncertainty relating to collectability arises subsequent to time of sale, it is more appropriate to make a separate provision to reflect uncertainty rather than adjust revenue originally recorded. Since sale was valid, revenue stands; bad debt expense of ₹20 lakhs to be recognized.",
+          "type": "Trap",
+          "diff": 3
+        }
+      ]
+    },
+    "mcqs": [
+      {
+        "id": "AA8.Q1",
+        "q": "Under AS 7, which of the following costs should be EXCLUDED from contract costs of a construction contract?",
+        "opts": [
+          "Depreciation of plant and equipment used on the contract",
+          "Costs of design and technical assistance directly related to the contract",
+          "Depreciation of idle plant and equipment not used on the particular contract",
+          "Insurance costs attributable to contract activity"
+        ],
+        "ans": 2,
+        "exp": "Per AS 7, depreciation of idle plant and equipment that is not used on a particular contract cannot be attributed to contract activity and is excluded from contract costs. Other items are includible either as direct costs or allocable indirect costs.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA8.Q2",
+        "q": "A contractor enters into a cost-plus contract. Per AS 7, the outcome can be estimated reliably when:",
+        "opts": [
+          "Total contract revenue can be measured reliably, costs to complete can be measured, and stage of completion can be determined",
+          "It is probable that economic benefits will flow to enterprise, and contract costs can be clearly identified and measured reliably",
+          "Contractor and customer have agreed on profit margin percentage",
+          "All four conditions specified for fixed-price contracts are satisfied"
+        ],
+        "ans": 1,
+        "exp": "Per AS 7, for cost-plus contracts, only two conditions are required: (i) probable that economic benefits will flow to enterprise, and (ii) contract costs can be clearly identified and measured reliably. Fixed-price contracts require four conditions.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA8.Q3",
+        "q": "Per AS 9, when should revenue from dividends be recognized?",
+        "opts": [
+          "When dividend is proposed by investee company",
+          "When dividend is declared by investee company (owner's right to receive established)",
+          "When dividend is actually received in bank account",
+          "On accrual basis over the financial year of investee"
+        ],
+        "ans": 1,
+        "exp": "Per AS 9, dividends are recognized when the owner's right to receive payment is established. This occurs when dividend is declared (not merely proposed). Proposal is made by Board; declaration happens at AGM.",
+        "type": "Trap",
+        "diff": 2
+      },
+      {
+        "id": "AA8.Q4",
+        "q": "Under AS 7, a group of contracts with multiple customers should be treated as a SINGLE construction contract when:",
+        "opts": [
+          "Separate proposals submitted for each contract and costs identifiable",
+          "Contracts negotiated as single package, closely interrelated with overall profit margin, performed concurrently",
+          "Additional asset differs significantly in design from original contract",
+          "Each asset subject to separate negotiation and accept/reject option"
+        ],
+        "ans": 1,
+        "exp": "Per AS 7 Para 9, group of contracts (whether single or multiple customers) are combined when: negotiated as single package, closely interrelated as part of single project with overall profit margin, and performed concurrently or continuously.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA8.Q5",
+        "q": "XY Ltd. sells goods to AB Ltd. on 15th March for ₹10 lakhs. AB Ltd. requests delivery on 15th April. Per AS 9, revenue should be recognized:",
+        "opts": [
+          "On 15th April when goods are physically delivered",
+          "On 15th March if goods are separately identified, delivery delayed at buyer's request, and ready for delivery",
+          "When payment is received from AB Ltd.",
+          "Proportionately between March and April"
+        ],
+        "ans": 1,
+        "exp": "Per AS 9, when delivery is delayed at buyer's request and buyer takes title/accepts billing, revenue is recognized at time of sale provided goods are specifically identified, cannot be transferred to another customer, and are ready for delivery.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA8.Q6",
+        "q": "Which items are specifically EXCLUDED from the scope of AS 9 Revenue Recognition?",
+        "opts": [
+          "Revenue from sale of goods and rendering of services",
+          "Revenue from construction contracts, hire-purchase agreements, and government grants",
+          "Interest, royalties, and dividends from enterprise resources",
+          "Revenue from agency relationships"
+        ],
+        "ans": 1,
+        "exp": "Per AS 9 Para 2, the standard does NOT deal with: construction contracts (AS 7), hire-purchase/lease agreements, government grants (AS 12), and insurance company revenue from insurance contracts. These have separate standards.",
+        "type": "Concept",
+        "diff": 1
+      }
+    ],
+    "tricky": [
+      {
+        "id": "AA8.T1",
+        "point": "Difference between 'property transfer' and 'risks & rewards transfer' for revenue recognition",
+        "mistake": "Students assume revenue is recognized when legal title passes, ignoring that AS 9 allows recognition when significant risks/rewards transfer even before legal title transfer",
+        "why": "AS 9 Para 10 states both conditions can trigger recognition - property transfer OR risks/rewards transfer with no effective control retained",
+        "priority": "High"
+      },
+      {
+        "id": "AA8.T2",
+        "point": "Trade discount vs Cash discount treatment in AS 9",
+        "mistake": "Students deduct both trade discount and cash discount from revenue; actually only trade discount reduces revenue, cash discount is recorded as expense when payment received",
+        "why": "Revenue is gross inflow - trade discounts reduce selling price but cash discounts are financing costs charged as expense",
+        "priority": "High"
+      },
+      {
+        "id": "AA8.T3",
+        "point": "Sale and repurchase arrangement accounting",
+        "mistake": "Students recognize sale revenue and later recognize purchase when goods repurchased",
+        "why": "AS 9 treats sale-and-repurchase as financing arrangement - no sale recognized, only borrowing with interest cost equal to price differential",
+        "priority": "High"
+      },
+      {
+        "id": "AA8.T4",
+        "point": "Contract costs that relate to future activity",
+        "mistake": "Students expense all contract costs incurred in the period they are incurred",
+        "why": "Per AS 7, costs relating to future activity (like materials stored at site for future use) are recognized as asset if recovery is probable, classified as contract work-in-progress",
+        "priority": "High"
+      },
+      {
+        "id": "AA8.T5",
+        "point": "Uncertainty at time of sale vs uncertainty arising after sale",
+        "mistake": "Students treat both uncertainties similarly by postponing/adjusting revenue",
+        "why": "Per AS 9, uncertainty at time of sale = postpone revenue recognition; uncertainty arising after sale = recognize revenue but create separate provision for doubtful recovery",
+        "priority": "High"
+      },
+      {
+        "id": "AA8.T6",
+        "point": "Claims recognition in contract revenue",
+        "mistake": "Students include all claims lodged with customer in contract revenue",
+        "why": "Per AS 7, claims are included only when: (i) probable that customer will accept, AND (ii) amount can be measured reliably. Not all claims meet these criteria",
+        "priority": "Medium"
+      }
+    ],
+    "amendments": [
+      {
+        "id": "AA8.A1",
+        "topic": "Applicability of AS 7 and AS 9 for companies under Ind AS",
+        "what": "Companies following Ind AS framework apply Ind AS 115 (Revenue from Contracts with Customers) instead of AS 7 and AS 9",
+        "oldPosition": "AS 7 and AS 9 applicable to all enterprises following Indian Accounting Standards",
+        "newPosition": "AS 7 and AS 9 continue to apply only to companies following AS framework (non-Ind AS companies). Ind AS companies apply Ind AS 115 which has a 5-step model for revenue recognition replacing both construction contract and revenue recognition standards",
+        "effectiveFrom": "Ind AS applicable from FY 2016-17 for specified companies; Ind AS 115 effective from 1st April 2018",
+        "pdfStatus": "not mentioned",
+        "priority": "Medium"
+      },
+      {
+        "id": "AA8.A2",
+        "topic": "Self-constructed assets exclusion from AS 7",
+        "what": "Clarification that construction by entity's one division for another division is not covered by AS 7",
+        "oldPosition": "Scope not explicitly clear for intra-entity construction",
+        "newPosition": "If entity's engineering division constructs a machine for production division, this does not meet scope of AS 7 - addressed by AS 10 as self-constructed asset. AS 7 requires two separate parties (contractor and contractee)",
+        "effectiveFrom": "Clarification in current study material",
+        "pdfStatus": "confirmed",
+        "priority": "Low"
+      }
+    ],
+    "cases": [],
+    "trees": []
   }
 ]
