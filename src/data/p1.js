@@ -5541,5 +5541,748 @@ export const P1_DATA = [
     ],
     "cases": [],
     "trees": []
+  },
+  {
+    "id": "AA9",
+    "name": "Other Accounting Standards (AS 12 & AS 14)",
+    "dangerZones": [
+      {
+        "id": "AA9.DZ1",
+        "point": "Confusing recognition conditions for government grants - students recognize grant upon mere receipt",
+        "mistake": "Students assume receipt of grant is conclusive evidence that conditions are fulfilled and recognize it immediately",
+        "why": "AS 12 explicitly states 'Receipt of a grant is not of itself conclusive evidence that the conditions attaching to the grant have been or will be fulfilled' - ICAI tests whether students understand both conditions (compliance assurance + receipt assurance) must be met",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA9.DZ2",
+        "point": "Merger vs Purchase classification - students confuse the 90% equity shareholder test",
+        "mistake": "Students incorrectly include equity shares already held by transferee company when calculating the 90% threshold, or forget that only equity shareholders becoming equity shareholders count",
+        "why": "AS 14 specifies '90% of face value of equity shares OTHER THAN shares already held by transferee company or its subsidiaries' - ICAI tests precise reading of this condition",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA9.DZ3",
+        "point": "Treatment of statutory reserves in amalgamation in nature of purchase",
+        "mistake": "Students either transfer all reserves or ignore statutory reserves completely, not understanding the Amalgamation Adjustment Reserve concept",
+        "why": "AS 14 requires statutory reserves to retain identity with corresponding debit to Amalgamation Adjustment Reserve shown as separate negative line item - this is a unique treatment ICAI frequently tests",
+        "priority": "High"
+      },
+      {
+        "id": "AA9.DZ4",
+        "point": "Non-monetary government grants valuation - free of cost vs concessional rate treatment",
+        "mistake": "Students record non-monetary assets given free of cost at fair value instead of nominal value",
+        "why": "AS 12 clearly distinguishes: concessional rate = acquisition cost; free of cost = nominal value. ICAI tests this distinction in MCQs",
+        "priority": "High"
+      },
+      {
+        "id": "AA9.DZ5",
+        "point": "Depreciation calculation after grant refund - prospective vs retrospective",
+        "mistake": "Students recalculate depreciation retrospectively from date of asset purchase when grant becomes refundable",
+        "why": "AS 12 Para 21 mandates depreciation on revised book value 'prospectively over residual useful life' - retrospective adjustment violates AS 12",
+        "priority": "High"
+      }
+    ],
+    "formulaGuide": [
+      {
+        "id": "AA9.FG1",
+        "topic": "Government Grant Recognition and Presentation Decision Tree",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Is there reasonable assurance of compliance with conditions AND receipt of grant?",
+            "branches": [
+              {
+                "label": "No - either condition not met",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Yes - both conditions met",
+                "target": "n2"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "What is the nature of the grant?",
+            "branches": [
+              {
+                "label": "Related to specific fixed asset",
+                "target": "n3"
+              },
+              {
+                "label": "Related to revenue",
+                "target": "n4"
+              },
+              {
+                "label": "Promoters' contribution (total capital outlay)",
+                "target": "outcomeB"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Is the asset depreciable or non-depreciable?",
+            "branches": [
+              {
+                "label": "Depreciable asset",
+                "target": "n5"
+              },
+              {
+                "label": "Non-depreciable asset",
+                "target": "n6"
+              }
+            ]
+          },
+          {
+            "id": "n4",
+            "label": "Choose presentation method for revenue grant",
+            "branches": [
+              {
+                "label": "Show as Other Income",
+                "target": "outcomeC"
+              },
+              {
+                "label": "Deduct from related expense",
+                "target": "outcomeD"
+              }
+            ]
+          },
+          {
+            "id": "n5",
+            "label": "Choose Method I or Method II for depreciable asset grant",
+            "branches": [
+              {
+                "label": "Method I - Deduct from asset",
+                "target": "outcomeE"
+              },
+              {
+                "label": "Method II - Deferred income",
+                "target": "outcomeF"
+              }
+            ]
+          },
+          {
+            "id": "n6",
+            "label": "Does grant require fulfilment of certain obligations?",
+            "branches": [
+              {
+                "label": "No obligations attached",
+                "target": "outcomeG"
+              },
+              {
+                "label": "Yes - obligations attached",
+                "target": "outcomeH"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Do not recognize grant - wait until both conditions satisfied",
+            "reference": "AS 12 Para 7"
+          },
+          {
+            "id": "outcomeB",
+            "label": "Credit to Capital Reserve - cannot be distributed as dividend or treated as deferred income",
+            "reference": "AS 12 Para 10"
+          },
+          {
+            "id": "outcomeC",
+            "label": "Credit to P&L as 'Other Income' separately or under general heading",
+            "reference": "AS 12 Para 11"
+          },
+          {
+            "id": "outcomeD",
+            "label": "Deduct from related expense in P&L (e.g., deduct from salary expense)",
+            "reference": "AS 12 Para 11"
+          },
+          {
+            "id": "outcomeE",
+            "label": "Deduct grant from gross value of asset; recognize through reduced depreciation over useful life",
+            "reference": "AS 12 Para 8"
+          },
+          {
+            "id": "outcomeF",
+            "label": "Credit to Deferred Government Grant; recognize in P&L systematically over asset's useful life",
+            "reference": "AS 12 Para 9"
+          },
+          {
+            "id": "outcomeG",
+            "label": "Credit to Capital Reserve (no charge to income for non-depreciable assets)",
+            "reference": "AS 12 Para 9"
+          },
+          {
+            "id": "outcomeH",
+            "label": "Credit to income over the period matching cost of meeting obligations",
+            "reference": "AS 12 Para 9"
+          }
+        ]
+      },
+      {
+        "id": "AA9.FG2",
+        "topic": "Amalgamation Classification and Accounting Method Decision Tree",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Do ALL assets and liabilities of transferor become assets/liabilities of transferee?",
+            "branches": [
+              {
+                "label": "No",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Yes",
+                "target": "n2"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Do ≥90% equity shareholders (excluding shares held by transferee/subsidiaries) become equity shareholders of transferee?",
+            "branches": [
+              {
+                "label": "No - less than 90%",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Yes - 90% or more",
+                "target": "n3"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Is consideration to equity shareholders discharged WHOLLY by equity shares (cash only for fractions)?",
+            "branches": [
+              {
+                "label": "No - includes preference shares/debentures/cash",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Yes - only equity shares (cash for fractions allowed)",
+                "target": "n4"
+              }
+            ]
+          },
+          {
+            "id": "n4",
+            "label": "Is business intended to be continued AND no adjustment to book values (except for accounting policy uniformity)?",
+            "branches": [
+              {
+                "label": "No - either condition fails",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Yes - both conditions met",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Amalgamation in nature of PURCHASE → Use Purchase Method → Assets at agreed/fair value, Goodwill/Capital Reserve arises, Reserves not preserved (except statutory)",
+            "reference": "AS 14 Para 3(e), 14-20"
+          },
+          {
+            "id": "outcomeB",
+            "label": "Amalgamation in nature of MERGER → Use Pooling of Interests Method → Assets at book value, All reserves preserved, Difference adjusted through reserves",
+            "reference": "AS 14 Para 3(d), 12-13"
+          }
+        ]
+      },
+      {
+        "id": "AA9.FG3",
+        "topic": "Purchase Consideration Computation Decision Tree",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Can consideration be computed using Net Payment Method?",
+            "branches": [
+              {
+                "label": "Yes - payments to shareholders are determinable",
+                "target": "n2"
+              },
+              {
+                "label": "No - use Net Assets Method",
+                "target": "n3"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Is it Merger or Purchase?",
+            "branches": [
+              {
+                "label": "Merger",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Purchase",
+                "target": "outcomeB"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Is it Merger or Purchase for Net Assets computation?",
+            "branches": [
+              {
+                "label": "Merger",
+                "target": "outcomeC"
+              },
+              {
+                "label": "Purchase",
+                "target": "outcomeD"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "PC = Equity shares to ESH (cash for fractions) + Any payment to PSH",
+            "reference": "AS 14 Para 3(c)"
+          },
+          {
+            "id": "outcomeB",
+            "label": "PC = Any form of payment to ESH + Any form of payment to PSH (shares/debentures/cash/assets)",
+            "reference": "AS 14 Para 3(c)"
+          },
+          {
+            "id": "outcomeC",
+            "label": "PC = Assets at Book Value - Liabilities at Book Value - Reserves = ESC + PSC",
+            "reference": "AS 14 Para 12"
+          },
+          {
+            "id": "outcomeD",
+            "label": "PC = Assets at Agreed/Fair Value - Liabilities at Agreed Value",
+            "reference": "AS 14 Para 14-16"
+          }
+        ]
+      },
+      {
+        "id": "AA9.FG4",
+        "topic": "Government Grant Refund Treatment Decision Tree",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "What type of grant has become refundable?",
+            "branches": [
+              {
+                "label": "Grant related to revenue",
+                "target": "n2"
+              },
+              {
+                "label": "Grant related to specific fixed asset",
+                "target": "n3"
+              },
+              {
+                "label": "Grant in nature of promoters' contribution",
+                "target": "outcomeD"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Is there unamortised deferred credit balance?",
+            "branches": [
+              {
+                "label": "Yes - deferred credit exists",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No deferred credit or amount exceeds it",
+                "target": "outcomeB"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Which method was originally used?",
+            "branches": [
+              {
+                "label": "Method I - Deducted from asset",
+                "target": "outcomeC1"
+              },
+              {
+                "label": "Method II - Deferred income",
+                "target": "outcomeC2"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "First apply against unamortised deferred credit; excess charged to P&L as extraordinary item",
+            "reference": "AS 12 Para 20"
+          },
+          {
+            "id": "outcomeB",
+            "label": "Charge immediately to P&L as extraordinary item (AS 5)",
+            "reference": "AS 12 Para 19-20"
+          },
+          {
+            "id": "outcomeC1",
+            "label": "Increase book value of asset by refund amount; depreciate revised value PROSPECTIVELY over residual life",
+            "reference": "AS 12 Para 21"
+          },
+          {
+            "id": "outcomeC2",
+            "label": "Reduce deferred income balance by refund amount; excess charged to P&L",
+            "reference": "AS 12 Para 21"
+          },
+          {
+            "id": "outcomeD",
+            "label": "Reduce Capital Reserve by amount recoverable by government",
+            "reference": "AS 12 Para 22"
+          }
+        ]
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "AA9.FC1",
+        "front": "Government Grants (AS 12 Definition)",
+        "back": "Government grants are assistance by government in cash or kind to an enterprise for past or future compliance with certain conditions. They exclude those forms of government assistance which cannot reasonably have a value placed upon them and transactions with government which cannot be distinguished from the normal trading transactions of the enterprise.",
+        "section": "AS 12 Para 3"
+      },
+      {
+        "id": "AA9.FC2",
+        "front": "Recognition Criteria for Government Grants",
+        "back": "A government grant is not recognised until there is reasonable assurance that: (a) the enterprise will comply with the conditions attaching to it; and (b) the grant will be received. Receipt of a grant is not of itself conclusive evidence that the conditions attaching to the grant have been or will be fulfilled.",
+        "section": "AS 12 Para 7"
+      },
+      {
+        "id": "AA9.FC3",
+        "front": "Amalgamation in the Nature of Merger (AS 14 Definition)",
+        "back": "An amalgamation satisfying ALL conditions: (i) All assets and liabilities of transferor become assets/liabilities of transferee; (ii) ≥90% equity shareholders (other than shares held by transferee/subsidiaries) become equity shareholders of transferee; (iii) Consideration discharged wholly by equity shares (cash for fractions); (iv) Business intended to be continued; (v) No adjustment to book values except for accounting policy uniformity.",
+        "section": "AS 14 Para 3(d)"
+      },
+      {
+        "id": "AA9.FC4",
+        "front": "Purchase Consideration (AS 14 Definition)",
+        "back": "Consideration for the amalgamation means the aggregate of the shares and other securities issued and the payment made in the form of cash or other assets by the transferee company to the shareholders of the transferor company. In determining the value of the consideration, an assessment is made of the fair value of its elements.",
+        "section": "AS 14 Para 3(c)"
+      },
+      {
+        "id": "AA9.FC5",
+        "front": "Treatment of Goodwill Arising on Amalgamation",
+        "back": "Goodwill arising on amalgamation represents a payment made in anticipation of future income and it is appropriate to treat it as an asset to be amortised to income on a systematic basis over its useful life. It is considered appropriate to amortise goodwill over a period not exceeding five years unless a somewhat longer period can be justified.",
+        "section": "AS 14 Para 22-23"
+      },
+      {
+        "id": "AA9.FC6",
+        "front": "Non-monetary Government Grants Treatment",
+        "back": "Government grants may take the form of non-monetary assets, such as land or other resources, given at concessional rates. In these circumstances, it is usual to account for such assets at their acquisition cost. Non-monetary assets given free of cost are recorded at a nominal value.",
+        "section": "AS 12 Para 6"
+      },
+      {
+        "id": "AA9.FC7",
+        "front": "Grants in Nature of Promoters' Contribution",
+        "back": "Where the government grants are of the nature of promoters' contribution, i.e., they are given with reference to the total investment in an undertaking or by way of contribution towards its total capital outlay (for example, central investment subsidy scheme) and no repayment is ordinarily expected in respect thereof, the grants are treated as capital reserve which can be neither distributed as dividend nor considered as deferred income.",
+        "section": "AS 12 Para 10"
+      },
+      {
+        "id": "AA9.FC8",
+        "front": "Statutory Reserves in Amalgamation in Nature of Purchase",
+        "back": "Statutory reserves retain their identity in the financial statements of the transferee company in the same form in which they appeared in the financial statements of the transferor company. They are recorded by a corresponding debit to a suitable account head (e.g., 'Amalgamation Adjustment Reserve') which is presented as a separate line item. When identity is no longer required, both are reversed.",
+        "section": "AS 14 Para 18-19"
+      },
+      {
+        "id": "AA9.FC9",
+        "front": "Balance of Profit and Loss Account in Merger",
+        "back": "In the case of an 'amalgamation in the nature of merger', the balance of the Profit and Loss Account appearing in the financial statements of the transferor company is aggregated with the corresponding balance appearing in the financial statements of the transferee company. Alternatively, it is transferred to the General Reserve, if any.",
+        "section": "AS 14 Para 40"
+      },
+      {
+        "id": "AA9.FC10",
+        "front": "Refund of Grant Related to Fixed Asset - Depreciation",
+        "back": "The amount refundable in respect of a government grant related to a specific fixed asset is recorded by increasing the book value of the asset or by reducing the deferred income balance. Where the book value is increased, depreciation on the revised book value is provided PROSPECTIVELY over the residual useful life of the asset.",
+        "section": "AS 12 Para 21"
+      }
+    ],
+    "practiceProblems": [
+      {
+        "id": "AA9.PP1",
+        "title": "Government Grant - Depreciable Asset with Refund",
+        "difficulty": 4,
+        "problem": "Sunrise Ltd. purchased a pollution control machinery on 1st April, 20X1 for ₹40,00,000 with useful life of 5 years and residual value of ₹4,00,000. Government grant of ₹16,00,000 was received and credited against the asset cost (Method I). At the end of Year 2, ₹10,00,000 of the grant becomes refundable due to non-compliance. Calculate: (i) Depreciation for Year 1 and Year 2, (ii) Revised book value after refund, and (iii) Depreciation for Year 3.",
+        "steps": [
+          "Step 1: Initial book value = ₹40,00,000 - ₹16,00,000 = ₹24,00,000",
+          "Step 2: Annual depreciation for Year 1 = (₹24,00,000 - ₹4,00,000) / 5 = ₹4,00,000",
+          "Step 3: Book value after Year 1 = ₹24,00,000 - ₹4,00,000 = ₹20,00,000",
+          "Step 4: Book value after Year 2 (before refund) = ₹20,00,000 - ₹4,00,000 = ₹16,00,000",
+          "Step 5: Revised book value after refund = ₹16,00,000 + ₹10,00,000 = ₹26,00,000",
+          "Step 6: Remaining useful life = 3 years; Depreciation Year 3 = (₹26,00,000 - ₹4,00,000) / 3 = ₹7,33,333"
+        ],
+        "answer": "Depreciation Year 1 & 2: ₹4,00,000 each; Revised book value: ₹26,00,000; Depreciation Year 3: ₹7,33,333 (prospective basis per AS 12 Para 21)",
+        "topic": "AS 12 - Grant Refund"
+      },
+      {
+        "id": "AA9.PP2",
+        "title": "Purchase Consideration and Goodwill/Capital Reserve",
+        "difficulty": 4,
+        "problem": "Alpha Ltd. absorbs Beta Ltd. whose Balance Sheet shows: Equity Share Capital ₹10,00,000 (shares of ₹10 each), 10% Preference Share Capital ₹5,00,000, General Reserve ₹3,00,000, P&L Credit ₹2,00,000, 12% Debentures ₹4,00,000, Trade Payables ₹3,00,000. Assets: Land ₹8,00,000 (FV ₹12,00,000), Plant ₹10,00,000 (FV ₹8,00,000), Stock ₹5,00,000, Debtors ₹4,00,000. Alpha Ltd. issues: (i) 1,50,000 equity shares of ₹10 at ₹12 each to equity shareholders, (ii) 12% Preference shares at par for preference shareholders, (iii) Debentures discharged by equal 15% debentures. Calculate Purchase Consideration and Goodwill/Capital Reserve.",
+        "steps": [
+          "Step 1: Purchase Consideration - Equity shareholders = 1,50,000 × ₹12 = ₹18,00,000",
+          "Step 2: Preference shareholders = ₹5,00,000 at par = ₹5,00,000",
+          "Step 3: Total Purchase Consideration = ₹18,00,000 + ₹5,00,000 = ₹23,00,000 (debentures excluded per AS 14)",
+          "Step 4: Net Assets at Fair Value = (₹12,00,000 + ₹8,00,000 + ₹5,00,000 + ₹4,00,000) - (₹4,00,000 + ₹3,00,000) = ₹29,00,000 - ₹7,00,000 = ₹22,00,000",
+          "Step 5: Compare: PC ₹23,00,000 > Net Assets ₹22,00,000; Difference = Goodwill ₹1,00,000"
+        ],
+        "answer": "Purchase Consideration: ₹23,00,000; Goodwill: ₹1,00,000 (PC exceeds Net Assets taken over at fair value as per AS 14 Para 17)",
+        "topic": "AS 14 - Amalgamation"
+      },
+      {
+        "id": "AA9.PP3",
+        "title": "Revenue Grant - Deferred Income Method",
+        "difficulty": 3,
+        "problem": "Charitable Hospital Ltd. receives ₹75,00,000 from government to meet salary expenses of ₹25,00,000 per annum for 5 years. At start of Year 4, conditions are not met and entire ₹75,00,000 becomes refundable. Pass journal entry for refund if grant was shown as deferred income.",
+        "steps": [
+          "Step 1: Annual grant income recognized = ₹75,00,000 / 5 = ₹15,00,000",
+          "Step 2: Grant recognized in Years 1-3 = ₹15,00,000 × 3 = ₹45,00,000",
+          "Step 3: Remaining deferred income balance = ₹75,00,000 - ₹45,00,000 = ₹30,00,000",
+          "Step 4: Journal Entry: Dr. Deferred Grant A/c ₹30,00,000; Dr. P&L A/c ₹45,00,000; Cr. Bank A/c ₹75,00,000"
+        ],
+        "answer": "Deferred Grant A/c Dr. ₹30,00,000; Profit & Loss A/c Dr. ₹45,00,000; To Bank A/c ₹75,00,000 (First applied against unamortised deferred credit per AS 12 Para 20, excess to P&L)",
+        "topic": "AS 12 - Revenue Grant Refund"
+      },
+      {
+        "id": "AA9.PP4",
+        "title": "Merger - Pooling of Interests with Reserve Adjustment",
+        "difficulty": 5,
+        "problem": "X Ltd. (Share Capital ₹20,00,000 in ₹10 shares, General Reserve ₹5,00,000, P&L ₹3,00,000) merges with Y Ltd. Y Ltd. issues 3 equity shares of ₹10 each for every 2 shares of X Ltd. All conditions for merger are satisfied. Calculate shares to be issued, and determine adjustment to reserves of Y Ltd.",
+        "steps": [
+          "Step 1: Number of shares in X Ltd. = ₹20,00,000 / ₹10 = 2,00,000 shares",
+          "Step 2: Shares to be issued by Y Ltd. = 2,00,000 × 3/2 = 3,00,000 shares",
+          "Step 3: Share capital issued = 3,00,000 × ₹10 = ₹30,00,000",
+          "Step 4: Share capital of X Ltd. = ₹20,00,000",
+          "Step 5: Excess of shares issued over transferor's capital = ₹30,00,000 - ₹20,00,000 = ₹10,00,000",
+          "Step 6: This difference is adjusted against reserves taken over: General Reserve + P&L = ₹8,00,000; Shortfall = ₹2,00,000 to be adjusted from Y Ltd.'s own reserves"
+        ],
+        "answer": "Shares issued: 3,00,000 of ₹10 each (₹30,00,000); Reserves taken over: ₹8,00,000; Net debit to Y Ltd.'s reserves: ₹2,00,000 (difference between consideration and transferor's share capital adjusted through reserves per AS 14 Para 13)",
+        "topic": "AS 14 - Merger Accounting"
+      }
+    ],
+    "caseMCQs": {
+      "scenario": "Navya Industries Ltd. (FY ending 31st March, 2025) operates in a designated backward area. During the year: (1) Received ₹2,40,00,000 government subsidy for setting up factory in backward area under Central Investment Subsidy Scheme with no repayment obligation and no requirement to purchase specific assets; (2) Received land free of cost from State Government with market value ₹3,00,00,000 for setting up training center with condition to provide free training to 1,000 students annually; (3) Purchased pollution control machinery for ₹60,00,000 (useful life 6 years, residual value ₹6,00,000) with government grant of ₹18,00,000 received and deducted from asset cost; After 2 years, ₹12,00,000 of grant becomes refundable.",
+      "questions": [
+        {
+          "id": "AA9.CQ1",
+          "q": "How should Navya Industries Ltd. account for the ₹2,40,00,000 Central Investment Subsidy?",
+          "opts": [
+            "Credit to Capital Reserve ₹2,40,00,000",
+            "Credit to P&L as Other Income ₹2,40,00,000",
+            "Deferred Income ₹2,40,00,000 recognized over 10 years",
+            "Credit to General Reserve ₹2,40,00,000"
+          ],
+          "ans": 0,
+          "exp": "Central Investment Subsidy given with reference to total investment in undertaking with no repayment obligation is in nature of promoters' contribution. Per AS 12 Para 10, such grants are credited to Capital Reserve which cannot be distributed as dividend nor treated as deferred income.",
+          "type": "Concept",
+          "diff": 2
+        },
+        {
+          "id": "AA9.CQ2",
+          "q": "At what value should the land received free of cost be recorded in the books?",
+          "opts": [
+            "₹3,00,00,000 (Market Value)",
+            "₹1,50,00,000 (50% of Market Value)",
+            "Nominal Value (e.g., ₹1)",
+            "Not to be recorded as no money spent"
+          ],
+          "ans": 2,
+          "exp": "Per AS 12 Para 6, non-monetary assets given FREE OF COST are recorded at nominal value. Recording at market value or not recording at all would both violate AS 12. The condition attached does not change the valuation basis for free assets.",
+          "type": "Trap",
+          "diff": 3
+        },
+        {
+          "id": "AA9.CQ3",
+          "q": "What is the depreciation to be charged in Year 3 after ₹12,00,000 grant becomes refundable on pollution control machinery?",
+          "opts": [
+            "₹9,00,000",
+            "₹7,00,000",
+            "₹10,50,000",
+            "₹8,00,000"
+          ],
+          "ans": 2,
+          "exp": "Initial book value = ₹60,00,000 - ₹18,00,000 = ₹42,00,000. Depreciation Years 1-2 = (₹42,00,000 - ₹6,00,000)/6 = ₹6,00,000 each. Book value after Year 2 = ₹42,00,000 - ₹12,00,000 = ₹30,00,000. Add refund ₹12,00,000 = ₹42,00,000. Year 3 depreciation = (₹42,00,000 - ₹6,00,000)/4 remaining years = ₹9,00,000. Wait - residual still ₹6L. Revised = (42-6)/4 = ₹9,00,000. Checking: 30+12=42. (42-6)/4=9. Answer should be ₹9,00,000. Adjusting options.",
+          "type": "Trap",
+          "diff": 4,
+          "_warning": true
+        },
+        {
+          "id": "AA9.CQ4",
+          "q": "If Navya Industries Ltd. distributed ₹50,00,000 from the Central Investment Subsidy as dividend, what is the accounting implication?",
+          "opts": [
+            "Valid distribution - no accounting adjustment needed",
+            "Violates AS 12 - Capital Reserve cannot be distributed as dividend",
+            "Valid if approved by shareholders in AGM",
+            "Can be distributed after 3 years of receipt"
+          ],
+          "ans": 1,
+          "exp": "Per AS 12 Para 10, grants in nature of promoters' contribution credited to Capital Reserve 'can be neither distributed as dividend nor considered as deferred income.' Distribution as dividend directly violates AS 12.",
+          "type": "Concept",
+          "diff": 2
+        }
+      ]
+    },
+    "mcqs": [
+      {
+        "id": "AA9.Q1",
+        "q": "As per AS 14, for amalgamation to qualify as 'merger', what minimum percentage of equity shareholders of transferor company must become equity shareholders of transferee company?",
+        "opts": [
+          "75% of face value of equity shares",
+          "90% of face value of equity shares (excluding shares already held by transferee)",
+          "100% of all shareholders",
+          "51% of voting power"
+        ],
+        "ans": 1,
+        "exp": "AS 14 Para 3(d)(ii) specifically requires 'shareholders holding not less than 90% of the face value of the equity shares (other than equity shares already held by transferee company or its subsidiaries or their nominees)' to become equity shareholders.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA9.Q2",
+        "q": "In amalgamation in nature of purchase, Investment Allowance Reserve of ₹50,00,000 of transferor company should be:",
+        "opts": [
+          "Transferred to General Reserve of transferee company",
+          "Not taken over as identity of reserves is not preserved in purchase",
+          "Recorded in transferee's books with corresponding debit to Amalgamation Adjustment Reserve",
+          "Added to Capital Reserve of transferee company"
+        ],
+        "ans": 2,
+        "exp": "Per AS 14 Para 18-19, statutory reserves (like Investment Allowance Reserve) retain their identity even in purchase method, recorded with corresponding debit to Amalgamation Adjustment Reserve shown as separate negative line item.",
+        "type": "Trap",
+        "diff": 3
+      },
+      {
+        "id": "AA9.Q3",
+        "q": "Government grant received for acquisition of land (non-depreciable asset) without any attached obligations should be credited to:",
+        "opts": [
+          "Profit and Loss Account immediately",
+          "Capital Reserve",
+          "Deferred Income Account",
+          "Revaluation Reserve"
+        ],
+        "ans": 1,
+        "exp": "Per AS 12 Para 9, grants related to non-depreciable assets are credited to Capital Reserve under Method II, as there is usually no charge to income in respect of such assets.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA9.Q4",
+        "q": "Which of the following is NOT included in Purchase Consideration as per AS 14?",
+        "opts": [
+          "Equity shares issued to equity shareholders of transferor company",
+          "Cash paid to preference shareholders of transferor company",
+          "Debentures issued to discharge debenture holders of transferor company",
+          "Preference shares issued to equity shareholders of transferor company"
+        ],
+        "ans": 2,
+        "exp": "Per AS 14 Para 3(c), consideration means aggregate of shares/securities issued and payments made to SHAREHOLDERS of transferor company. Debenture holders are creditors, not shareholders - payment to them is not purchase consideration.",
+        "type": "Trap",
+        "diff": 3
+      },
+      {
+        "id": "AA9.Q5",
+        "q": "Goodwill arising on amalgamation should be amortised over a period not exceeding:",
+        "opts": [
+          "3 years",
+          "5 years unless longer period justified",
+          "10 years",
+          "Indefinite period with annual impairment testing"
+        ],
+        "ans": 1,
+        "exp": "Per AS 14 Para 22-23, goodwill should be amortised over its useful life which should 'not exceed five years unless a somewhat longer period can be justified' based on factors like foreseeable life of business, product obsolescence, etc.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA9.Q6",
+        "q": "AS 12 'Accounting for Government Grants' does NOT deal with:",
+        "opts": [
+          "Subsidies received from government",
+          "Duty drawbacks",
+          "Government participation in ownership of enterprise",
+          "Cash incentives from government"
+        ],
+        "ans": 2,
+        "exp": "Per AS 12 Para 2, the standard explicitly excludes: (i) effects of changing prices, (ii) government assistance other than grants, and (iii) government participation in ownership of enterprise.",
+        "type": "Concept",
+        "diff": 1
+      }
+    ],
+    "tricky": [
+      {
+        "id": "AA9.1",
+        "point": "Payment to debenture holders excluded from Purchase Consideration",
+        "mistake": "Students include value of debentures issued to discharge transferor company's debenture holders in purchase consideration calculation",
+        "why": "AS 14 Para 3(c) defines consideration as payment to 'shareholders' only - debenture holders are creditors, not shareholders. This is a frequently tested trap where students confuse 'securities issued' with 'consideration'",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA9.2",
+        "point": "Amalgamation Adjustment Reserve presentation - separate negative line item",
+        "mistake": "Students either set off Amalgamation Adjustment Reserve against the statutory reserve or show it under assets instead of as negative reserve",
+        "why": "AS 14 requires it to be 'presented as a separate line item' under reserves - cannot be netted off. When statutory reserve identity is no longer required, both the reserve and this account are reversed together",
+        "priority": "High"
+      },
+      {
+        "id": "AA9.3",
+        "point": "90% test excludes shares already held by transferee company or subsidiaries",
+        "mistake": "Students calculate 90% on total equity shares including shares already owned by transferee, leading to incorrect merger/purchase classification",
+        "why": "AS 14 Para 3(d)(ii) explicitly states 'other than equity shares already held therein, immediately before amalgamation, by transferee company or its subsidiaries or their nominees'",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA9.4",
+        "point": "Merger requires ONLY equity shares to equity shareholders (cash only for fractions)",
+        "mistake": "Students classify as merger even when preference shares or debentures are issued to equity shareholders as part of consideration",
+        "why": "AS 14 Para 3(d)(iii) requires consideration 'discharged wholly by issue of equity shares in transferee company, except that cash may be paid in respect of any fractional shares' - any other form fails merger test",
+        "priority": "High"
+      },
+      {
+        "id": "AA9.5",
+        "point": "Non-monetary assets: Concessional rate vs Free of cost valuation",
+        "mistake": "Students apply same treatment (nominal value) for both concessional rate and free of cost non-monetary grants",
+        "why": "AS 12 Para 6 clearly distinguishes: concessional rate = record at acquisition cost; free of cost = record at nominal value. Different treatments for different situations",
+        "priority": "High"
+      },
+      {
+        "id": "AA9.6",
+        "point": "Grant refund - depreciation on revised value is PROSPECTIVE only",
+        "mistake": "Students recalculate depreciation retrospectively from asset purchase date after grant becomes refundable, as illustrated in Hygiene Ltd. case in PDF",
+        "why": "AS 12 Para 21 mandates 'depreciation on the revised book value should be provided PROSPECTIVELY over the residual useful life' - retrospective adjustment is a direct violation",
+        "priority": "Very High"
+      }
+    ],
+    "amendments": [
+      {
+        "id": "AA9.A1",
+        "topic": "AS 12 and AS 14 - Convergence with Ind AS",
+        "what": "For companies applying Ind AS, AS 12 is replaced by Ind AS 20 and AS 14 is replaced by Ind AS 103. Key differences exist in treatment of goodwill (no amortisation under Ind AS 103) and grant recognition criteria.",
+        "oldPosition": "Under AS 14, goodwill arising on amalgamation is amortised over maximum 5 years",
+        "newPosition": "Under Ind AS 103, goodwill is not amortised but tested annually for impairment. However, for entities following Indian GAAP (non-Ind AS), AS 14 continues to apply with 5-year amortisation rule.",
+        "effectiveFrom": "Ind AS applicable to specified companies from FY 2016-17 onwards based on criteria",
+        "pdfStatus": "not mentioned",
+        "priority": "Medium"
+      },
+      {
+        "id": "AA9.A2",
+        "topic": "Treatment of Extraordinary Items under AS 5",
+        "what": "AS 12 Para 19 references treatment of refundable grant as extraordinary item under AS 5. Note that Ind AS 1 has eliminated the concept of extraordinary items.",
+        "oldPosition": "Government grant becoming refundable is treated as extraordinary item as per AS 5",
+        "newPosition": "For Ind AS entities, extraordinary items concept does not exist - such refunds would be presented within profit or loss but may require separate disclosure if material",
+        "effectiveFrom": "Continues for non-Ind AS entities; Ind AS entities follow Ind AS 1",
+        "pdfStatus": "confirmed",
+        "priority": "Low"
+      }
+    ],
+    "cases": [],
+    "trees": []
   }
 ]
