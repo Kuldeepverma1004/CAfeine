@@ -3265,5 +3265,762 @@ export const P1_DATA = [
     ],
     "cases": [],
     "trees": []
+  },
+  {
+    "id": "AA6",
+    "name": "Liabilities Based Accounting Standards - AS 15 Employee Benefits & AS 29 Provisions, Contingent Liabilities and Contingent Assets",
+    "dangerZones": [
+      {
+        "id": "AA6.DZ1",
+        "point": "Confusing Accumulating vs Non-Accumulating Compensated Absences",
+        "mistake": "Students recognize liability for non-accumulating absences (like maternity leave) when service is rendered, instead of recognizing only when the absence occurs",
+        "why": "ICAI tests whether students understand that non-accumulating absences do not carry forward and are not linked to past services - hence no provision until absence actually occurs per AS 15 Para 8",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA6.DZ2",
+        "point": "Provision vs Contingent Liability Classification under AS 29",
+        "mistake": "Students create provisions when outflow is only possible (not probable), or fail to recognize that contingent liabilities arise when reliable estimate cannot be made even if outflow is probable",
+        "why": "ICAI specifically tests the three-criteria test: present obligation + probable outflow + reliable estimate. Missing any one criterion changes accounting treatment from provision to contingent liability disclosure",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA6.DZ3",
+        "point": "Defined Contribution Plan vs Defined Benefit Plan Classification",
+        "mistake": "Students misclassify gratuity funded through LIC as defined contribution plan, failing to recognize that if employer has obligation to pay benefits directly or pay further amounts if insurer defaults, it remains a defined benefit plan",
+        "why": "ICAI tests understanding that risk transfer determines classification - actuarial and investment risk on employee = DCP; on employer = DBP per AS 15 Para 26-27",
+        "priority": "High"
+      },
+      {
+        "id": "AA6.DZ4",
+        "point": "Actuarial Gains/Losses Recognition Timing",
+        "mistake": "Students spread actuarial gains/losses over average remaining working life of employees instead of recognizing immediately in profit and loss",
+        "why": "AS 15 (Revised 2005) mandates immediate recognition of actuarial gains and losses in statement of profit and loss - ICAI tests this to ensure students apply current Indian AS rather than older corridor approach",
+        "priority": "High"
+      },
+      {
+        "id": "AA6.DZ5",
+        "point": "Restructuring Provision - Costs Included",
+        "mistake": "Students include retraining costs, marketing costs, and investment in new systems in restructuring provision, which relate to future conduct of business",
+        "why": "AS 29 specifically excludes costs associated with ongoing activities - only direct expenditures necessarily entailed by restructuring and not related to ongoing activities qualify per Para 72-73",
+        "priority": "High"
+      }
+    ],
+    "formulaGuide": [
+      {
+        "id": "AA6.FG1",
+        "topic": "Provision Recognition Decision Tree under AS 29",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Is there a present obligation as a result of a past obligating event?",
+            "branches": [
+              {
+                "label": "Yes - Present obligation exists",
+                "target": "n2"
+              },
+              {
+                "label": "No - Check if possible obligation exists",
+                "target": "n4"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Is it probable that an outflow of resources embodying economic benefits will be required to settle the obligation?",
+            "branches": [
+              {
+                "label": "Yes - Outflow is probable (more likely than not)",
+                "target": "n3"
+              },
+              {
+                "label": "No - Outflow is not probable",
+                "target": "n5"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Can a reliable estimate be made of the amount of the obligation?",
+            "branches": [
+              {
+                "label": "Yes - Reliable estimate possible",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No - Reliable estimate not possible (rare)",
+                "target": "outcomeB"
+              }
+            ]
+          },
+          {
+            "id": "n4",
+            "label": "Does a possible obligation exist whose existence will be confirmed by future events?",
+            "branches": [
+              {
+                "label": "Yes - Possible obligation exists",
+                "target": "n5"
+              },
+              {
+                "label": "No - No obligation exists",
+                "target": "outcomeD"
+              }
+            ]
+          },
+          {
+            "id": "n5",
+            "label": "Is the possibility of outflow of resources remote?",
+            "branches": [
+              {
+                "label": "Yes - Remote possibility",
+                "target": "outcomeD"
+              },
+              {
+                "label": "No - Not remote (possible but not probable)",
+                "target": "outcomeB"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "RECOGNIZE PROVISION: Debit Expense/Asset, Credit Provision. Disclose: nature, timing, uncertainties, reimbursement amount",
+            "reference": "AS 29 Para 14"
+          },
+          {
+            "id": "outcomeB",
+            "label": "DISCLOSE CONTINGENT LIABILITY: Brief description of nature, estimate of financial effect, indication of uncertainties, possibility of reimbursement",
+            "reference": "AS 29 Para 68"
+          },
+          {
+            "id": "outcomeC",
+            "label": "RECOGNIZE PROVISION with disclosure that estimate is uncertain",
+            "reference": "AS 29 Para 14 read with Para 36"
+          },
+          {
+            "id": "outcomeD",
+            "label": "NO PROVISION, NO DISCLOSURE required",
+            "reference": "AS 29 Para 28"
+          }
+        ]
+      },
+      {
+        "id": "AA6.FG2",
+        "topic": "Employee Benefits Classification Decision Tree under AS 15",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "When is the benefit expected to fall due/be settled?",
+            "branches": [
+              {
+                "label": "Wholly within 12 months after period end",
+                "target": "n2"
+              },
+              {
+                "label": "After employment ends (post-employment)",
+                "target": "n3"
+              },
+              {
+                "label": "More than 12 months after period end (during employment)",
+                "target": "outcomeC"
+              },
+              {
+                "label": "On termination of employment before normal retirement",
+                "target": "outcomeD"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Type of Short-term Employee Benefit",
+            "branches": [
+              {
+                "label": "Regular period benefits (wages, salaries)",
+                "target": "outcomeA1"
+              },
+              {
+                "label": "Compensated absences",
+                "target": "n4"
+              },
+              {
+                "label": "Profit sharing/Bonus plans",
+                "target": "outcomeA3"
+              },
+              {
+                "label": "Non-monetary benefits",
+                "target": "outcomeA1"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Who bears actuarial and investment risk?",
+            "branches": [
+              {
+                "label": "Employee bears risk - fixed contribution by employer",
+                "target": "outcomeB1"
+              },
+              {
+                "label": "Employer bears risk - benefit amount defined",
+                "target": "outcomeB2"
+              }
+            ]
+          },
+          {
+            "id": "n4",
+            "label": "Can unused leave be carried forward?",
+            "branches": [
+              {
+                "label": "Yes - Accumulating",
+                "target": "n5"
+              },
+              {
+                "label": "No - Non-accumulating (e.g., maternity leave)",
+                "target": "outcomeA2"
+              }
+            ]
+          },
+          {
+            "id": "n5",
+            "label": "Is employee entitled to cash payment for unused leave on leaving?",
+            "branches": [
+              {
+                "label": "Yes - Vesting",
+                "target": "outcomeA4"
+              },
+              {
+                "label": "No - Non-vesting",
+                "target": "outcomeA5"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA1",
+            "label": "SHORT-TERM BENEFIT: Recognize undiscounted amount as expense when service rendered; liability = amount unpaid at balance sheet date",
+            "reference": "AS 15 Para 10-11"
+          },
+          {
+            "id": "outcomeA2",
+            "label": "NON-ACCUMULATING ABSENCE: Recognize no liability/expense until time of absence",
+            "reference": "AS 15 Para 16"
+          },
+          {
+            "id": "outcomeA3",
+            "label": "PROFIT SHARING/BONUS: Recognize when present obligation exists from past event AND reliable estimate can be made",
+            "reference": "AS 15 Para 17-18"
+          },
+          {
+            "id": "outcomeA4",
+            "label": "VESTING ACCUMULATING: Recognize expected cost as additional amount to be paid for unused entitlement accumulated",
+            "reference": "AS 15 Para 14-15"
+          },
+          {
+            "id": "outcomeA5",
+            "label": "NON-VESTING ACCUMULATING: Recognize expected cost considering probability of employees leaving before using entitlement",
+            "reference": "AS 15 Para 15"
+          },
+          {
+            "id": "outcomeB1",
+            "label": "DEFINED CONTRIBUTION PLAN: Charge contribution payable to P&L; no actuarial valuation needed",
+            "reference": "AS 15 Para 25-27"
+          },
+          {
+            "id": "outcomeB2",
+            "label": "DEFINED BENEFIT PLAN: Actuarial valuation required; recognize: PV of DBO - unrecognized past service cost - FV of plan assets",
+            "reference": "AS 15 Para 49-54"
+          },
+          {
+            "id": "outcomeC",
+            "label": "OTHER LONG-TERM BENEFITS: Recognize similar to defined benefit plan; actuarial gains/losses recognized immediately",
+            "reference": "AS 15 Para 129"
+          },
+          {
+            "id": "outcomeD",
+            "label": "TERMINATION BENEFITS: Recognize when detailed formal plan exists and enterprise is demonstrably committed; discount if >12 months",
+            "reference": "AS 15 Para 133-138"
+          }
+        ]
+      },
+      {
+        "id": "AA6.FG3",
+        "topic": "Defined Benefit Obligation Components Calculation",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Calculate Present Value of Defined Benefit Obligation (DBO) at balance sheet date using Projected Unit Credit Method",
+            "branches": [
+              {
+                "label": "DBO calculated",
+                "target": "n2"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Deduct: Past service cost not yet recognized",
+            "branches": [
+              {
+                "label": "Amount deducted",
+                "target": "n3"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Deduct: Fair value of plan assets at balance sheet date",
+            "branches": [
+              {
+                "label": "Net amount is positive (DBO > Plan Assets)",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Net amount is negative (Plan Assets > DBO)",
+                "target": "n4"
+              }
+            ]
+          },
+          {
+            "id": "n4",
+            "label": "Apply Asset Ceiling Test: Is surplus recoverable through refunds or reduced contributions?",
+            "branches": [
+              {
+                "label": "Yes - Recoverable",
+                "target": "outcomeB"
+              },
+              {
+                "label": "No - Not fully recoverable",
+                "target": "outcomeC"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "RECOGNIZE LIABILITY: Net amount = PV of DBO - Unrecognized past service cost - FV of Plan Assets",
+            "reference": "AS 15 Para 54"
+          },
+          {
+            "id": "outcomeB",
+            "label": "RECOGNIZE ASSET: Lower of (a) amount determined, or (b) PV of economic benefits from refunds/reduced contributions",
+            "reference": "AS 15 Para 59"
+          },
+          {
+            "id": "outcomeC",
+            "label": "RECOGNIZE ASSET: Limited to PV of economic benefits available through refunds or reduced future contributions",
+            "reference": "AS 15 Para 59(b)"
+          }
+        ]
+      },
+      {
+        "id": "AA6.FG4",
+        "topic": "Actual Return on Plan Assets Calculation",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Start with Fair Value of Plan Assets at period end",
+            "branches": [
+              {
+                "label": "Closing FV available",
+                "target": "n2"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Deduct: Fair Value of Plan Assets at period start",
+            "branches": [
+              {
+                "label": "Opening FV deducted",
+                "target": "n3"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Deduct: Contributions received during the period",
+            "branches": [
+              {
+                "label": "Contributions deducted",
+                "target": "n4"
+              }
+            ]
+          },
+          {
+            "id": "n4",
+            "label": "Add: Benefits paid during the period",
+            "branches": [
+              {
+                "label": "Benefits added back",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "ACTUAL RETURN = Closing FV - Opening FV - Contributions + Benefits Paid",
+            "reference": "AS 15 Para 106"
+          }
+        ]
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "AA6.FC1",
+        "front": "Employee Benefits (AS 15 Definition)",
+        "back": "All forms of consideration given by an enterprise in exchange for services rendered by employees. Includes benefits provided to employees and their dependents (spouses, children and others). Payment can be made directly to employees, their dependent or to any other party (e.g., legal heirs, nominees, insurance companies, trust etc.).",
+        "section": "AS 15 Para 3"
+      },
+      {
+        "id": "AA6.FC2",
+        "front": "Defined Contribution Plans",
+        "back": "Post-employment benefit plans under which an enterprise pays fixed contributions into a separate fund and will have no obligation to pay further contributions. Under defined contribution plans, actuarial risk (that benefits will be less than expected) and investment risk (that assets invested will be insufficient to meet expected benefits) fall on the employee.",
+        "section": "AS 15 Para 7"
+      },
+      {
+        "id": "AA6.FC3",
+        "front": "Provision (AS 29 Definition)",
+        "back": "A liability which can be measured only by using a substantial degree of estimation.",
+        "section": "AS 29 Para 10"
+      },
+      {
+        "id": "AA6.FC4",
+        "front": "Contingent Liability (AS 29 Definition)",
+        "back": "(a) A possible obligation that arises from past events and the existence of which will be confirmed only by the occurrence or non-occurrence of one or more uncertain future events not wholly within the control of the enterprise; or (b) A present obligation that arises from past events but is not recognised because: (i) It is not probable that an outflow of resources embodying economic benefits will be required to settle the obligation; or (ii) A reliable estimate of the amount of the obligation cannot be made.",
+        "section": "AS 29 Para 10"
+      },
+      {
+        "id": "AA6.FC5",
+        "front": "Obligating Event",
+        "back": "An event that creates an obligation that results in an enterprise having no realistic alternative to settling that obligation.",
+        "section": "AS 29 Para 10"
+      },
+      {
+        "id": "AA6.FC6",
+        "front": "Accumulating Compensated Absences",
+        "back": "Compensated absences that are carried forward and can be used in future periods if the current period's entitlement is not used in full. May be vesting (employees entitled to cash payment for unused entitlement on leaving) or non-vesting (not entitled to cash payment on leaving).",
+        "section": "AS 15 Para 13"
+      },
+      {
+        "id": "AA6.FC7",
+        "front": "Actuarial Gains and Losses",
+        "back": "Comprise: (a) experience adjustments (the effects of difference between the previous actuarial assumptions and what has actually occurred); and (b) the effects of changes in actuarial assumptions. Actuarial gains and losses should be recognized immediately in the statement of profit and loss as income or expense.",
+        "section": "AS 15 Para 92-93"
+      },
+      {
+        "id": "AA6.FC8",
+        "front": "Termination Benefits",
+        "back": "Employee benefits payable as a result of either an enterprise's decision to terminate an employee's employment before the normal retirement date or an employee's decision to accept voluntary redundancy in exchange for those benefits (e.g., payments under VRS).",
+        "section": "AS 15 Para 133"
+      },
+      {
+        "id": "AA6.FC9",
+        "front": "Contingent Asset (AS 29 Definition)",
+        "back": "A possible asset that arises from past events the existence of which will be confirmed only by the occurrence or non-occurrence of one or more uncertain future events not wholly within the control of the enterprise.",
+        "section": "AS 29 Para 10"
+      },
+      {
+        "id": "AA6.FC10",
+        "front": "Restructuring (AS 29 Definition)",
+        "back": "A programme that is planned and controlled by management, and materially changes either: (a) The scope of a business undertaken by an enterprise; or (b) The manner in which that business is conducted.",
+        "section": "AS 29 Para 10"
+      }
+    ],
+    "practiceProblems": [
+      {
+        "id": "AA6.PP1",
+        "title": "Calculation of Expected and Actual Return on Plan Assets",
+        "difficulty": 4,
+        "problem": "Alpha Ltd. has a defined benefit pension plan. As on 1st April, 20X1, the fair value of plan assets was ₹3,00,000. On 30th September, 20X1, the plan paid out benefits of ₹40,000 and received inward contributions of ₹80,000. On 31st March, 20X2, the fair value of plan assets was ₹4,20,000. The expected rate of return is 10% per annum (5% for six months, reflecting semi-annual compounding). Calculate (a) Expected return on plan assets and (b) Actual return on plan assets for the year 20X1-20X2.",
+        "steps": [
+          "Step 1: Calculate expected return on opening balance held for 12 months: ₹3,00,000 × 10% = ₹30,000",
+          "Step 2: Calculate expected return on net inflow (₹80,000 - ₹40,000 = ₹40,000) held for 6 months: ₹40,000 × 5% = ₹2,000",
+          "Step 3: Total Expected Return = ₹30,000 + ₹2,000 = ₹32,000",
+          "Step 4: Calculate Actual Return = Closing FV - Opening FV - Contributions + Benefits Paid = ₹4,20,000 - ₹3,00,000 - ₹80,000 + ₹40,000 = ₹80,000"
+        ],
+        "answer": "Expected Return on Plan Assets = ₹32,000; Actual Return on Plan Assets = ₹80,000. The difference of ₹48,000 (₹80,000 - ₹32,000) represents actuarial gain on plan assets to be recognized in P&L per AS 15.",
+        "topic": "AS 15 - Defined Benefit Plans"
+      },
+      {
+        "id": "AA6.PP2",
+        "title": "Defined Benefit Obligation and Current Service Cost Calculation",
+        "difficulty": 5,
+        "problem": "An employee Mr. Sharma joins Beta Ltd. on 1st April, 20X1 with annual salary of ₹12,00,000. The company provides a lump sum retirement benefit of 20% of final annual salary for each completed year of service. Mr. Sharma is expected to retire after 4 years. Salary is expected to grow at 8% per annum. Discount rate is 6% per annum. Calculate (a) Total DBO at retirement, (b) Current service cost for Year 1, (c) Interest cost for Year 2. PV factors @ 6%: Year 1 = 0.840, Year 2 = 0.890, Year 3 = 0.943, Year 4 = 1.000",
+        "steps": [
+          "Step 1: Calculate expected final salary = ₹12,00,000 × (1.08)^4 = ₹12,00,000 × 1.3605 = ₹16,32,600 (approx ₹16,32,596)",
+          "Step 2: Calculate total DBO at retirement = ₹16,32,600 × 20% × 4 years = ₹13,06,080",
+          "Step 3: Annual apportioned DBO = ₹13,06,080 ÷ 4 = ₹3,26,520",
+          "Step 4: Current Service Cost Year 1 = ₹3,26,520 × PV factor for 3 years (0.840) = ₹2,74,277",
+          "Step 5: Opening DBO for Year 2 = ₹2,74,277; Interest Cost Year 2 = ₹2,74,277 × 6% = ₹16,457"
+        ],
+        "answer": "Total DBO at retirement = ₹13,06,080; Current Service Cost Year 1 = ₹2,74,277; Interest Cost Year 2 = ₹16,457. Per AS 15, DBO is calculated using Projected Unit Credit Method attributing benefit to periods of service.",
+        "topic": "AS 15 - Defined Benefit Plans"
+      },
+      {
+        "id": "AA6.PP3",
+        "title": "Warranty Provision Calculation",
+        "difficulty": 3,
+        "problem": "Gamma Ltd. sells electronic appliances with 2-year warranty. Based on past experience, the company estimates: (a) 70% of products sold will have no defects, (b) 20% will have minor defects costing ₹500 per unit to repair, (c) 10% will have major defects costing ₹2,000 per unit to repair. During 20X1-20X2, the company sold 10,000 units. Calculate the warranty provision to be recognized as at 31st March, 20X2 as per AS 29.",
+        "steps": [
+          "Step 1: Calculate expected cost for minor defects = 10,000 × 20% × ₹500 = ₹10,00,000",
+          "Step 2: Calculate expected cost for major defects = 10,000 × 10% × ₹2,000 = ₹20,00,000",
+          "Step 3: Calculate expected cost for no defects = 10,000 × 70% × ₹0 = ₹0",
+          "Step 4: Total Expected Warranty Provision = ₹10,00,000 + ₹20,00,000 = ₹30,00,000"
+        ],
+        "answer": "Warranty Provision to be recognized = ₹30,00,000. Per AS 29, where there are similar obligations (product warranties), probability of outflow is determined by considering the class of obligations as a whole using expected value approach.",
+        "topic": "AS 29 - Provisions"
+      },
+      {
+        "id": "AA6.PP4",
+        "title": "Gain from Curtailment of Defined Benefit Plan",
+        "difficulty": 4,
+        "problem": "Delta Ltd. discontinues a business segment. Before curtailment: Gross DBO = ₹50,00,000, Fair Value of Plan Assets = ₹42,00,000, Unamortized Past Service Cost = ₹1,50,000. The curtailment reduces the obligation by ₹8,00,000 (16% of gross obligation). Calculate (a) Gain from curtailment, (b) Net liability to be recognized after curtailment.",
+        "steps": [
+          "Step 1: Calculate proportion of unamortized past service cost relating to curtailed portion = ₹1,50,000 × 16% = ₹24,000",
+          "Step 2: Gain from curtailment = Reduction in gross obligation - Related past service cost = ₹8,00,000 - ₹24,000 = ₹7,76,000",
+          "Step 3: Reduced gross obligation = ₹50,00,000 × 84% = ₹42,00,000",
+          "Step 4: Net liability after curtailment = Reduced DBO - Plan Assets - Remaining PSC = ₹42,00,000 - ₹42,00,000 - (₹1,50,000 × 84%) = -₹1,26,000"
+        ],
+        "answer": "Gain from curtailment = ₹7,76,000; Net liability after curtailment = ₹42,00,000 - ₹42,00,000 - ₹1,26,000 = Nil (or surplus of ₹1,26,000 subject to asset ceiling test). Per AS 15 Para 109-115, curtailment gains/losses are recognized when curtailment occurs.",
+        "topic": "AS 15 - Curtailment and Settlement"
+      }
+    ],
+    "caseMCQs": {
+      "scenario": "Zenith Industries Ltd. (FY ending 31st March, 2025) is engaged in manufacturing heavy machinery. The company faces the following situations:\n\nSituation 1: The company has 200 employees entitled to 10 days of paid leave each year. Unused leave can be carried forward for one year. Leave is taken on LIFO basis. At 31st March, 2025, average unused entitlement is 4 days per employee. Based on past experience, 180 employees will take no more than 10 days in 2025-26, and remaining 20 employees will take average of 12 days each. Daily wage rate is ₹1,500.\n\nSituation 2: A customer has filed a lawsuit claiming ₹45,00,000 for product defects. Legal counsel advises that it is probable the company will lose. Legal costs (irrespective of outcome) are estimated at ₹3,00,000. Settlement amount if lost is estimated at ₹40,00,000.\n\nSituation 3: The company operates a defined benefit pension plan. As on 1st April, 2024: Opening DBO = ₹80,00,000; Opening Plan Assets = ₹72,00,000. During the year: Current Service Cost = ₹8,00,000; Interest Cost = ₹6,40,000 (8% discount rate); Expected Return on Plan Assets = ₹5,76,000; Contributions paid = ₹10,00,000; Benefits paid = ₹5,00,000. Actuarial loss on obligation = ₹2,00,000; Actuarial gain on plan assets = ₹80,000.",
+      "questions": [
+        {
+          "id": "AA6.CQ1",
+          "q": "What is the provision for accumulating compensated absences to be recognized as at 31st March, 2025?",
+          "opts": [
+            "₹60,000",
+            "₹1,20,000",
+            "₹12,00,000",
+            "₹6,00,000"
+          ],
+          "ans": 0,
+          "exp": "Per AS 15 Para 14-15, provision equals additional amount expected to be paid for unused entitlement. 20 employees × 2 extra days × ₹1,500 = ₹60,000. The 180 employees taking ≤10 days create no additional liability as they use current year entitlement plus some brought forward.",
+          "type": "Trap",
+          "diff": 3
+        },
+        {
+          "id": "AA6.CQ2",
+          "q": "What is the total amount to be recognized as provision in respect of the lawsuit as at 31st March, 2025?",
+          "opts": [
+            "₹45,00,000",
+            "₹40,00,000",
+            "₹43,00,000",
+            "₹3,00,000"
+          ],
+          "ans": 2,
+          "exp": "Per AS 29, when outflow is probable and reliably estimable, recognize provision. Legal costs (₹3,00,000) are certain irrespective of outcome - provision required. Settlement (₹40,00,000) is probable - provision required. Total provision = ₹3,00,000 + ₹40,00,000 = ₹43,00,000.",
+          "type": "Concept",
+          "diff": 2
+        },
+        {
+          "id": "AA6.CQ3",
+          "q": "What is the net employee benefit expense to be recognized in profit and loss for the defined benefit plan for FY 2024-25?",
+          "opts": [
+            "₹8,64,000",
+            "₹9,84,000",
+            "₹7,84,000",
+            "₹8,00,000"
+          ],
+          "ans": 1,
+          "exp": "Per AS 15 Para 61, expense = Current Service Cost + Interest Cost - Expected Return + Net Actuarial Loss = ₹8,00,000 + ₹6,40,000 - ₹5,76,000 + (₹2,00,000 - ₹80,000) = ₹8,00,000 + ₹6,40,000 - ₹5,76,000 + ₹1,20,000 = ₹9,84,000.",
+          "type": "Calculation",
+          "diff": 4
+        },
+        {
+          "id": "AA6.CQ4",
+          "q": "What is the closing DBO as at 31st March, 2025?",
+          "opts": [
+            "₹89,40,000",
+            "₹91,40,000",
+            "₹87,40,000",
+            "₹94,40,000"
+          ],
+          "ans": 1,
+          "exp": "Closing DBO = Opening DBO + Current Service Cost + Interest Cost - Benefits Paid + Actuarial Loss = ₹80,00,000 + ₹8,00,000 + ₹6,40,000 - ₹5,00,000 + ₹2,00,000 = ₹91,40,000.",
+          "type": "Calculation",
+          "diff": 3
+        },
+        {
+          "id": "AA6.CQ5",
+          "q": "What is the net defined benefit liability to be recognized in Balance Sheet as at 31st March, 2025?",
+          "opts": [
+            "₹8,04,000",
+            "₹7,84,000",
+            "₹19,40,000",
+            "₹8,84,000"
+          ],
+          "ans": 3,
+          "exp": "Closing Plan Assets = ₹72,00,000 + ₹5,76,000 + ₹10,00,000 - ₹5,00,000 + ₹80,000 = ₹83,56,000 (using Expected Return). Alternatively: ₹72,00,000 + Actual Return + ₹10,00,000 - ₹5,00,000. Net Liability = Closing DBO - Closing Plan Assets = ₹91,40,000 - ₹82,56,000 = ₹8,84,000.",
+          "type": "Trap",
+          "diff": 4
+        }
+      ]
+    },
+    "mcqs": [
+      {
+        "id": "AA6.Q1",
+        "q": "Under AS 15, if an enterprise has 500 employees entitled to carry forward unused leave but past experience shows only 10% will avail more than current year entitlement of 15 days (i.e., they will use 17 days on average), what should be provided if daily wage is ₹800?",
+        "opts": [
+          "₹80,000 (50 employees × 2 days × ₹800)",
+          "₹60,00,000 (500 employees × 15 days × ₹800)",
+          "₹6,00,000 (500 employees × 15 days × ₹800 × 10%)",
+          "No provision required as leave is non-vesting"
+        ],
+        "ans": 0,
+        "exp": "Per AS 15 Para 14, provision for accumulating absences = additional amount expected to be paid. Only 50 employees (10%) expected to use 2 extra days each. Provision = 50 × 2 × ₹800 = ₹80,000.",
+        "type": "Trap",
+        "diff": 3
+      },
+      {
+        "id": "AA6.Q2",
+        "q": "Which of the following is NOT excluded from the scope of AS 29 'Provisions, Contingent Liabilities and Contingent Assets'?",
+        "opts": [
+          "Provisions arising from executory contracts that are not onerous",
+          "Product warranty obligations",
+          "Provisions covered by AS 7 on Construction Contracts",
+          "Financial instruments carried at fair value"
+        ],
+        "ans": 1,
+        "exp": "Per AS 29 Para 1, product warranty obligations are covered by AS 29. Executory contracts (except onerous), financial instruments at fair value, insurance contracts, and items covered by other AS are excluded from AS 29 scope.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA6.Q3",
+        "q": "A company's profit-sharing plan provides 5% of net profit to employees serving throughout the year. Net profit is ₹2,00,00,000. Staff turnover is expected to reduce payments to 4.5% of net profit. What expense should be recognized?",
+        "opts": [
+          "₹10,00,000",
+          "₹9,00,000",
+          "₹9,50,000",
+          "₹0 as turnover creates uncertainty"
+        ],
+        "ans": 1,
+        "exp": "Per AS 15 Para 17-22, expected cost of profit sharing should be recognized considering employee turnover. Expense = ₹2,00,00,000 × 4.5% = ₹9,00,000.",
+        "type": "Calculation",
+        "diff": 2
+      },
+      {
+        "id": "AA6.Q4",
+        "q": "Under AS 29, when should a contingent asset be recognized in financial statements?",
+        "opts": [
+          "When inflow of economic benefits is probable",
+          "When inflow of economic benefits is virtually certain",
+          "When inflow of economic benefits is possible but not probable",
+          "Contingent assets are never recognized; only disclosed when probable"
+        ],
+        "ans": 1,
+        "exp": "Per AS 29 Para 31-32, contingent assets are not recognized. However, when realization of income is virtually certain, the related asset is not a contingent asset and its recognition is appropriate.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA6.Q5",
+        "q": "Which cost should NOT be included in a restructuring provision under AS 29?",
+        "opts": [
+          "Termination payments to employees being made redundant",
+          "Costs of relocating continuing staff to new locations",
+          "Penalties for early termination of leases",
+          "Professional fees for legal work related to restructuring"
+        ],
+        "ans": 1,
+        "exp": "Per AS 29 Para 72-73, restructuring provision includes only direct expenditures necessarily entailed by restructuring and not associated with ongoing activities. Retraining/relocating continuing staff, marketing, and investment in new systems are excluded as they relate to future conduct of business.",
+        "type": "Trap",
+        "diff": 3
+      },
+      {
+        "id": "AA6.Q6",
+        "q": "Under AS 15, settlement allowance payable to retiring employees should be:",
+        "opts": [
+          "Accounted on claim basis when employee retires",
+          "Provided every year based on actuarial valuation as a defined benefit",
+          "Recognized only when detailed formal plan is announced",
+          "Disclosed as contingent liability until retirement"
+        ],
+        "ans": 1,
+        "exp": "Per AS 15 Para 49 and Illustration, settlement allowance is a defined benefit requiring provision every year based on actuarial valuation, as it is a post-employment benefit with obligation arising from past service.",
+        "type": "Concept",
+        "diff": 2
+      }
+    ],
+    "tricky": [
+      {
+        "id": "AA6.T1",
+        "point": "LIFO Basis for Leave Calculation - Understanding 'Additional Amount' Concept",
+        "mistake": "Students calculate provision based on total unused leave balance instead of additional amount expected to be paid as a result of accumulation",
+        "why": "AS 15 Para 14 states provision equals 'additional amount' not total balance - if leave is taken LIFO (current year first), provision is only for excess usage over current entitlement expected to be claimed",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA6.T2",
+        "point": "Informal Practices Creating Constructive Obligation under AS 15",
+        "mistake": "Students ignore informal benefits (like festival bonuses) assuming only formal plans require provisioning",
+        "why": "AS 15 Para 3(c) includes informal practices giving rise to obligation where enterprise has no realistic alternative but to pay - historical pattern and employee expectations create constructive obligation",
+        "priority": "High"
+      },
+      {
+        "id": "AA6.T3",
+        "point": "Expected Disposal Gains Not Reducing Provision under AS 29",
+        "mistake": "Students reduce restructuring provision by expected gains from disposal of assets linked to restructuring",
+        "why": "AS 29 Para 51 explicitly states gains on expected disposal of assets are NOT taken into account in measuring provision, even if closely linked to event giving rise to provision",
+        "priority": "High"
+      },
+      {
+        "id": "AA6.T4",
+        "point": "Discounting Provisions - General Rule vs Exception",
+        "mistake": "Students discount all long-term provisions to present value",
+        "why": "AS 29 Para 45 states provisions should NOT be discounted EXCEPT for decommissioning, restoration and similar liabilities recognized as cost of PPE. General provisions use undiscounted expected expenditure",
+        "priority": "High"
+      },
+      {
+        "id": "AA6.T5",
+        "point": "Short-term vs Long-term Leave Classification Based on Behavioral Pattern",
+        "mistake": "Students classify all earned leave as short-term benefit assuming it can be availed within 12 months",
+        "why": "AS 15 Para 7.2 and Para 8(b) require both 'falls due' AND 'expected to occur' within 12 months. If 400 days carry forward but pattern shows employees won't avail within 12 months, it's long-term benefit requiring actuarial valuation per Para 129",
+        "priority": "Very High"
+      }
+    ],
+    "amendments": [
+      {
+        "id": "AA6.A1",
+        "topic": "AS 15 - Immediate Recognition of Actuarial Gains and Losses",
+        "what": "AS 15 (Revised 2005) mandates immediate recognition of actuarial gains and losses in profit and loss statement",
+        "oldPosition": "Earlier AS 15 allowed spreading of actuarial gains/losses over average remaining working life of employees (corridor approach)",
+        "newPosition": "AS 15 (Revised 2005) Para 93 requires actuarial gains and losses to be recognized immediately in the statement of profit and loss as income or expense",
+        "effectiveFrom": "1st April 2006",
+        "pdfStatus": "confirmed",
+        "priority": "High"
+      },
+      {
+        "id": "AA6.A2",
+        "topic": "AS 29 - Discounting of Provisions",
+        "what": "AS 29 generally does not require discounting of provisions except for specific liabilities",
+        "oldPosition": "General understanding that all long-term provisions should be discounted",
+        "newPosition": "AS 29 Para 45 clarifies that provisions should NOT be discounted to present value EXCEPT for decommissioning, restoration and similar liabilities recognized as cost of Property, Plant and Equipment",
+        "effectiveFrom": "1st April 2004",
+        "pdfStatus": "confirmed",
+        "priority": "High"
+      },
+      {
+        "id": "AA6.A3",
+        "topic": "SMC Exemptions under AS 15 and AS 29",
+        "what": "Small and Medium-sized Companies (SMCs) are provided certain exemptions from AS 15 and AS 29 requirements",
+        "oldPosition": "All enterprises required to comply with full requirements",
+        "newPosition": "Level II, III, IV enterprises: (a) May not comply with recognition/measurement of non-vesting short-term accumulating compensated absences under AS 15; (b) SMCs exempt from certain disclosure requirements under AS 29 Para 66-67",
+        "effectiveFrom": "1st April 2006",
+        "pdfStatus": "confirmed",
+        "priority": "Medium"
+      }
+    ],
+    "cases": [],
+    "trees": []
   }
 ]
