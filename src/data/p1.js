@@ -4022,5 +4022,830 @@ export const P1_DATA = [
     ],
     "cases": [],
     "trees": []
+  },
+  {
+    "id": "AA7",
+    "name": "Accounting Standards Based on Items Impacting Financial Statements",
+    "dangerZones": [
+      {
+        "id": "AA7.DZ1",
+        "point": "Adjusting vs Non-adjusting events classification under AS 4",
+        "mistake": "Students classify events based on when they occurred rather than whether the condition existed at balance sheet date. For example, treating debtor insolvency after balance sheet date as non-adjusting when the debtor was already in financial difficulty before year-end.",
+        "why": "ICAI frequently tests the principle that adjusting events provide evidence of conditions EXISTING at balance sheet date, not when the event physically occurred. The key determinant is existence of condition, not occurrence of event.",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA7.DZ2",
+        "point": "Prior Period Items vs Change in Accounting Estimate under AS 5",
+        "mistake": "Students treat revision of useful life estimates as prior period items and provide for retrospective adjustment. They confuse mathematical errors requiring correction with legitimate estimate revisions based on new information.",
+        "why": "ICAI tests whether students understand that prior period items arise from ERRORS or OMISSIONS only, while changes in estimates (like useful life) affect current and future periods prospectively, not retrospectively.",
+        "priority": "High"
+      },
+      {
+        "id": "AA7.DZ3",
+        "point": "Monetary vs Non-monetary items translation under AS 11",
+        "mistake": "Students translate all foreign currency items at closing rate, failing to distinguish that non-monetary items carried at historical cost must use transaction date rate. They also incorrectly translate advances for goods as monetary items.",
+        "why": "ICAI tests understanding that only monetary items (cash, receivables, payables) are restated at closing rate. Non-monetary items like fixed assets, inventory at cost, and advances remain at historical rate.",
+        "priority": "High"
+      },
+      {
+        "id": "AA7.DZ4",
+        "point": "Deferred Tax Asset recognition conditions under AS 22",
+        "mistake": "Students create DTA on all timing differences without distinguishing between 'reasonable certainty' requirement for normal cases vs 'virtual certainty supported by convincing evidence' requirement when there are unabsorbed depreciation or carry forward losses.",
+        "why": "ICAI specifically tests the stricter recognition criteria for DTA when company has losses. Virtual certainty requires concrete evidence like binding profitable orders, not mere projections.",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA7.DZ5",
+        "point": "Contingent gains vs contingent losses treatment under AS 4",
+        "mistake": "Students apply symmetric treatment to gains and losses. They recognize contingent gains when probability is high, ignoring that gains are never recognized until virtually certain (when it's no longer a contingency).",
+        "why": "ICAI tests the prudence concept - contingent losses are provided when likely, but contingent gains are recognized only when virtually certain (i.e., no longer contingent).",
+        "priority": "High"
+      }
+    ],
+    "formulaGuide": [
+      {
+        "id": "AA7.FG1",
+        "topic": "Events After Balance Sheet Date - Treatment Decision Tree (AS 4)",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "Did the event occur between Balance Sheet date and approval date?",
+            "branches": [
+              {
+                "label": "Yes",
+                "target": "n2"
+              },
+              {
+                "label": "No - Event after approval date",
+                "target": "outcomeE"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Did condition giving rise to the event EXIST at Balance Sheet date?",
+            "branches": [
+              {
+                "label": "Yes - Evidence of existing condition",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No - New condition arose after Balance Sheet date",
+                "target": "n3"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Does the event affect going concern assumption?",
+            "branches": [
+              {
+                "label": "Yes - Going concern threatened",
+                "target": "outcomeB"
+              },
+              {
+                "label": "No - Does not affect going concern",
+                "target": "n4"
+              }
+            ]
+          },
+          {
+            "id": "n4",
+            "label": "Is the event of such significance that non-disclosure would affect users' decisions?",
+            "branches": [
+              {
+                "label": "Yes - Material for decision making",
+                "target": "outcomeC"
+              },
+              {
+                "label": "No - Not significant",
+                "target": "outcomeD"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "ADJUSTING EVENT: Adjust assets and liabilities in financial statements. Disclose nature and financial effect.",
+            "reference": "AS 4 (Revised) Para 8"
+          },
+          {
+            "id": "outcomeB",
+            "label": "NON-ADJUSTING but GOING CONCERN ISSUE: Prepare financial statements on liquidation basis if going concern not valid. Disclose change in basis.",
+            "reference": "AS 4 (Revised) Para 13"
+          },
+          {
+            "id": "outcomeC",
+            "label": "NON-ADJUSTING EVENT: No adjustment to assets/liabilities. Disclose in Report of Approving Authority (Directors' Report).",
+            "reference": "AS 4 (Revised) Para 12"
+          },
+          {
+            "id": "outcomeD",
+            "label": "NON-ADJUSTING EVENT: No adjustment required. No disclosure required in financial statements.",
+            "reference": "AS 4 (Revised) Para 11"
+          },
+          {
+            "id": "outcomeE",
+            "label": "NOT AN EVENT AFTER BALANCE SHEET DATE: Outside scope of AS 4. Will be accounted in subsequent period.",
+            "reference": "AS 4 (Revised) Para 3"
+          }
+        ]
+      },
+      {
+        "id": "AA7.FG2",
+        "topic": "Classification of Items in Statement of Profit and Loss (AS 5)",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "What is the nature of the income/expense item?",
+            "branches": [
+              {
+                "label": "Error/omission in prior period financial statements",
+                "target": "outcomeA"
+              },
+              {
+                "label": "From ordinary activities of enterprise",
+                "target": "n2"
+              },
+              {
+                "label": "Clearly distinct from ordinary activities",
+                "target": "n3"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Is the item of such size, nature or incidence requiring separate disclosure?",
+            "branches": [
+              {
+                "label": "Yes - Material unusual item",
+                "target": "outcomeB"
+              },
+              {
+                "label": "No - Normal item",
+                "target": "outcomeC"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Is the event expected to recur frequently or regularly?",
+            "branches": [
+              {
+                "label": "Yes - Recurring",
+                "target": "outcomeC"
+              },
+              {
+                "label": "No - Infrequent/Non-recurring",
+                "target": "outcomeD"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "PRIOR PERIOD ITEM: Separately disclose nature and amount in Statement of P&L so impact on current profit is perceived.",
+            "reference": "AS 5 Para 15-16"
+          },
+          {
+            "id": "outcomeB",
+            "label": "EXCEPTIONAL ITEM (within ordinary activities): Separately disclose nature and amount. Examples: inventory write-down, restructuring costs, litigation settlements.",
+            "reference": "AS 5 Para 12-14"
+          },
+          {
+            "id": "outcomeC",
+            "label": "ORDINARY ITEM: Include in profit/loss from ordinary activities. No special disclosure required.",
+            "reference": "AS 5 Para 10"
+          },
+          {
+            "id": "outcomeD",
+            "label": "EXTRAORDINARY ITEM: Separately disclose nature and amount as part of net profit/loss. Examples: earthquake loss, property attachment.",
+            "reference": "AS 5 Para 11-12"
+          }
+        ]
+      },
+      {
+        "id": "AA7.FG3",
+        "topic": "Foreign Currency Transaction - Reporting at Balance Sheet Date (AS 11)",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "What type of item is being reported?",
+            "branches": [
+              {
+                "label": "Monetary item (cash, receivables, payables, loans)",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Non-monetary item",
+                "target": "n2"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "How is the non-monetary item carried?",
+            "branches": [
+              {
+                "label": "At historical cost",
+                "target": "outcomeB"
+              },
+              {
+                "label": "At fair value or revalued amount",
+                "target": "outcomeC"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "Report using CLOSING RATE. Exchange difference to P&L (or capitalize for long-term items relating to depreciable assets under Para 46A option).",
+            "reference": "AS 11 Para 11(a)"
+          },
+          {
+            "id": "outcomeB",
+            "label": "Report using TRANSACTION DATE RATE (historical rate). No exchange difference arises.",
+            "reference": "AS 11 Para 11(b)"
+          },
+          {
+            "id": "outcomeC",
+            "label": "Report using RATE AT VALUATION DATE. Exchange difference treated as per revaluation policy.",
+            "reference": "AS 11 Para 11(c)"
+          }
+        ]
+      },
+      {
+        "id": "AA7.FG4",
+        "topic": "Deferred Tax Asset Recognition Decision Tree (AS 22)",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "What type of difference exists between accounting income and taxable income?",
+            "branches": [
+              {
+                "label": "Permanent difference",
+                "target": "outcomeA"
+              },
+              {
+                "label": "Timing difference",
+                "target": "n2"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Does timing difference result in future tax benefit (DTA) or liability (DTL)?",
+            "branches": [
+              {
+                "label": "Future tax payable - DTL",
+                "target": "outcomeB"
+              },
+              {
+                "label": "Future tax recoverable - DTA",
+                "target": "n3"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Does enterprise have unabsorbed depreciation or carry forward losses?",
+            "branches": [
+              {
+                "label": "No unabsorbed losses",
+                "target": "n4"
+              },
+              {
+                "label": "Yes - Has unabsorbed depreciation/losses",
+                "target": "n5"
+              }
+            ]
+          },
+          {
+            "id": "n4",
+            "label": "Is there reasonable certainty of future taxable income?",
+            "branches": [
+              {
+                "label": "Yes - Reasonable certainty exists",
+                "target": "outcomeC"
+              },
+              {
+                "label": "No - Uncertain",
+                "target": "outcomeD"
+              }
+            ]
+          },
+          {
+            "id": "n5",
+            "label": "Is there virtual certainty supported by convincing evidence of future taxable income?",
+            "branches": [
+              {
+                "label": "Yes - Virtual certainty with convincing evidence",
+                "target": "outcomeC"
+              },
+              {
+                "label": "No - Only projections/forecasts",
+                "target": "outcomeD"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "NO DEFERRED TAX: Permanent differences do not result in DTA or DTL. Only affects current tax.",
+            "reference": "AS 22 Para 15"
+          },
+          {
+            "id": "outcomeB",
+            "label": "RECOGNIZE DTL: No preconditions. Recognize full DTL at applicable tax rate.",
+            "reference": "AS 22 Para 15"
+          },
+          {
+            "id": "outcomeC",
+            "label": "RECOGNIZE DTA: Record DTA at applicable tax rate. Review at each balance sheet date.",
+            "reference": "AS 22 Para 15-17"
+          },
+          {
+            "id": "outcomeD",
+            "label": "DO NOT RECOGNIZE DTA: Insufficient certainty. Re-assess at each balance sheet date.",
+            "reference": "AS 22 Para 17"
+          }
+        ]
+      },
+      {
+        "id": "AA7.FG5",
+        "topic": "Foreign Operations Classification and Translation (AS 11)",
+        "nodes": [
+          {
+            "id": "n1",
+            "label": "What is the nature of the foreign operation?",
+            "branches": [
+              {
+                "label": "Extension of reporting enterprise (dependent branch)",
+                "target": "n2"
+              },
+              {
+                "label": "Operates with significant autonomy",
+                "target": "n3"
+              }
+            ]
+          },
+          {
+            "id": "n2",
+            "label": "Are transactions/cash flows directly affected by parent?",
+            "branches": [
+              {
+                "label": "Yes - High proportion with parent",
+                "target": "outcomeA"
+              },
+              {
+                "label": "No - Independent operations",
+                "target": "n3"
+              }
+            ]
+          },
+          {
+            "id": "n3",
+            "label": "Is operation financed from local borrowings and settles in local currency?",
+            "branches": [
+              {
+                "label": "Yes - Self-sustaining",
+                "target": "outcomeB"
+              },
+              {
+                "label": "No - Dependent on parent financing",
+                "target": "outcomeA"
+              }
+            ]
+          }
+        ],
+        "outcomes": [
+          {
+            "id": "outcomeA",
+            "label": "INTEGRAL FOREIGN OPERATION: Translate as if transactions entered by reporting enterprise. Monetary at closing rate, non-monetary at historical rate. Exchange difference to P&L.",
+            "reference": "AS 11 Para 24-26"
+          },
+          {
+            "id": "outcomeB",
+            "label": "NON-INTEGRAL FOREIGN OPERATION: All assets/liabilities at closing rate, income/expenses at transaction date rate (or average). Exchange difference to Foreign Currency Translation Reserve until disposal.",
+            "reference": "AS 11 Para 27-31"
+          }
+        ]
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "AA7.FC1",
+        "front": "Contingency (AS 4)",
+        "back": "Contingency is a condition or situation, the ultimate outcome of which, gain or loss, will be known or determined only on the occurrence, or non-occurrence, of one or more uncertain future events.",
+        "section": "AS 4 (Revised) Para 4.2"
+      },
+      {
+        "id": "AA7.FC2",
+        "front": "Adjusting Events (AS 4)",
+        "back": "Those which provide further evidence of conditions that existed at the balance sheet date. For example, a trade receivable declared insolvent after reporting date and unable to pay full amount against whom provision for doubtful debt was created.",
+        "section": "AS 4 (Revised) Para 8"
+      },
+      {
+        "id": "AA7.FC3",
+        "front": "Non-adjusting Events (AS 4)",
+        "back": "Those which are indicative of conditions that arose subsequent to the balance sheet date. For example, plant got damaged due to occurrence of fire.",
+        "section": "AS 4 (Revised) Para 11"
+      },
+      {
+        "id": "AA7.FC4",
+        "front": "Prior Period Items (AS 5)",
+        "back": "Prior period items are income or expenses which arise in the current period as a result of errors or omissions in the preparation of the financial statements of one or more prior periods.",
+        "section": "AS 5 Para 4"
+      },
+      {
+        "id": "AA7.FC5",
+        "front": "Extraordinary Items (AS 5)",
+        "back": "Income or expenses that arise from events or transactions that are clearly distinct from the ordinary activities of the enterprise and, therefore, are not expected to recur frequently or regularly.",
+        "section": "AS 5 Para 5"
+      },
+      {
+        "id": "AA7.FC6",
+        "front": "Monetary Items (AS 11)",
+        "back": "Monetary items are money held and assets and liabilities to be received or paid in fixed or determinable amounts of money. For example, cash, receivables and payables.",
+        "section": "AS 11 Para 3"
+      },
+      {
+        "id": "AA7.FC7",
+        "front": "Non-monetary Items (AS 11)",
+        "back": "Non-monetary items are assets and liabilities other than monetary items. For example, fixed assets, advances for purchase of goods/fixed assets, inventories and investments in equity shares.",
+        "section": "AS 11 Para 3"
+      },
+      {
+        "id": "AA7.FC8",
+        "front": "Integral Foreign Operation (AS 11)",
+        "back": "A foreign operation, the activities of which are an integral part of those of the reporting enterprise. A foreign operation that is integral to the operations of the reporting enterprise carries on its business as if it were an extension of the reporting enterprise's operations.",
+        "section": "AS 11 Para 3"
+      },
+      {
+        "id": "AA7.FC9",
+        "front": "Timing Differences (AS 22)",
+        "back": "Timing differences are the differences between taxable income and accounting income for a period that originate in one period and are capable of reversal in one or more subsequent periods.",
+        "section": "AS 22 Para 4"
+      },
+      {
+        "id": "AA7.FC10",
+        "front": "Permanent Differences (AS 22)",
+        "back": "Permanent differences are the differences between taxable income and accounting income for a period that originate in one period and do not reverse subsequently.",
+        "section": "AS 22 Para 4"
+      },
+      {
+        "id": "AA7.FC11",
+        "front": "Virtual Certainty for DTA Recognition (AS 22)",
+        "back": "Virtual certainty refers to the extent of certainty, which, for all practical purposes, can be considered certain. Virtual certainty cannot be based merely on forecasts of performance such as business plans. It should be supported by convincing evidence available at the reporting date in a concrete form, for example, a profitable binding export order.",
+        "section": "AS 22 Explanation"
+      },
+      {
+        "id": "AA7.FC12",
+        "front": "Dividend Declared After Balance Sheet Date (AS 4)",
+        "back": "If dividends are declared after the balance sheet date but before the financial statements are approved, the dividends are not recognised as a liability at the balance sheet date because no obligation exists at that time unless a statute requires otherwise. Such dividends are disclosed in the notes.",
+        "section": "AS 4 (Revised) Para 12"
+      }
+    ],
+    "practiceProblems": [
+      {
+        "id": "AA7.PP1",
+        "title": "Deferred Tax Computation with Timing Differences",
+        "difficulty": 3,
+        "problem": "Delta Ltd. provides the following information for FY 2024-25:\nDepreciation as per books: ₹8,00,000\nDepreciation as per Income Tax Act: ₹12,00,000\nProvision for doubtful debts (not allowed under IT Act): ₹1,50,000\nDonation to political party (disallowed): ₹50,000\nThere is adequate evidence of future profit sufficiency. Tax rate is 30%.\nCompute the deferred tax asset/liability to be recognized.",
+        "steps": [
+          "Identify timing vs permanent differences: Excess tax depreciation (₹12,00,000 - ₹8,00,000 = ₹4,00,000) is timing difference. Provision for doubtful debts (₹1,50,000) is timing difference. Donation to political party (₹50,000) is permanent difference.",
+          "Calculate net timing difference: Excess tax depreciation creates DTL = ₹4,00,000. Provision for doubtful debts creates DTA = ₹1,50,000. Net timing difference resulting in DTL = ₹4,00,000 - ₹1,50,000 = ₹2,50,000.",
+          "Apply tax rate: Net Deferred Tax Liability = ₹2,50,000 × 30% = ₹75,000.",
+          "Permanent difference of ₹50,000 donation has no deferred tax impact - affects only current tax."
+        ],
+        "answer": "Net Deferred Tax Liability = ₹75,000. The excess depreciation under tax laws creates DTL of ₹1,20,000 and provision for doubtful debts creates DTA of ₹45,000, resulting in net DTL of ₹75,000.",
+        "topic": "AS 22 - Deferred Tax"
+      },
+      {
+        "id": "AA7.PP2",
+        "title": "Foreign Currency Transaction with Forward Contract",
+        "difficulty": 4,
+        "problem": "Sigma Ltd. purchased machinery from USA for US$ 2,00,000 on 1st January 2025, payable after 4 months. The company entered into a forward contract for 4 months at ₹84.50 per dollar. Exchange rates: 1st January 2025: ₹83.00 per dollar; 31st March 2025 (Balance Sheet date): ₹85.00 per dollar; 1st May 2025 (payment date): ₹85.50 per dollar. Calculate the loss/gain on forward contract to be recognized in FY 2024-25 and FY 2025-26.",
+        "steps": [
+          "Calculate premium on forward contract: Forward Rate ₹84.50 - Spot Rate ₹83.00 = ₹1.50 per dollar (premium/loss). Total premium = US$ 2,00,000 × ₹1.50 = ₹3,00,000.",
+          "Amortize premium over contract period: Contract period = 4 months. FY 2024-25 (Jan-Mar) = 3 months. Loss to be recognized in FY 2024-25 = ₹3,00,000 × 3/4 = ₹2,25,000.",
+          "Loss to be recognized in FY 2025-26 (April): ₹3,00,000 × 1/4 = ₹75,000.",
+          "Note: The machinery is recorded at spot rate ₹83.00 = ₹1,66,00,000. Creditor at 31st March restated at closing rate but hedged by forward contract."
+        ],
+        "answer": "Loss on forward contract: FY 2024-25 = ₹2,25,000; FY 2025-26 = ₹75,000. Total premium of ₹3,00,000 is amortized over 4 months life of contract as per AS 11.",
+        "topic": "AS 11 - Forward Exchange Contract"
+      },
+      {
+        "id": "AA7.PP3",
+        "title": "Events After Balance Sheet Date Classification",
+        "difficulty": 3,
+        "problem": "Omega Ltd. has year ending 31st March 2025. Financial statements approved on 15th June 2025. Following events occurred:\n(a) Trade receivable of ₹25 lakhs declared insolvent on 20th April 2025. The debtor was in financial difficulty since January 2025.\n(b) Fire destroyed warehouse on 10th May 2025 causing loss of ₹80 lakhs.\n(c) Company declared dividend of ₹2 per share on 1st June 2025.\nClassify each event and state accounting treatment.",
+        "steps": [
+          "Event (a) - Debtor insolvency: Condition of financial difficulty existed at balance sheet date (January 2025). This is an ADJUSTING EVENT. Adjust provision for doubtful debts to reflect full ₹25 lakhs as bad debt in FY 2024-25 financial statements.",
+          "Event (b) - Fire loss: Condition did not exist at balance sheet date. Fire is a new event arising after balance sheet date. This is NON-ADJUSTING EVENT. No adjustment to financial statements. Disclose in Directors' Report with estimated loss of ₹80 lakhs.",
+          "Event (c) - Dividend declared: As per AS 4 (Revised) and Companies Act amendment, dividend declared after balance sheet date is NOT recognized as liability. It is a NON-ADJUSTING EVENT. Disclose in notes to accounts only.",
+          "Summarize: Adjusting - (a) ₹25 lakhs bad debt; Non-adjusting requiring disclosure - (b) ₹80 lakhs fire loss; Non-adjusting with note disclosure - (c) Proposed dividend."
+        ],
+        "answer": "(a) Adjusting event - Provide full ₹25 lakhs as bad debt in FY 2024-25. (b) Non-adjusting event - Disclose ₹80 lakhs loss in Directors' Report. (c) Non-adjusting - Disclose dividend in notes, no liability recognition.",
+        "topic": "AS 4 - Events After Balance Sheet Date"
+      },
+      {
+        "id": "AA7.PP4",
+        "title": "Integral Foreign Branch Translation",
+        "difficulty": 4,
+        "problem": "Alpha Ltd. (India) has an integral foreign branch in UK. Branch Trial Balance as on 31st March 2025 shows: Machinery (purchased 1st April 2023): £50,000; Debtors: £15,000; Stock (at cost): £8,000; Creditors: £12,000; Cash: £5,000. Exchange rates: 1st April 2023: ₹100; 31st March 2025: ₹105; Average rate 2024-25: ₹103. Translate the balance sheet items.",
+        "steps": [
+          "Monetary items at closing rate: Debtors £15,000 × ₹105 = ₹15,75,000. Creditors £12,000 × ₹105 = ₹12,60,000. Cash £5,000 × ₹105 = ₹5,25,000.",
+          "Non-monetary items at historical/transaction rate: Machinery £50,000 × ₹100 (purchase date rate) = ₹50,00,000. Stock at cost £8,000 × transaction date rate (assume average) = £8,000 × ₹103 = ₹8,24,000.",
+          "Exchange difference on monetary items goes to P&L as per AS 11 for integral operations.",
+          "Summary: Machinery ₹50,00,000; Debtors ₹15,75,000; Stock ₹8,24,000; Cash ₹5,25,000; Creditors ₹12,60,000."
+        ],
+        "answer": "Translated values: Machinery ₹50,00,000 (historical rate); Debtors ₹15,75,000; Cash ₹5,25,000; Stock ₹8,24,000; Creditors ₹12,60,000 (all monetary items at closing rate ₹105). Exchange differences on monetary items recognized in P&L.",
+        "topic": "AS 11 - Integral Foreign Operations"
+      },
+      {
+        "id": "AA7.PP5",
+        "title": "Deferred Tax with Carry Forward Losses",
+        "difficulty": 5,
+        "problem": "Beta Ltd. has the following position for FY 2024-25:\nAccounting Loss: ₹50,00,000\nTax Loss (including unabsorbed depreciation ₹20,00,000): ₹70,00,000\nTiming difference on depreciation creating potential DTA: ₹15,00,000\nThe company has a binding export order worth ₹200 crores with 25% margin to be executed in FY 2025-26.\nTax rate: 25%. Should DTA be recognized?",
+        "steps": [
+          "Identify the situation: Company has unabsorbed depreciation of ₹20,00,000 and carry forward tax loss. AS 22 requires 'virtual certainty supported by convincing evidence' for DTA recognition in such cases.",
+          "Evaluate evidence: Binding export order of ₹200 crores with 25% margin = ₹50 crores expected profit. This is convincing evidence as it's a concrete binding order, not mere projection.",
+          "Check sufficiency: Tax losses ₹70,00,000 + DTA on timing difference ₹15,00,000 × 25% = ₹3,75,000. Total DTA = ₹70,00,000 × 25% + ₹3,75,000 = ₹17,50,000 + ₹3,75,000 = ₹21,25,000. Future profit ₹50 crores is more than sufficient.",
+          "Conclusion: Virtual certainty with convincing evidence exists. DTA of ₹21,25,000 should be recognized."
+        ],
+        "answer": "DTA of ₹21,25,000 should be recognized. Binding export order constitutes convincing evidence providing virtual certainty of sufficient future taxable income as per AS 22 explanation on virtual certainty.",
+        "topic": "AS 22 - DTA with Losses"
+      }
+    ],
+    "caseMCQs": {
+      "scenario": "Zenith Manufacturing Ltd. (FY ending 31st March 2025) has the following situations:\n\n1. Foreign currency loan of US$ 5,00,000 taken on 1st October 2024 for purchase of plant. Exchange rates: 1st Oct 2024: ₹82; 31st March 2025: ₹85; Plant useful life: 10 years.\n\n2. Theft of inventory worth ₹12 lakhs occurred in February 2025 but detected in May 2025 before approval of accounts on 15th June 2025.\n\n3. Depreciation: Books ₹40,00,000; Tax ₹55,00,000. Provision for warranty (allowed on payment): ₹8,00,000. Penalty for tax default: ₹2,00,000. Tax rate 30%.",
+      "questions": [
+        {
+          "id": "AA7.CQ1",
+          "q": "What is the exchange difference on the foreign currency loan to be recognized in FY 2024-25, assuming company has NOT opted for Para 46A?",
+          "opts": [
+            "₹15,00,000 charged to P&L as expense",
+            "₹15,00,000 capitalized to Plant cost",
+            "₹7,50,000 charged to P&L (proportionate)",
+            "No exchange difference as it's long-term loan"
+          ],
+          "ans": 0,
+          "exp": "Under AS 11 Para 13, exchange differences on monetary items are recognized in P&L when Para 46A option is not exercised. Difference = US$ 5,00,000 × (₹85 - ₹82) = ₹15,00,000, fully charged to P&L.",
+          "type": "Trap",
+          "diff": 3
+        },
+        {
+          "id": "AA7.CQ2",
+          "q": "How should the theft of inventory worth ₹12 lakhs be treated in FY 2024-25 financial statements?",
+          "opts": [
+            "Non-adjusting event - disclose in Directors' Report only",
+            "Adjusting event - reduce inventory and recognize loss of ₹12,00,000 in FY 2024-25",
+            "Prior period item requiring restatement",
+            "Extraordinary item with separate disclosure"
+          ],
+          "ans": 1,
+          "exp": "As per AS 4 (Revised), theft occurred in February 2025 (before balance sheet date), so the condition existed at balance sheet date. Detection in May 2025 provides evidence of this existing condition. This is an adjusting event requiring adjustment of ₹12,00,000 in FY 2024-25.",
+          "type": "Concept",
+          "diff": 2
+        },
+        {
+          "id": "AA7.CQ3",
+          "q": "What is the net Deferred Tax Liability/(Asset) to be recognized for FY 2024-25?",
+          "opts": [
+            "DTL ₹4,50,000",
+            "DTL ₹2,10,000",
+            "DTA ₹2,10,000",
+            "DTL ₹6,90,000"
+          ],
+          "ans": 1,
+          "exp": "Timing differences: Excess tax depreciation (₹55L - ₹40L = ₹15L) creates DTL. Warranty provision ₹8L creates DTA. Net timing difference = ₹15L - ₹8L = ₹7L (DTL). Penalty ₹2L is permanent difference (no DT impact). Net DTL = ₹7,00,000 × 30% = ₹2,10,000.",
+          "type": "Trap",
+          "diff": 3
+        },
+        {
+          "id": "AA7.CQ4",
+          "q": "If company opts for Para 46A for the foreign currency loan, what is the revised carrying amount of Plant as on 31st March 2025?",
+          "opts": [
+            "₹4,10,00,000",
+            "₹4,25,00,000",
+            "₹4,23,75,000",
+            "₹4,08,50,000"
+          ],
+          "ans": 2,
+          "exp": "Initial cost = US$ 5,00,000 × ₹82 = ₹4,10,00,000. Exchange difference capitalized = ₹15,00,000. Revised cost = ₹4,25,00,000. Depreciation for 6 months (Oct-Mar) on revised cost = ₹4,25,00,000 × 1/10 × 6/12 = ₹2,12,500. Less accumulated depreciation: ₹4,25,00,000 - ₹1,25,000 (original 6 months) = Wait, recalculate: Depreciation on ₹4,25,00,000 for 6 months = ₹4,25,00,000/10 × 6/12 = ₹2,12,500. Carrying amount = ₹4,25,00,000 - ₹1,25,000 = ₹4,23,75,000.",
+          "type": "Amendment",
+          "diff": 4,
+          "_warning": true
+        }
+      ]
+    },
+    "mcqs": [
+      {
+        "id": "AA7.Q1",
+        "q": "Under AS 4 (Revised), which of the following is an adjusting event for financial statements for year ended 31st March 2025 (approved on 30th May 2025)?",
+        "opts": [
+          "Major fire destroying warehouse on 15th April 2025",
+          "Court judgment on 20th April 2025 confirming liability for case pending since December 2024",
+          "Declaration of final dividend on 25th April 2025",
+          "Acquisition of subsidiary announced on 10th May 2025"
+        ],
+        "ans": 1,
+        "exp": "Court judgment confirms a liability that existed at balance sheet date (case was pending since December 2024). This provides additional evidence of condition existing at balance sheet date, making it an adjusting event under AS 4 (Revised).",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA7.Q2",
+        "q": "A company changed its depreciation method from WDV to SLM resulting in excess depreciation of ₹5,00,000 for prior years. This should be treated as:",
+        "opts": [
+          "Prior period item with retrospective adjustment",
+          "Change in accounting estimate affecting current and future periods only",
+          "Extraordinary item requiring separate disclosure",
+          "Change in accounting policy with retrospective restatement"
+        ],
+        "ans": 1,
+        "exp": "As per AS 5 Para 21, when it is difficult to distinguish between change in accounting policy and change in accounting estimate, the change is treated as change in accounting estimate. Change in depreciation method affects current and future periods prospectively.",
+        "type": "Trap",
+        "diff": 3
+      },
+      {
+        "id": "AA7.Q3",
+        "q": "Under AS 11, advance paid of US$ 10,000 for purchase of machinery when exchange rate was ₹83 should be reported at balance sheet date when closing rate is ₹85 at:",
+        "opts": [
+          "₹8,50,000 (closing rate)",
+          "₹8,30,000 (transaction date rate)",
+          "₹8,40,000 (average rate)",
+          "₹8,50,000 with exchange gain of ₹20,000"
+        ],
+        "ans": 1,
+        "exp": "Advance for purchase of machinery is a non-monetary item as per AS 11. Non-monetary items carried at historical cost are reported using exchange rate at transaction date. No exchange difference arises on non-monetary items.",
+        "type": "Trap",
+        "diff": 3
+      },
+      {
+        "id": "AA7.Q4",
+        "q": "A company has accounting profit of ₹100 lakhs and taxable profit of ₹80 lakhs due to excess tax depreciation. If tax rate is 25%, the deferred tax impact is:",
+        "opts": [
+          "Deferred Tax Asset of ₹5,00,000",
+          "Deferred Tax Liability of ₹5,00,000",
+          "Deferred Tax Asset of ₹20,00,000",
+          "No deferred tax as accounting profit is higher"
+        ],
+        "ans": 1,
+        "exp": "Timing difference = ₹100L - ₹80L = ₹20L. Taxable profit is lower due to higher tax depreciation. This creates future tax payable when book depreciation exceeds tax depreciation. DTL = ₹20,00,000 × 25% = ₹5,00,000.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA7.Q5",
+        "q": "Exchange differences on translation of non-integral foreign operation's assets and liabilities should be:",
+        "opts": [
+          "Recognized in Statement of Profit and Loss immediately",
+          "Accumulated in Foreign Currency Translation Reserve until disposal",
+          "Adjusted against cost of assets",
+          "Transferred to General Reserve annually"
+        ],
+        "ans": 1,
+        "exp": "As per AS 11 Para 29, all exchange differences arising on translation of non-integral foreign operation should be accumulated in Foreign Currency Translation Reserve (a separate component of shareholders' funds) until disposal of the net investment.",
+        "type": "Concept",
+        "diff": 2
+      },
+      {
+        "id": "AA7.Q6",
+        "q": "Under AS 5, losses sustained due to earthquake for a manufacturing company should be classified as:",
+        "opts": [
+          "Ordinary activity requiring no special disclosure",
+          "Prior period item",
+          "Extraordinary item with separate disclosure of nature and amount",
+          "Exceptional item within profit from ordinary activities"
+        ],
+        "ans": 2,
+        "exp": "As per AS 5 Para 11, earthquake losses qualify as extraordinary items for most enterprises as they are clearly distinct from ordinary activities and not expected to recur frequently. Nature and amount must be separately disclosed.",
+        "type": "Concept",
+        "diff": 1
+      },
+      {
+        "id": "AA7.Q7",
+        "q": "For deferred tax measurement when company pays tax under Section 115JB (MAT), the tax rate to be used is:",
+        "opts": [
+          "MAT rate as it is the current tax rate",
+          "Regular tax rate as per Income Tax Act",
+          "Higher of MAT rate and regular tax rate",
+          "Weighted average of MAT and regular rate"
+        ],
+        "ans": 1,
+        "exp": "As per AS 22 Explanation on Section 115JB, deferred tax assets and liabilities should be measured using regular tax rates and not MAT rate, even when company pays tax under MAT in current period. MAT payment is treated as current tax.",
+        "type": "Amendment",
+        "diff": 3
+      },
+      {
+        "id": "AA7.Q8",
+        "q": "Post-dated cheques received from customers bearing date 31st March but received on 5th April should be:",
+        "opts": [
+          "Recognized as cash and cash equivalents on 31st March",
+          "Not recognized as asset on 31st March as company has no control",
+          "Recognized as trade receivables on 31st March",
+          "Disclosed as contingent asset"
+        ],
+        "ans": 1,
+        "exp": "As per AS 4 (Revised) example, cheques received after 31st March do not represent condition existing on that date. Company acquires custody after balance sheet date, hence has no control on 31st March. Cannot be recognized as asset.",
+        "type": "Trap",
+        "diff": 3
+      }
+    ],
+    "tricky": [
+      {
+        "id": "AA7.1",
+        "point": "Detection date vs occurrence date for adjusting events",
+        "mistake": "Students classify theft/fraud based on when it was detected (after balance sheet date) rather than when it occurred. If theft occurred before balance sheet date but detected after, it is still an adjusting event.",
+        "why": "ICAI tests understanding that the key criterion is when the CONDITION existed, not when it was discovered. AS 4 Para 8.1 states adjusting events 'provide further evidence of conditions that existed at balance sheet date'.",
+        "priority": "High"
+      },
+      {
+        "id": "AA7.2",
+        "point": "Advances for goods/assets are non-monetary items",
+        "mistake": "Students treat advances paid in foreign currency as monetary items and restate at closing rate, creating exchange differences. Advances for purchase of goods or assets are non-monetary as they represent right to receive goods, not cash.",
+        "why": "AS 11 specifically defines monetary items as 'assets to be received in fixed amounts of money'. Advance for goods gives right to receive goods, not money. ICAI frequently tests this distinction.",
+        "priority": "High"
+      },
+      {
+        "id": "AA7.3",
+        "point": "Virtual certainty vs reasonable certainty for DTA",
+        "mistake": "Students apply same 'reasonable certainty' test for all DTA recognition. When company has unabsorbed depreciation or carry forward losses, the stricter 'virtual certainty supported by convincing evidence' test applies.",
+        "why": "AS 22 Para 17 has specific requirement for losses situation. Projections and business plans are NOT convincing evidence. Only concrete evidence like binding profitable orders qualifies.",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA7.4",
+        "point": "Permanent differences have no deferred tax impact",
+        "mistake": "Students calculate deferred tax on all differences between accounting and taxable income. Permanent differences like penalties, donations to political parties, exempt income never reverse and affect only current tax.",
+        "why": "AS 22 Para 15 clearly states 'Permanent differences do not result in deferred tax assets or deferred tax liabilities'. They should be excluded from DT computation.",
+        "priority": "High"
+      },
+      {
+        "id": "AA7.5",
+        "point": "Writing off old creditors is not a prior period item",
+        "mistake": "Students treat write-off of old outstanding balances as prior period items because they originated in earlier years. However, this is not an error or omission - it's a current year decision based on current assessment.",
+        "why": "AS 5 defines prior period items as arising from 'errors or omissions' only. Management decision to write off old balance in current year based on current facts is not an error of prior period.",
+        "priority": "High"
+      },
+      {
+        "id": "AA7.6",
+        "point": "Contingent gains never recognized until virtually certain",
+        "mistake": "Students recognize contingent gains when probability is 'likely' or 'probable', applying same threshold as contingent losses. Contingent gains are recognized only when virtually certain (no longer a contingency).",
+        "why": "AS 4 Para 10 states 'when realisation of a gain is virtually certain, then such gain is not a contingency and accounting for the gain is appropriate'. This reflects prudence concept.",
+        "priority": "High"
+      }
+    ],
+    "amendments": [
+      {
+        "id": "AA7.A1",
+        "topic": "Proposed Dividend Treatment under AS 4",
+        "what": "Dividends declared after balance sheet date not recognized as liability",
+        "oldPosition": "Prior to amendment, proposed dividend was shown as appropriation of profits and recognized as liability in the year to which it related even if declared after balance sheet date.",
+        "newPosition": "As per Companies (Accounting Standards) Amendment Rules, 2016 dated 30 March 2016, if dividends are declared after the balance sheet date but before financial statements are approved, they are not recognised as a liability at balance sheet date. Such dividends are disclosed in notes to accounts only.",
+        "effectiveFrom": "Financial year 2016-17 onwards",
+        "pdfStatus": "confirmed",
+        "priority": "High"
+      },
+      {
+        "id": "AA7.A2",
+        "topic": "Para 46A Option for Long-term Foreign Currency Monetary Items",
+        "what": "Exchange differences on long-term FC items can be capitalized or accumulated in FCMITDA",
+        "oldPosition": "All exchange differences on monetary items to be recognized in P&L in the period in which they arise as per AS 11 Para 13.",
+        "newPosition": "Under Para 46A (inserted by Companies Accounting Standards Amendment Rules 2011), for accounting periods from 1st April 2011, exchange differences on long-term foreign currency monetary items: (a) relating to depreciable assets - can be added to/deducted from cost of asset; (b) other cases - can be accumulated in FCMITDA and amortised over balance period of asset/liability. Option is irrevocable.",
+        "effectiveFrom": "1st April 2011",
+        "pdfStatus": "confirmed",
+        "priority": "Very High"
+      },
+      {
+        "id": "AA7.A3",
+        "topic": "AS 4 Contingencies Paragraphs - Limited Applicability",
+        "what": "Contingencies paragraphs of AS 4 apply only where AS 29 does not cover",
+        "oldPosition": "AS 4 dealt comprehensively with all contingencies including provisions, contingent liabilities and contingent assets.",
+        "newPosition": "As per Companies (Accounting Standards) Amendment Rules, 2016, all paragraphs of AS 4 (Revised) dealing with contingencies are applicable only to the extent not covered by other Accounting Standards. For example, impairment of financial assets (provision for bad debts) is governed by AS 4, while other provisions and contingent liabilities are governed by AS 29.",
+        "effectiveFrom": "30 March 2016",
+        "pdfStatus": "confirmed",
+        "priority": "High"
+      },
+      {
+        "id": "AA7.A4",
+        "topic": "Remittance from Non-integral Foreign Operation",
+        "what": "Repatriation of accumulated profits does not constitute disposal",
+        "oldPosition": "Position on whether remittance from non-integral foreign operation constitutes disposal was not explicitly clarified.",
+        "newPosition": "As per MCA notification dated 18th June 2018, remittance from a non-integral foreign operation by way of repatriation of accumulated profits does not form part of a disposal unless it constitutes return of the investment. This clarifies that normal dividend/profit remittances do not trigger release of FCTR to P&L.",
+        "effectiveFrom": "18th June 2018",
+        "pdfStatus": "confirmed",
+        "priority": "High"
+      }
+    ],
+    "cases": [],
+    "trees": []
   }
 ]
